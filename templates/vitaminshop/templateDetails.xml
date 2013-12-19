@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+	<name>vitaminshop</name>
+	<version>1.0</version>
+	<creationDate>2/12/2013</creationDate>
+	<author>nuevosmedios</author>
+	<authorEmail>pablo.pantoja@nuevosmedios.ws</authorEmail>
+	<copyright>Copyright (C) 2013 Open Source Matters, Inc. Todos los derechos reservados.</copyright>
+	<description>Template for Vitamin Shop</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+	</files>
+	<positions>
+		<position>debug</position>
+		<position>login</position>
+		<position>brand</position>
+		<position>languaje</position>
+		<position>logo</position>
+		<position>search</position>
+		<position>top</position>
+		<position>menu</position>
+		<position>submenu</position>
+		<position>banner</position>
+		<position>banner_home</position>
+		<position>left</position>
+		<position>right</position>
+		<position>foot</position>
+		<position>communities</position>
+		<position>googleanalytics</position>
+		<position>homelink1</position>
+		<position>homelink2</position>
+		<position>homelink3</position>
+		<position>homelink4</position>
+		<position>homelink5</position>
+		<position>homelink6</position>
+		<position>homelink7</position>
+		<position>homelink8</position>
+		<position>footlink1</position>
+		<position>footlink2</position>
+		<position>footlink3</position>
+		<position>menu1</position>
+		<position>menu2</position>
+		<position>menu3</position>
+		<position>menu4</position>
+		<position>menu5</position>
+		<position>menu6</position>
+		<position>promo</position>
+		<position>promo1</position>
+		<position>promo2</position>
+		<position>promo3</position>
+		<position>promo4</position>
+		<position>toplinks1</position>
+		<position>toplinks1.1</position>
+		<position>toplinks2</position>
+		
+		<position>takingIt</position>
+		<position>weAre</position>
+		<position>ourSolutions</position>
+		<position>shareAnExp</position>
+		<position>credits</position>
+		
+		<position>submenu-inline</position>
+		<position>contact-info</position>
+		
+		<position>contactFooter</position>
+		<position>footer</position>
+		<position>powered</position>
+	</positions>
+</extension>

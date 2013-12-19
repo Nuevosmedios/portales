@@ -1,0 +1,66 @@
+body{background:url(../images/back.jpg) repeat; font-weight:200;}
+b,strong{font-weight:400;}
+h1,h2,h3,h4,h5{font-weight:400;}
+label{display:inherit !important;}
+
+@media (max-width: 767px){
+	#logo{text-align:center;}
+	#toplinks ul{float:none !important;text-align:center;margin-top:10px;margin-bottom:0;}
+	#header{padding:20px 0 8px 0 !important;}
+	.login{width:80% !important;}
+}
+
+#menu-accordion .panel-heading{color:#285e8e;font-weight:200;padding: 5px 10px;}
+#menu-accordion .panel-heading .panel-title{font-size:15px !important;}
+#menu-accordion .panel-body{padding:5px;}
+#menu-accordion .nav>li>a{}
+
+.clear{clear:both;}
+.auto{margin:auto;}
+/*Custom*/
+#loyalty-points{margin-left:10px;font-size:16px;}
+#disp{font-size:18px;}
+#general-message{margin-top:10px;}
+#store-message{}
+#top-message{background:#B2B2B2;color:#FFF;min-height:20px;position:fixed;text-align:center;width:100%;z-index:999;}
+#body{background:#FFF;}
+#header{margin-top:20px;min-height:100px;padding:20px 0;}
+#toplinks{}
+#toplink1{background:#FEB500;font-size:13px;padding:10px;}
+#toplink1-1{background:#FEB500;padding:3px 10px;}
+#toplink2{background:#D7D7D7;font-size:13px;padding:10px;}
+
+#menu ul{}
+#menu ul li{float:none;display:inline-block;}
+#menu ul li a{}
+
+#promo-container{margin-top:20px;}
+#banner{border:1px solid #E9E9E9;padding-right:0;}
+#promo{padding-left:0;}
+
+#promos-container{margin-top:20px;}
+
+#footer{color:#999999;font-size:12px;margin-bottom:20px;}
+
+#catalogue{padding:20px 0;}
+#catalogue blockquote{margin-bottom:5px;}
+#toClone{display:none;}
+.thumb .label{margin-right:5px;}
+/*Custom end*/
+
+/*Joomla overwrite*/
+/*#mod-finder-searchform{margin-top:8px;}*/
+.login{padding:40px 0 0;width:40%;margin:auto;}
+.login .form-horizontal .control-label{text-align:left;}
+#login-actions{width:40%;margin:auto;}
+.registration{padding:40px 0 0;width:50%;margin:auto;}
+.registration .form-horizontal .control-label{text-align:left;}
+.registration .form-actions{margin-top:20px;}
+
+/*Joomla overwrite end*/
+
+/*Bootstrap ovewrite*/
+.nav-tabs>li>a{border-right:2px solid #E9E9E9;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;margin: 0 0 0 -6px;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{background:#E9E9E9;}
+#menu .tab-content{background:#E9E9E9;min-height:40px;}
+/*Bootstrap ovewrite end*/
