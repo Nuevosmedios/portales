@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade" >
+	<name>plg_system_multisites_ssidomains</name>
+	<author>Edwin2Win sprlu</author>
+	<creationDate>18-mar-2013</creationDate>
+	<copyright>Copyright 2011-2013 Edwin2Win sprlu - all right reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@jms2win.com</authorEmail>
+	<authorUrl>www.jms2win.com</authorUrl>
+	<version>1.0.9</version>
+	<description>PLG_SYSTEM_MULTISITES_SSIDOMAINS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="multisites_ssidomains">multisites_ssidomains.php</filename>
+		<folder>multisites_ssidomains</folder>
+	</files>
+
+	<!-- Joomla 1.6, 1.7, 2.5, 3.0, 3.1 -->
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic"  addfieldpath="/plugins/system/multisites_ssidomains/multisites_ssidomains">
+
+				<field name="active" type="radio"
+					default="site"
+					description="Define if the Single Sign-In must be active for the front-end, back-end or both"
+					label="SSI active for the"
+				>
+					<option value="site">Front-End</option>
+					<option value="admin">Back-End</option>
+					<option value="both">Both</option>
+				</field>
+
+				<field name="script1" type="addscript" hidden="true" script="/plugins/system/multisites_ssidomains/multisites_ssidomains/domain_action.js" />
+				<field name="domain_action" type="list"
+					default="automatic"
+					description="Type of action that must be performed"
+					label="Action"
+               onchange="updateDomains( this.options[selectedIndex].value, 'jform_params_', 'domains_params', 'domain_additional');"
+				>
+      			<option value="automatic">Domains automatically computed (default)</option>
+      			<option value="force">selected domains</option>
+					<option value="exclude">Use automatic and exclude domains</option>
+				</field>
+
+				<field name="domains" type="domains"  
+					description="Select the domain(s) for which the action is applied"
+					label="Domains"
+					multiple="multiple"
+					size="10"
+				/>
+
+            <field name="domain_additional" type="textarea" default="" rows="5" cols="35" 
+                   label="Free additional domain"
+                   description="Enter the list of domain that you want also process with the action above. For example, enter here the master website domain(s). Each domain can be separated by a comas or a new line."
+            />
+
+      		<field name="currentsite_protocol" type="radio" default="0" label="Ping protocol" description="Use the current site protocol (http, https) or use the protocol specified in the specific domain name or use http.">
+      			<option value="1">Current site</option>
+      			<option value="0">Domain protocol or http</option>
+      		</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<languages folder="admin/language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_multisites_ssidomains.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_multisites_ssidomains.sys.ini</language>
+	</languages>
+</extension>

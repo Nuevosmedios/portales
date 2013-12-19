@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" disabled_overwrite="true" version="1.6.0">
+	<name>Multi Sites User Site</name>
+	<author>Edwin2Win sprlu</author>
+	<creationDate>14-Mar-2013</creationDate>
+	<copyright>Copyright 2011-2013 Edwin2Win sprlu - all right reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@jms2win.com</authorEmail>
+	<authorUrl>www.jms2win.com</authorUrl>
+	<version>1.2.00</version>
+	<description><![CDATA[Jms Multi Sites User Site.<br/>
+Store the Site ID where a user is created.<br/>
+This information allow for example to filter the user on the site where they were created.<br/>
+This component also install all the plugins for the Partial User Sharing under Joomla 1.5, 2.5, 3.0 and 3.1.<br/>
+It requires Jms Multi Sites version 1.3.07 or higher.]]></description>
+	<!-- Custom Install Script to execute -->
+	<installfile>install.multisitesusersite.php</installfile>
+
+	<!-- Custom Install SQL Script to execute -->
+	<install>
+	   <sql>
+	      <file driver="mysql" charset="utf8">install.mysql.utf8.php</file>
+	      <file driver="mysql">install.mysql.php</file>
+	   </sql>
+	</install>
+
+	<scriptfile>install.script.php</scriptfile>
+
+	<!-- Front end File Copy Section -->
+	<files folder="front">
+	   <filename>index.html</filename>
+	</files>
+	<!-- Front end Language File Copy Section -->
+	<languages folder="front/language">
+	</languages>
+
+  	<administration>
+		<!-- Administrator menus -->
+      <menu img="components/com_multisitesusersite/images/multisitesusersite_icon.gif">com_multisitesusersite</menu>
+      <submenu>
+         <menu link="option=com_multisitesusersite&amp;task=listusersite" view="usersite" alt="MultisitesUserSite/Users">com_multisitesusersite_listusersite</menu>
+         <menu link="option=com_multisitesusersite&amp;task=usersmanual" view="usersmanual" alt="MultisitesUserSite/User Manual">com_multisitesusersite_usersmanual</menu>
+         <menu link="option=com_multisitesusersite&amp;task=about" view="about" alt="MultisitesUserSite/About">com_multisitesusersite_about</menu>
+      </submenu>
+      
+		<!-- Administrator files -->
+		<files folder="admin">
+		   <filename>admin.multisitesusersite.php</filename>
+		   <filename>CHANGELOG.php</filename>
+		   <filename>classes/debug.php</filename>
+		   <filename>classes/http.php</filename>
+		   <filename>classes/index.html</filename>
+		   <filename>config.xml</filename>
+		   <filename>controller.php</filename>
+		   <filename>images/btn_registration.gif</filename>
+		   <filename>images/icon-16-default.png</filename>
+		   <filename>images/index.html</filename>
+		   <filename>images/multisitesusersite_icon.gif</filename>
+		   <filename>install.language_j16.php</filename>
+		   <filename>install.multisitesusersite.php</filename>
+		   <filename>install.mysql.php</filename>
+		   <filename>install.mysql.utf8.php</filename>
+		   <filename>install.script.php</filename>
+		   <filename>legacy.php</filename>
+		   <filename>LICENSE.php</filename>
+		   <filename>models/manage.php</filename>
+		   <filename>models/registration.php</filename>
+		   <filename>models/registration_inc.php</filename>
+		   <filename>models/usersite.php</filename>
+		   <filename>multisitesusersite.cfg-dist.php</filename>
+		   <filename>multisitesusersite.php</filename>
+		   <filename>tables/index.html</filename>
+		   <filename>tables/multisites_users.php</filename>
+		   <filename>views/index.html</filename>
+		   <filename>views/registration/index.html</filename>
+		   <filename>views/registration/tmpl/index.html</filename>
+		   <filename>views/registration/tmpl/registration.php</filename>
+		   <filename>views/registration/view.php</filename>
+		   <filename>views/usersite/index.html</filename>
+		   <filename>views/usersite/tmpl/default.php</filename>
+		   <filename>views/usersite/tmpl/detail.php</filename>
+		   <filename>views/usersite/tmpl/index.html</filename>
+		   <filename>views/usersite/tmpl/list.css</filename>
+		   <filename>views/usersite/tmpl/list.php</filename>
+		   <filename>views/usersite/view.php</filename>
+		   <filename>_j16/index.html</filename>
+		   <filename>_j16/install.script.php</filename>
+		</files>
+		<!-- Administration Language File Copy Section -->
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_multisitesusersite.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_multisitesusersite.sys.ini</language>
+		</languages>
+	</administration>
+   <additional>
+      <plugin name="partialusersharing" group="user" publish="1" jversion=">=1.6">Propagate the Joomla 1.7 group level to other sites</plugin>
+      <plugin name="multisitesusersite" group="system" publish="1">Record the site where the user is created</plugin>
+      <plugin name="patches_usersharing" group="multisites" publish="1">Add partial user sharing to JMS definitions</plugin>
+      <plugin name="deletesiteid" group="multisites" publish="1">Cleanup user sites access when a site is deleted</plugin>
+   </additional>
+
+</extension>
+

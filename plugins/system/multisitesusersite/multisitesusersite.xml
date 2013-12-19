@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>plg_system_multisitesusersite</name>
+	<name>System - Save Multisites ID</name>
+	<author>Edwin2Win sprlu</author>
+	<creationDate>14-mar-2013</creationDate>
+	<copyright>Copyright 2011-2013 Edwin2Win sprlu - all right reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@jms2win.com</authorEmail>
+	<authorUrl>www.jms2win.com</authorUrl>
+	<version>1.2.00</version>
+	<description>PLG_SYSTEM_MULTISITESUSERSITE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="multisitesusersite">multisitesusersite.php</filename>
+	</files>
+	<languages folder="admin/language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_multisitesusersite.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_multisitesusersite.sys.ini</language>
+	</languages>
+</extension>

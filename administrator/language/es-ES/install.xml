@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension version="2.5" client="administrator" type="language" method="upgrade">
+    <name>Spanish (Es)</name>
+    <tag>es-ES</tag>
+    <version>2.5</version>
+    <creationDate>2012-02-04</creationDate>
+    <author>Juliocésar Prieto Lem</author>
+    <authorEmail>pizzakiller@gmail.com</authorEmail>
+    <authorUrl>www.pizzakille.com.ve</authorUrl>
+    <copyright></copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <description>Phocagallery Spanish language pack for Joomla! 1.7</description>
+    <files>
+                <filename>es-ES.com_phocagallery.ini</filename>
+                <filename>es-ES.com_phocagallery.sys.ini</filename>
+		<filename file="meta">install.xml</filename>
+     </files>
+</extension>
+

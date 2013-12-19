@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<params>
+		<param name="dbsh_UserSharing" type="radio" default="none" 
+		                               label="TEMPLATE_VIEW_EDT_SHR_USERSHARING" 
+		                               description="TEMPLATE_VIEW_EDT_SHR_USERSHARING_DESC" 
+		                               icon="dbsharing.gif#6" >
+				<option value="JoomlaFilterSite" description="Share the Joomla users filtered on the Site ID">Share the users filtered on Site ID<tables>
+                  <table      name="#__multisites_users" description="Multisites ID and users association" >
+                     <queries if="$test = (empty( $template) || empty( $template->adminUserID));">
+                        <query>INSERT INTO #__multisites_users SELECT id, '{site_id}' FROM {fromPrefix}users WHERE gid=25</query>
+                     </queries>
+                     <queries if="$test = (!empty( $template) &amp;&amp; !empty( $template->adminUserID));">
+                        <query>INSERT INTO #__multisites_users SELECT id, '{site_id}' FROM {fromPrefix}users WHERE id='{adminUserID}'</query>
+                     </queries>
+                  </table>
+                  <tablewhere name="#__users"            description="Joomla users filtered on Site ID" where="WHERE id IN (SELECT user_id FROM #__multisites_users WHERE site_id='{site_id}')" />
+                  <table      name="#__session" />
+                  <table      name="#__core_acl_%"       description="Access Control List" />
+            </tables></option>
+		</param>
+		<param name="dbsh_MSUserSite" type="checkbox" 
+		                      condition="{root}/administrator/components/com_multisitesusersite"
+                            icon="dbsharing.gif#30"
+		                      label="Multisites User Site" description="Share all the User Site ID associations" >
+				<tables>
+                  <table      name="#__multisites_users" description="Multisites ID and users association" >
+                     <queries if="$test = (empty( $template) || empty( $template->adminUserID));">
+                        <query>INSERT INTO #__multisites_users SELECT id, '{site_id}' FROM {fromPrefix}users WHERE gid=25</query>
+                     </queries>
+                     <queries if="$test = (!empty( $template) &amp;&amp; !empty( $template->adminUserID));">
+                        <query>INSERT INTO #__multisites_users SELECT id, '{site_id}' FROM {fromPrefix}users WHERE id='{adminUserID}'</query>
+                     </queries>
+                  </table>
+				</tables>
+		</param>
+	</params>
+</form>

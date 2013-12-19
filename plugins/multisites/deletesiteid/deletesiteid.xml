@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="multisites" method="upgrade">
+	<name>plg_multisites_deletesiteid</name>
+	<author>Edwin2Win sprlu</author>
+	<creationDate>14-mar-2013</creationDate>
+	<copyright>Copyright 2011-2013 Edwin2Win sprlu - all right reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@jms2win.com</authorEmail>
+	<authorUrl>www.jms2win.com</authorUrl>
+	<version>1.2.0</version>
+	<description>PLG_MULTISITES_DELETESITEID_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="deletesiteid">deletesiteid.php</filename>
+	</files>
+	<languages folder="admin/language">
+		<language tag="en-GB">en-GB/en-GB.plg_multisites_deletesiteid.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_multisites_deletesiteid.sys.ini</language>
+	</languages>
+</extension>

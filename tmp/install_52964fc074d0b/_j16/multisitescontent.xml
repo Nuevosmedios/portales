@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" disabled_overwrite="true" version="1.6.0">
+	<name>Multi Sites Content</name>
+	<author>Edwin2Win sprlu</author>
+	<creationDate>05-Dec-2012</creationDate>
+	<copyright>Copyright 2008-2012 Edwin2Win sprlu - all right reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>e.cheront@jms2win.com</authorEmail>
+	<authorUrl>www.jms2win.com</authorUrl>
+	<version>1.1.8</version>
+	<description><![CDATA[Jms Multi Sites article content sharing.<br/>
+This component allows to display the content (section, categories, articles) coming from any websites defined in Joomla Multi Sites.<br/>
+There is no administration to manage the content of the websites. To update the sections, categories and articles, use the standard Joomla content menu or similar tools.<br/>
+<br/>
+Version 1.1.1 is compatible with Joomla 1.5 AND 1.6.<br/>
+Version 1.1.2 is compatible with Joomla 1.5 AND 1.7.<br/>
+Version 1.1.3 add in section layout under Joomla 1.5 the possibility to select the number of artcile to display like under joomla 1.7<br/>
+Version 1.1.3 add in section layout under Joomla 1.5 the possibility to show or hide the filter and the select display dropdown<br/>
+Version 1.1.5 fix joomla 2.5 compatibility<br/>
+]]></description>
+	<!-- Custom Install Script to execute -->
+	<installfile>install.multisitescontent.php</installfile>
+
+	<scriptfile>install.script.php</scriptfile>
+
+	<!-- Front end File Copy Section -->
+	<files folder="front">
+	   <filename>controller.php</filename>
+	   <filename>controllers/article.php</filename>
+	   <filename>controllers/index.html</filename>
+	   <filename>helpers/category.php</filename>
+	   <filename>helpers/icon.php</filename>
+	   <filename>helpers/index.html</filename>
+	   <filename>helpers/query.php</filename>
+	   <filename>helpers/route.php</filename>
+	   <filename>index.html</filename>
+	   <filename>metadata.xml</filename>
+	   <filename>models/archive.php</filename>
+	   <filename>models/article.php</filename>
+	   <filename>models/articles.php</filename>
+	   <filename>models/categories.php</filename>
+	   <filename>models/category.php</filename>
+	   <filename>models/featured.php</filename>
+	   <filename>models/form.php</filename>
+	   <filename>models/index.html</filename>
+	   <filename>multisitescontent.php</filename>
+	   <filename>router.php</filename>
+	   <filename>views/article/index.html</filename>
+	   <filename>views/article/metadata.xml</filename>
+	   <filename>views/article/tmpl/default.php</filename>
+	   <filename>views/article/tmpl/default.xml</filename>
+	   <filename>views/article/tmpl/default_links.php</filename>
+	   <filename>views/article/tmpl/form.php</filename>
+	   <filename>views/article/tmpl/form.xml</filename>
+	   <filename>views/article/tmpl/index.html</filename>
+	   <filename>views/article/tmpl/pagebreak.php</filename>
+	   <filename>views/article/tmpl/pagebreak.xml</filename>
+	   <filename>views/article/view.html.php</filename>
+	   <filename>views/article/view.pdf.php</filename>
+	   <filename>views/categories/index.html</filename>
+	   <filename>views/categories/tmpl/default.php</filename>
+	   <filename>views/categories/tmpl/default.xml</filename>
+	   <filename>views/categories/tmpl/default_items.php</filename>
+	   <filename>views/categories/tmpl/index.html</filename>
+	   <filename>views/categories/view.html.php</filename>
+	   <filename>views/category/index.html</filename>
+	   <filename>views/category/metadata.xml</filename>
+	   <filename>views/category/tmpl/blog.php</filename>
+	   <filename>views/category/tmpl/blog.xml</filename>
+	   <filename>views/category/tmpl/blog_children.php</filename>
+	   <filename>views/category/tmpl/blog_item.php</filename>
+	   <filename>views/category/tmpl/blog_links.php</filename>
+	   <filename>views/category/tmpl/default.php</filename>
+	   <filename>views/category/tmpl/default.xml</filename>
+	   <filename>views/category/tmpl/default_articles.php</filename>
+	   <filename>views/category/tmpl/default_children.php</filename>
+	   <filename>views/category/tmpl/default_items.php</filename>
+	   <filename>views/category/tmpl/index.html</filename>
+	   <filename>views/category/view.feed.php</filename>
+	   <filename>views/category/view.html.php</filename>
+	   <filename>views/featured/index.html</filename>
+	   <filename>views/featured/metadata.xml</filename>
+	   <filename>views/featured/tmpl/default.php</filename>
+	   <filename>views/featured/tmpl/default.xml</filename>
+	   <filename>views/featured/tmpl/default_item.php</filename>
+	   <filename>views/featured/tmpl/default_links.php</filename>
+	   <filename>views/featured/tmpl/index.html</filename>
+	   <filename>views/featured/view.feed.php</filename>
+	   <filename>views/featured/view.html.php</filename>
+	   <filename>views/index.html</filename>
+	</files>
+	<!-- Front end Language File Copy Section -->
+	<languages folder="front/language">
+		<language tag="en-GB">en-GB/en-GB.com_multisitescontent.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.com_multisitescontent.ini</language>
+	</languages>
+
+  	<administration>
+		<!-- Administrator menus -->
+      <menu img="components/com_multisitescontent/images/multisitescontent_icon.gif">com_multisitescontent</menu>
+      <submenu>
+         <menu link="option=com_multisitescontent&amp;task=purgeCache" view="purgeCache" alt="Multi Sites Articles sharing/Purge all cache">com_multisitescontent_purgeCache</menu>
+         <menu link="option=com_multisitescontent&amp;task=usersmanual" view="usersmanual" alt="Multi Sites Articles sharing/Users Manual">com_multisitescontent_usersmanual</menu>
+         <menu link="option=com_multisitescontent&amp;task=about" view="about" alt="Multi Sites Articles sharing/About">com_multisitescontent_about</menu>
+      </submenu>
+      
+		<!-- Administrator files -->
+		<files folder="admin">
+		   <filename>admin.multisitescontent.php</filename>
+		   <filename>CHANGELOG.php</filename>
+		   <filename>classes/debug.php</filename>
+		   <filename>classes/http.php</filename>
+		   <filename>classes/index.html</filename>
+		   <filename>config.xml</filename>
+		   <filename>controller.php</filename>
+		   <filename>elements/article.php</filename>
+		   <filename>elements/author.php</filename>
+		   <filename>elements/category.php</filename>
+		   <filename>elements/index.html</filename>
+		   <filename>elements/section.php</filename>
+		   <filename>elements/site.php</filename>
+		   <filename>helper.php</filename>
+		   <filename>helpers/content.php</filename>
+		   <filename>helpers/html/contentadministrator.php</filename>
+		   <filename>helpers/html/index.html</filename>
+		   <filename>helpers/index.html</filename>
+		   <filename>images/btn_registration.gif</filename>
+		   <filename>images/index.html</filename>
+		   <filename>images/multisitescontent_icon.gif</filename>
+		   <filename>install.language_j16.php</filename>
+		   <filename>install.multisitescontent.php</filename>
+		   <filename>install.script.php</filename>
+		   <filename>js/article/default16.js</filename>
+		   <filename>js/article/index.html</filename>
+		   <filename>js/categories/default.js</filename>
+		   <filename>js/categories/index.html</filename>
+		   <filename>js/category/blog.js</filename>
+		   <filename>js/category/index.html</filename>
+		   <filename>js/index.html</filename>
+		   <filename>legacy.php</filename>
+		   <filename>LICENSE.php</filename>
+		   <filename>models/article.php</filename>
+		   <filename>models/article.xml</filename>
+		   <filename>models/articles.php</filename>
+		   <filename>models/feature.php</filename>
+		   <filename>models/featured.php</filename>
+		   <filename>models/fields/category.php</filename>
+		   <filename>models/fields/filters.php</filename>
+		   <filename>models/fields/index.html</filename>
+		   <filename>models/fields/modal/article.php</filename>
+		   <filename>models/fields/modal/index.html</filename>
+		   <filename>models/fields/site.php</filename>
+		   <filename>models/registration.php</filename>
+		   <filename>models/registration_inc.php</filename>
+		   <filename>views/articles/index.html</filename>
+		   <filename>views/articles/tmpl/index.html</filename>
+		   <filename>views/articles/tmpl/modal.php</filename>
+		   <filename>views/articles/view.html.php</filename>
+		   <filename>views/index.html</filename>
+		   <filename>views/registration/tmpl/index.html</filename>
+		   <filename>views/registration/tmpl/registration.php</filename>
+		   <filename>views/registration/view.php</filename>
+		   <filename>_j16/install.script.php</filename>
+		</files>
+		<!-- Administration Language File Copy Section -->
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_multisitescontent.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_multisitescontent.sys.ini</language>
+			<language tag="fr-FR">fr-FR/fr-FR.com_multisitescontent.ini</language>
+			<language tag="fr-FR">fr-FR/fr-FR.com_multisitescontent.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
+

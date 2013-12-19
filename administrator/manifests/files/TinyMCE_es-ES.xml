@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0" method="upgrade">
+	<name>TinyMCE Idioma ES</name>
+	<author>Equipo Joomla! Spanish : joomlaspanish.org</author>
+	<version>3.5.6</version>
+	<creationDate>26 Septiembre 2012</creationDate>
+	<copyright>(C) 2005-2012 Joomla! Spanish</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joomlaspanish@joomlaspanish.org</authorEmail>
+	<authorUrl>www.joomlaspanish.org</authorUrl>
+	<description><![CDATA[<a href="http://joomlaspanish.org" target="_blank"><img src="http://joomlaspanish.org/images/logo.png" width="360" height="62" alt="Joomlaspanish.org" /></a><br/>
+		<h3>La instalación del paquete de idioma ES TinyMCE 3.5.6 para Joomla 3.0 se ha completado con éxito</h3>
+        <div style="font-weight:normal">
+ 		No se olvide de seleccionar el idioma ES en el
+ 		<a href="index.php?option=com_plugins&view=plugins&filter_search=TinyMCE"><strong>gestor del Plugin TinyMCE</strong></a><br />
+ 		Si utiliza la detección automática, asegúrese de que estén instalados los paquetes de los distintos idiomas para TinyMCE correspondiente con los instalados en el propio Joomla!</div>
+		]]>
+	</description>
+
+	<!-- Fileset definition -->
+	<fileset>
+		<files target="media/editors">
+					<filename>tinymce/jscripts/tiny_mce/langs/es.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advhr/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advimage/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advlink/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/autosave/langs/es.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/emotions/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/fullpage/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/media/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/paste/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/searchreplace/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/style/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/table/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/template/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/advanced/langs/es.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/advanced/langs/es_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/simple/langs/es.js</filename>
+		</files>
+	</fileset>
+</extension>

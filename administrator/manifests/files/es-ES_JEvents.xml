@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.6" type="file" client="site" method="upgrade">
+<name>Spanish Translation for JEvents</name>
+<tag>es-ES</tag>
+<packagename>es-ES JEvents</packagename>
+<version>3.1.16</version>
+<creationdate>2013.11.06</creationdate>
+<author>Isidro Baquero y Carlos M. Cámara</author>
+<authoremail>carcam@gnumla.com</authoremail>
+<authorurl>www.gnumla.com</authorurl>
+<copyright>
+</copyright>
+<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+<description>Idioma español para JEvents</description>
+<fileset>
+<files folder="admin" target="administrator/language/es-ES">
+	<filename>es-ES.com_jevents.ini</filename>
+	<filename>es-ES.com_jevents.menu.ini</filename>
+	<filename>es-ES.com_jevents.sys.ini</filename>
+	<filename>es-ES.plg_finder_jevents.ini</filename>
+	<filename>es-ES.plg_finder_jevents.sys.ini</filename>
+	<filename>es-ES.plg_search_eventsearch.ini</filename>
+</files>
+<files folder="site" target="language/es-ES">
+	<filename>es-ES.com_jevents.ini</filename>
+</files>
+</fileset>
+</extension>

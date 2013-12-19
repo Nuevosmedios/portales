@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout hidden="true" title="Article Submission Layout">
+		<message>
+			<![CDATA[ARTICLE SUBMISSION LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>Article Submission Layout</name>
+		<description>ARTICLE SUBMISSION LAYOUT DESC</description>
+		<url addpath="/administrator/components/com_multisitescontent/elements">
+			<param name="site_id" type="site"     label="site" description="Select a website..." />
+		</url>
+		<params>
+		</params>
+	</state>
+</metadata>

@@ -1,0 +1,159 @@
+
+/* form.css */
+@import url(button.css);
+
+/* --- list --- */
+div.formList ul { margin: 0px; padding:0px; }
+div.formList li { list-style-type: none; list-style-image:none; list-style-position:inside; }
+
+/* --- delete --- */
+div.formDelete span.folder { color:red; }
+
+/* --- form --- */
+div.col-left-fr   { float:left; width:50%; }
+div.col-left-pad  { background: url(images/label-bg.jpg) #eff1ba repeat-y left top; margin-right: 10px; }
+div.col-right-fr  { float:right; width:50%; }
+
+div.icon-48-logo-jms2win { background-image:url("images/logo-jms2win.png"); }
+
+div.actionAll  select   { float:left; }
+
+div.formBlock-required,
+div.formBlock           { clear:both; }
+
+fieldset.localisation         { padding: 0px; }
+fieldset.localisation label   { float: none; }
+
+div.formField label,
+div.formLabel  { float:left; text-align:right; width:150px; padding-top:5px; }
+div.formField  { float:left; }
+
+div.current div.fieldRadio label,
+div.fieldRadio label  { float: left; clear: none; width: auto; min-width: 10px; text-align:left; margin-top: 2px; padding-left: 5px; padding-right: 10px; }
+
+div.fieldRadio,
+div.fieldCheckbox,
+div.fieldTextarea,
+div.formField input,
+div.fieldInput,
+div.formField .inputbox { float:left; }
+div.fieldTips           { float:left; }
+
+div.formFieldDefault,
+div.formField { padding-left:5px; }
+
+div.formFieldWithDefault   { float: left; }
+div.formFieldWithDefault div.formField .inputbox { float:left; }
+
+div.formFieldDefault ul { margin: 0px; padding:0px; }
+div.formFieldDefault li { list-style-type: none; list-style-image:none; list-style-position:inside; }
+
+div.formFieldDefault {
+	color: #050;
+	font-style: italic;
+}
+
+div.current div.formField select,
+div.current div.edit_unix select { margin-bottom: 0px; }
+
+
+/*---- col left ----- */
+
+
+/*---- col right ----- */
+
+/*- title - */
+
+div.multisites-form .radio input[type="radio"],
+div.multisites-form .checkbox input[type="checkbox"] { float: none; margin-left: 0px;
+}
+div.multisites-form .pane-sliders .panel { border:1px solid #CCCCCC; margin-bottom:3px; }
+
+div.multisites-form .pane-sliders .panel h3 a,
+div.multisites-form .pane-sliders .panel h3 { background-color:#f0f1d4; background-image:url("images/number-bg-close.jpg"); background-position:left; font-size:15px; font-weight:bold; color:#899f68; height:37px; background-repeat:no-repeat; padding:0px; padding:0px; margin: 0px; }
+div.multisites-form .pane-sliders .panel h3 a:hover,
+div.multisites-form .pane-sliders .panel h3:hover { background-color:#5d6e43; background-image:url("images/number-bg.jpg"); color:#fff; }
+
+div.multisites-form .pane-sliders .panel h3.pane-toggler-down,
+div.multisites-form .pane-sliders .panel h3.pane-toggler-down a,
+div.multisites-form .pane-sliders .panel h3.jpane-toggler-down,
+div.multisites-form .pane-sliders .panel h3.pane-toggler-down a:hover,
+div.multisites-form .pane-sliders .panel h3.pane-toggler-down:hover,
+div.multisites-form .pane-sliders .panel h3.jpane-toggler-down:hover { background-color:#525252; background-image:url("images/number-bg-down.jpg"); background-position:left; font-size:15px; font-weight:bold; color:#fff; height:37px; background-repeat:no-repeat; padding:0px; }
+div.multisites-form .pane-sliders .panel h3#settings-info,
+div.multisites-form .pane-sliders .panel h3#common-general { background-color:#525252; background-image:none; color:#fff; padding-left: 20px; line-height: 30px; }
+
+div.multisites-form .pane-toggler span.nbr,
+div.multisites-form .jpane-toggler span.nbr       { padding:0px; background-image:none; width:20px; float:left; color:#5d6e43; margin-right:3px; }
+div.multisites-form .pane-toggler span.nbr:hover,
+div.multisites-form .jpane-toggler span.nbr:hover { background-image:none; }
+
+div.multisites-form .pane-toggler span,
+div.multisites-form .jpane-toggler span           { background:transparent url(images/more-close.jpg) no-repeat scroll 5px 50%; background-position:right; width:97.4%; height:30px; display:block; padding-top:7px; float:left; padding-left:14px; }
+div.multisites-form .pane-toggler span:hover,
+div.multisites-form .jpane-toggler span:hover     { background:transparent url(images/more-hover.jpg) no-repeat scroll 5px 50%; background-position:right; }
+
+div.multisites-form .pane-toggler-down span.nbr,
+div.multisites-form .jpane-toggler-down span.nbr       { padding:0px; background-image:none; width:20px; float:left; color:#525252; margin-right:3px; }
+div.multisites-form .pane-toggler-down span.nbr:hover,
+div.multisites-form .jpane-toggler-down span.nbr:hover { background-image:none; }
+
+div.multisites-form .pane-toggler-down span,
+div.multisites-form .jpane-toggler-down span       { background:transparent url(images/min-close-down.jpg) no-repeat scroll 5px 50%; background-position:right; width:97.4%; height:30px; display:block; padding-top:7px; float:left; padding-left:14px; }
+div.multisites-form .pane-toggler-down span:hover,
+div.multisites-form .jpane-toggler-down span:hover { background:transparent url(images/min-hover-down.jpg) no-repeat scroll 5px 50%; background-position:right; }
+
+
+div.fromLongitude { float:left; width: 50%; }
+div.toLongitude   { float:left; width: 50%; }
+
+x-div.fromLongitude div.formLabel  { width:142px; }
+x-div.toLongitude   div.formLabel  { width:100px; }
+
+/*- content - */
+div.multisites-form #continents_frame { border-bottom:solid; border-width:1px; border-color:#fff;  }
+div.multisites-form .pane-slider  .formField,
+div.multisites-form .jpane-slider .formField  { height:100%; float:left; padding-right:10px; padding-left:5px; padding-top:5px; padding-bottom:5px; }
+
+div.multisites-form .pane-slider,
+div.multisites-form .jpane-slider      { background: url(images/label-bg.jpg) #d7e8bd repeat-y left top; }
+div.multisites-form .formBlock         { border-bottom: 1px #FFF solid; }
+
+div.multisites-form .pane-slider  div.fromLongitude div.formField,
+div.multisites-form .jpane-slider div.fromLongitude div.formField,
+div.multisites-form .pane-slider  div.toLongitude   div.formField,
+div.multisites-form .jpane-slider div.toLongitude   div.formField  { width: auto; }
+
+
+div.multisites-form fieldset.localisation { width: 100%; border: none; margin-bottom: 0px; }
+div.multisites-form fieldset.localisation legend { display: none; }
+
+
+div#quota_frame div.padding                  { padding: 0px; padding-top: 10px; }
+div#settings-values fieldset.quota           { width: 100%; border: none; padding: 0px; }
+div.multisites-form fieldset.quota legend    { padding-left: 155px; width: 100%; }
+div#settings-values fieldset.quota div.left  { float: left; }
+div#settings-values fieldset.quota div.right { float: left; margin-left: 20px; }
+
+div#settings-values div.maxmind_city div.left,
+div#settings-values div.maxmind_icc  div.left    { float: left; }
+
+div#settings-values div.maxmind_city div.right,
+div#settings-values div.maxmind_city div.right div.date,
+div#settings-values div.maxmind_city div.right div.download_button,
+div#settings-values div.maxmind_icc  div.right div.date,
+div#settings-values div.maxmind_icc  div.right div.download_button,
+div#settings-values div.maxmind_icc  div.right   { float: left; margin-left: 10px; }
+
+div#settings-values div.maxmind_icc  div.right div.date,
+div#settings-values div.maxmind_city div.right div.date  { min-width: 110px; }
+div#settings-values div.maxmind_city div.right div.mbstring-error { clear:left; color: #F00; text-decoration:blink; }
+
+/*- Tool Tips (J3.x)- */
+.tip-wrap, .tool-tip, .tip { max-width: 800px !important; }
+
+/* J3.0 */
+div#multisite-manage   input,
+div#multisite-template input,
+div#settings-values    input { width: auto; }
+

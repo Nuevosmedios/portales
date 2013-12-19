@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="1.6" method="upgrade" client="site">
+    <name>Phoca Download</name>
+    <author>Diego Hagopian</author>
+    <authorurl></authorurl>
+	<copyright>Copyright</copyright>
+	<license></license>
+    <version></version>
+    <creationDate>26 June 2013</creationDate>
+    <description><![CDATA[Idioma Español para Phoca Download 3.0 ]]></description>
+	<fileset>
+		<files folder="backend" target="administrator/language/es-ES">
+			<filename>es-ES.com_phocadownload.ini</filename>
+			<filename>es-ES.com_phocadownload.sys.ini</filename>
+		</files>
+		<files folder="frontend" target="language/es-ES">
+			<filename>es-ES.com_phocadownload.ini</filename>
+			<filename>es-ES.com_phocadownload.sys.ini</filename>
+		</files>
+	</fileset>
+</extension>
