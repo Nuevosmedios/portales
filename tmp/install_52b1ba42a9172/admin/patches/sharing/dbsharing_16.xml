@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<params>
+		<param name="dbsh_UserSharing" type="radio" default="none" 
+		                               label="TEMPLATE_VIEW_EDT_SHR_USERSHARING" 
+		                               description="TEMPLATE_VIEW_EDT_SHR_USERSHARING_DESC" 
+		                               icon="dbsharing.gif#6" >
+				<option value="none">TEMPLATE_VIEW_EDT_SHR_NOSHARE</option>
+				<option value="Joomla" description="TEMPLATE_VIEW_EDT_SHR_JUSERS_DESCR">TEMPLATE_VIEW_EDT_SHR_JUSERS<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+            </tables></option>
+				<option value="VMUser" condition="{root}/administrator/components/com_virtuemart"
+				        description="TEMPLATE_VIEW_EDT_SHR_VMUSERS_DESCR">TEMPLATE_VIEW_EDT_SHR_VMUSERS<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__vm_user_info" description="VirtueMart Users shopping info" />
+				</tables></option>
+		</param>
+		<param name="dbsh_AcyMailing" type="radio" default="none"
+		                      condition="{root}/administrator/components/com_acymailing"
+                            icon="dbsharing.gif#47"
+		                      label="AcyMailing" description="Share all the AcyMailing tables" >
+				<option value="none">TEMPLATE_VIEW_EDT_SHR_NOSHARE</option>
+				<option value="on" description="Share all the AcyMailing tables and its dependencies">Sharing all<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__acymailing_%" description="All the AcyMailing tables" />
+                  <table name="#__comprofiler%" description="All the Community Builder tables" />
+                  <table name="#__community_%"  description="All the JomSocial tables" />
+                  <table name="#__vm_%"         description="All the VirtueMart tables" />
+            </tables></option>
+				<option value="noVM" description="Share all the AcyMailing tables excluding VirtueMart">Sharing all except VirtueMart<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__acymailing_%" description="All the AcyMailing tables" />
+                  <table name="#__comprofiler%" description="All the Community Builder tables" />
+                  <table name="#__community_%"  description="All the JomSocial tables" />
+            </tables></option>
+				<option value="VMUsers" description="Share all the AcyMailing tables excluding VirtueMart - present risks">Sharing all with limited VirtueMart (only the VM Users) - All the AcyMailing plugins that import content (except user dedtailes shoud be desactivated<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__acymailing_%" description="All the AcyMailing tables" />
+                  <table name="#__comprofiler%" description="All the Community Builder tables" />
+                  <table name="#__community_%"  description="All the JomSocial tables" />
+                  <table name="#__vm_user_info" description="VirtueMart Users shopping info" />
+            </tables></option>
+		</param>
+		<param name="dbsh_CB" type="checkbox" 
+		                      condition="{root}/administrator/components/com_comprofiler"
+                            icon="dbsharing.gif#10"
+		                      label="Community Builder" description="Share all the Community Builder tables" >
+				<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__comprofiler%" description="All the community builder tables" />
+                  <table name="#__cbsubs_%"     description="All the CBSubs tables" />
+                  <table name="#__groupjive_%"  description="All the GroupJive tables" />
+				</tables>
+		</param>
+		<param name="dbsh_EasyBlog" type="radio" default="none"
+		                      condition="{root}/administrator/components/com_easyblog"
+                            icon="dbsharing.gif#76"
+		                      label="EasyBlog" description="Sharing of the EasyBlog tables" >
+				<option value="none">TEMPLATE_VIEW_EDT_SHR_NOSHARE</option>
+				<option value="on" description="Share all the EasyBlog tables">Sharing all<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__easyblog_%"   description="All the EasyBlog tables" />
+            </tables></option>
+				<option value="noConfig" description="Share all the EasyBlog tables except the configuration">Sharing all except the configuration<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__easyblog_%"   description="All the EasyBlog tables" />
+                  <tableexcluded name="#__easyblog_configs" description="Exclude the configuration" />
+            </tables></option>
+		</param>
+		<param name="dbsh_hikashop" type="checkbox" 
+		                      condition="{root}/administrator/components/com_hikashop"
+                            icon="dbsharing.gif#70"
+		                      label="Hika Shop"               description="Share all the Hika Shop tables" >
+				<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__hikashop_%"               description="All the HikaShop tables" />
+				</tables>
+		</param>
+		<param name="dbsh_ComAnswer" type="checkbox" 
+		                      condition="{root}/administrator/components/com_communityanswers"
+                            icon="dbsharing.gif#73"
+		                      label="Community Answers"   description="Share all the Community Answers tables" >
+				<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__answers_%"    description="All the Community Answers tables" />
+				</tables>
+		</param>
+		<param name="dbsh_ComPolls" type="checkbox" 
+		                      condition="{root}/administrator/components/com_communitypolls"
+                            icon="dbsharing.gif#74"
+		                      label="Community Polls"   description="Share all the Community Polls tables" >
+				<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__jcp_%"        description="All the Community Polls tables" />
+				</tables>
+		</param>
+		<param name="dbsh_JBJobs" type="checkbox" 
+		                      condition="{root}/administrator/components/com_jbjobs"
+                            icon="dbsharing.gif#77"
+		                      label="JoomBah Jobs"   description="Share all the JoomBah Jobs tables" >
+				<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__jbjobs_%"        description="All the JoomBah Jobs tables" />
+                  <table name="#__jb_messaging"    description="All the JoomBah Messaging" />
+				</tables>
+		</param>
+		<param name="dbsh_JobBoard" type="checkbox" 
+		                      condition="{root}/administrator/components/com_jobboard"
+                            icon="dbsharing.gif#75"
+		                      label="JobBoard" description="Share all the JobBoard tables" >
+				<tables>
+                  <table name="#__jobboard_%"   description="All the JobBoard tables" />
+				</tables>
+		</param>
+		<param name="dbsh_JomSocial" type="radio" default="none"
+		                      condition="{root}/administrator/components/com_community"
+                            icon="dbsharing.gif#23"
+		                      label="JomSocial"   description="Share all the JomSocial tables" >
+				<option value="none">TEMPLATE_VIEW_EDT_SHR_NOSHARE</option>
+				<option value="on" description="Share all the JomSocial tables">Sharing all<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__session" />
+                  <table name="#__core_acl_%"   description="Access Control List" />
+                  <table name="#__community_%"  description="All the JomSocial tables" />
+            </tables></option>
+				<option value="noConfig" description="Share all the JomSocial tables except the configuration">Sharing all except the configuration<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__session" />
+                  <table name="#__core_acl_%"   description="Access Control List" />
+                  <table name="#__community_%"  description="All the JomSocial tables" />
+                  <tableexcluded name="#__community_config" description="Exclude the configuration" />
+            </tables></option>
+		</param>
+		<param name="dbsh_K2" type="checkbox" 
+		                      condition="{root}/administrator/components/com_k2"
+                            icon="dbsharing.gif#21"
+		                      label="K2"  description="Share all the K2 tables" >
+				<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__session" />
+                  <table name="#__core_acl_%"   description="Access Control List" />
+                  <table name="#__k2_%"         description="All the K2 tables" />
+				</tables>
+		</param>
+		<param name="dbsh_Kunena" type="checkbox" 
+		                      condition="{root}/administrator/components/com_kunena"
+                            icon="dbsharing.gif#41"
+		                      label="Kunena Forum"  description="Share all the Kunena Forum tables" >
+				<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__kunena_%"     description="All the Kunena 1.6 Forum tables" />
+				</tables>
+		</param>
+		<param name="dbsh_SOBIPro" type="checkbox" 
+		                      condition="{root}/administrator/components/com_sobipro"
+                            icon="dbsharing.gif#70"
+		                      label="SOBI Pro"    description="Share all SOBI Pro" >
+				<tables>
+                  <table name="#__users"        description="Joomla users" />
+                  <table name="#__user_%"       description="Joomla user" />
+                  <table name="#__usergroups"   description="Joomla user groups" />
+                  <table name="#__usergroup_%"  description="Joomla user groups rules" />
+                  <table name="#__session" />
+                  <table name="#__viewlevels%"  description="User Access Level" />
+                  <table name="#__sobipro_%"    description="All the SOBI Pro tables" />
+				</tables>
+		</param>
+	</params>
+</form>

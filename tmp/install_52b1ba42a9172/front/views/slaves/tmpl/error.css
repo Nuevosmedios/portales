@@ -1,0 +1,17 @@
+
+#multisites-error                { color:#F00; width: 100%; }
+#multisites-error div.err-bg     { background-color: #9d9d9d; }
+#multisites-error div.err-left   { background: url(images/err/left.jpg) repeat-y left top; }
+#multisites-error div.err-right  { background: url(images/err/right.jpg) repeat-y right top; }
+#multisites-error div.err-top    { background: url(images/err/top.png) repeat-x left top; }
+#multisites-error div.err-tl     { background: url(images/err/tl.jpg) no-repeat left top; }
+#multisites-error div.err-tr     { background: url(images/err/tr.jpg) no-repeat right top; }
+#multisites-error div.err-bottom { background: url(images/err/bottom.png) repeat-x left bottom; }
+#multisites-error div.err-bl     { background: url(images/err/bl.jpg) no-repeat left bottom; }
+#multisites-error div.err-br     { background: url(images/err/br.jpg) no-repeat right bottom; }
+
+#multisites-error-type-error           { background: url(images/err/types/error.png) no-repeat 15px 13px; min-height: 90px; }
+#multisites-error div.err-type         { padding-left: 93px; padding-top: 10px; }
+#multisites-error div.err-type-title   { background: url(images/err/type_title_bg.png) no-repeat left top; height: 28px; padding-left: 15px; font-size: 18px; line-height: 28px; margin-bottom: 10px; color: #FFF; text-transform: uppercase; }
+#multisites-error div.err-Msg          { padding-left: 15px; color: #FFF; font-size: 12px; }
+

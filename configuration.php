@@ -4,8 +4,8 @@ class JConfig {
 	public $offline_message = 'Este sitio está cerrado por tareas de mantenimiento.<br /> Por favor, inténtelo nuevamente más tarde.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'Políticos';
-	public $editor = 'tinymce';
+	public $sitename = 'politicos';
+	public $editor = 'jce';
 	public $captcha = '0';
 	public $list_limit = '20';
 	public $access = '1';
@@ -16,9 +16,9 @@ class JConfig {
 	public $user = 'root';
 	public $password = '123456';
 	public $db = 'politicos';
-	public $dbprefix = 'ee6po_';
+	public $dbprefix = 'ziax6_';
 	public $live_site = '';
-	public $secret = '3ujcgGWhgOUsSZnI';
+	public $secret = 'kEss52BquHOp0pqz';
 	public $gzip = '0';
 	public $error_reporting = 'default';
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
@@ -32,7 +32,7 @@ class JConfig {
 	public $mailonline = '1';
 	public $mailer = 'mail';
 	public $mailfrom = 'pablo.pantoja@nuevosmedios.ws';
-	public $fromname = 'Políticos';
+	public $fromname = 'politicos';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';
@@ -43,7 +43,7 @@ class JConfig {
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
-	public $MetaDesc = 'Políticos';
+	public $MetaDesc = '';
 	public $MetaKeys = '';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
