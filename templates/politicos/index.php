@@ -30,20 +30,21 @@
 		<div id="top" class="row"><div class="container"><div class="pull-right">Faltan x días</div></div></div>
 		<div id="top-bar" class="row">
 			<div class="container">
-				<div class="col-md-7">
+				<div class="col-md-9">
 					<div id="logo"><jdoc:include type="modules" name="logo" style="none" /></div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-3">
 					<div id="menu-top-bar"><jdoc:include type="modules" name="menu-top-bar" style="none" /></div>
 				</div>
 			</div>
 		</div>
 		<div class="row" id="content-container">
 			<div class="container" id="content">
-				<div class="row" id="content-back">
-					<?php if (JRequest::getVar('view') == 'featured'):?>
-						<div class="" id="content-wrapper">
-							<div class="">
+				<div class="row <?php if (JRequest::getVar('view') != 'featured'):?>alpha40<?php endif; ?>" id="content-back">
+					<div id="content-wrapper">
+						<?php if (JRequest::getVar('view') == 'featured'):?>
+							<!-- Home Page -->
+							<div>
 								<div class="col-md-9"></div>
 								<div class="col-md-3">
 									<div id="menu">
@@ -59,20 +60,21 @@
 									<jdoc:include type="modules" name="right" style="xhtml" />
 								</div>
 							</div>
-							<div class="overflow-hidden clear" id="banner-senado">
-								<div class="col-md-9 text-center"><jdoc:include type="modules" name="footlink1" style="none" /></div>
-								<div class="col-md-3 text-center"><jdoc:include type="modules" name="footlink2" style="none" /></div>
+							<!-- End Home Page -->
+						<?php else: ?>
+							<!-- Content -->
+							<div id="breadcrumbs"><jdoc:include type="modules" name="breadcrumbs" style="none" /></div>
+							<div class="container" id="inner-content-wrapper">
+								<div class="col-md-9 top-shadow" id="inner-left"><jdoc:include type="component" /></div>
+								<div class="col-md-3 top-shadow" id="inner-right"><jdoc:include type="modules" name="right" style="xhtml" /></div>
 							</div>
+							<!-- End Content -->
+						<?php endif; ?>
+						<div class="overflow-hidden clear" id="banner-senado">
+							<div class="col-md-9 text-center"><jdoc:include type="modules" name="footlink1" style="none" /></div>
+							<div class="col-md-3 text-center"><jdoc:include type="modules" name="footlink2" style="none" /></div>
 						</div>
-					<?php else: ?>
-						<div class="" id="">
-							<div class="" id="breadcrumbs"><jdoc:include type="modules" name="breadcrumbs" style="none" /></div>
-							<div class="clear">
-								<div class="col-md-9"><jdoc:include type="component" /></div>
-								<div class="col-md-3"><jdoc:include type="modules" name="right" style="xhtml" /></div>
-							</div>
-						</div>
-					<?php endif; ?>
+					</div>
 				</div>
 			</div>
 			<div class="container" id="footer-container">
