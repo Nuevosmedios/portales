@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.8
+-- version 3.5.7
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 23-12-2013 a las 21:44:26
--- Versión del servidor: 5.6.13
--- Versión de PHP: 5.4.17
+-- Servidor: localhost
+-- Tiempo de generación: 30-12-2013 a las 19:54:43
+-- Versión del servidor: 5.5.29
+-- Versión de PHP: 5.4.10
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `politicos`
@@ -26,7 +20,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `ziax6_assets`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_assets` (
+CREATE TABLE `ziax6_assets` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set parent.',
   `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
@@ -39,73 +33,78 @@ CREATE TABLE IF NOT EXISTS `ziax6_assets` (
   UNIQUE KEY `idx_asset_name` (`name`),
   KEY `idx_lft_rgt` (`lft`,`rgt`),
   KEY `idx_parent_id` (`parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=66 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_assets`
 --
 
 INSERT INTO `ziax6_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 0, 119, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(1, 0, 0, 129, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
 (5, 1, 9, 10, 1, 'com_checkin', 'com_checkin', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
 (6, 1, 11, 12, 1, 'com_config', 'com_config', '{}'),
 (7, 1, 13, 16, 1, 'com_contact', 'com_contact', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(8, 1, 17, 24, 1, 'com_content', 'com_content', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
-(9, 1, 25, 26, 1, 'com_cpanel', 'com_cpanel', '{}'),
-(10, 1, 27, 28, 1, 'com_installer', 'com_installer', '{"core.admin":[],"core.manage":{"7":0},"core.delete":{"7":0},"core.edit.state":{"7":0}}'),
-(11, 1, 29, 30, 1, 'com_languages', 'com_languages', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(12, 1, 31, 32, 1, 'com_login', 'com_login', '{}'),
-(13, 1, 33, 34, 1, 'com_mailto', 'com_mailto', '{}'),
-(14, 1, 35, 36, 1, 'com_massmail', 'com_massmail', '{}'),
-(15, 1, 37, 38, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
-(16, 1, 39, 40, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(17, 1, 41, 42, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
-(18, 1, 43, 82, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(19, 1, 83, 86, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(20, 1, 87, 88, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
-(21, 1, 89, 90, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
-(22, 1, 91, 92, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(23, 1, 93, 94, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(24, 1, 95, 98, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(25, 1, 99, 102, 1, 'com_weblinks', 'com_weblinks', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
-(26, 1, 103, 104, 1, 'com_wrapper', 'com_wrapper', '{}'),
-(27, 8, 18, 23, 2, 'com_content.category.2', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(8, 1, 17, 32, 1, 'com_content', 'com_content', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
+(9, 1, 33, 34, 1, 'com_cpanel', 'com_cpanel', '{}'),
+(10, 1, 35, 36, 1, 'com_installer', 'com_installer', '{"core.admin":[],"core.manage":{"7":0},"core.delete":{"7":0},"core.edit.state":{"7":0}}'),
+(11, 1, 37, 38, 1, 'com_languages', 'com_languages', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(12, 1, 39, 40, 1, 'com_login', 'com_login', '{}'),
+(13, 1, 41, 42, 1, 'com_mailto', 'com_mailto', '{}'),
+(14, 1, 43, 44, 1, 'com_massmail', 'com_massmail', '{}'),
+(15, 1, 45, 46, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
+(16, 1, 47, 48, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(17, 1, 49, 50, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
+(18, 1, 51, 92, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(19, 1, 93, 96, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(20, 1, 97, 98, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
+(21, 1, 99, 100, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
+(22, 1, 101, 102, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(23, 1, 103, 104, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(24, 1, 105, 108, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(25, 1, 109, 112, 1, 'com_weblinks', 'com_weblinks', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
+(26, 1, 113, 114, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(27, 8, 18, 19, 2, 'com_content.category.2', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(30, 19, 84, 85, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(31, 25, 100, 101, 2, 'com_weblinks.category.6', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(32, 24, 96, 97, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(33, 1, 105, 106, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(34, 1, 107, 108, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(35, 1, 109, 110, 1, 'com_tags', 'com_tags', '{"core.admin":[],"core.manage":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(36, 1, 111, 112, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
-(37, 1, 113, 114, 1, 'com_ajax', 'com_ajax', '{}'),
-(38, 1, 115, 116, 1, 'com_postinstall', 'com_postinstall', '{}'),
-(39, 18, 44, 45, 2, 'com_modules.module.1', 'Main Menu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(40, 18, 46, 47, 2, 'com_modules.module.2', 'Login', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(41, 18, 48, 49, 2, 'com_modules.module.3', 'Popular Articles', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(42, 18, 50, 51, 2, 'com_modules.module.4', 'Recently Added Articles', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(43, 18, 52, 53, 2, 'com_modules.module.8', 'Toolbar', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(44, 18, 54, 55, 2, 'com_modules.module.9', 'Quick Icons', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(45, 18, 56, 57, 2, 'com_modules.module.10', 'Logged-in Users', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(46, 18, 58, 59, 2, 'com_modules.module.12', 'Admin Menu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(47, 18, 60, 61, 2, 'com_modules.module.13', 'Admin Submenu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(48, 18, 62, 63, 2, 'com_modules.module.14', 'User Status', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(49, 18, 64, 65, 2, 'com_modules.module.15', 'Title', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(50, 18, 66, 67, 2, 'com_modules.module.16', 'Login Form', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(51, 18, 68, 69, 2, 'com_modules.module.17', 'Breadcrumbs', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(52, 18, 70, 71, 2, 'com_modules.module.79', 'Multilanguage status', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(53, 18, 72, 73, 2, 'com_modules.module.86', 'Joomla Version', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(54, 18, 74, 75, 2, 'com_modules.module.87', 'Logo', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(55, 1, 117, 118, 1, 'com_jce', 'jce', '{}'),
-(56, 27, 19, 20, 3, 'com_content.article.1', 'Perfil de Jorge Eliécer', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(57, 27, 21, 22, 3, 'com_content.article.2', 'Jorge propone para el 2014', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(58, 18, 76, 77, 2, 'com_modules.module.88', 'Banner senado', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(59, 18, 78, 79, 2, 'com_modules.module.89', 'Banner Partido de la U', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(60, 18, 80, 81, 2, 'com_modules.module.90', 'Propuestas de Campaña:', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}');
+(30, 19, 94, 95, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(31, 25, 110, 111, 2, 'com_weblinks.category.6', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(32, 24, 106, 107, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(33, 1, 115, 116, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(34, 1, 117, 118, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(35, 1, 119, 120, 1, 'com_tags', 'com_tags', '{"core.admin":[],"core.manage":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(36, 1, 121, 122, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
+(37, 1, 123, 124, 1, 'com_ajax', 'com_ajax', '{}'),
+(38, 1, 125, 126, 1, 'com_postinstall', 'com_postinstall', '{}'),
+(39, 18, 52, 53, 2, 'com_modules.module.1', 'Main Menu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(40, 18, 54, 55, 2, 'com_modules.module.2', 'Login', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(41, 18, 56, 57, 2, 'com_modules.module.3', 'Popular Articles', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(42, 18, 58, 59, 2, 'com_modules.module.4', 'Recently Added Articles', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(43, 18, 60, 61, 2, 'com_modules.module.8', 'Toolbar', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(44, 18, 62, 63, 2, 'com_modules.module.9', 'Quick Icons', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(45, 18, 64, 65, 2, 'com_modules.module.10', 'Logged-in Users', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(46, 18, 66, 67, 2, 'com_modules.module.12', 'Admin Menu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(47, 18, 68, 69, 2, 'com_modules.module.13', 'Admin Submenu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(48, 18, 70, 71, 2, 'com_modules.module.14', 'User Status', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(49, 18, 72, 73, 2, 'com_modules.module.15', 'Title', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(50, 18, 74, 75, 2, 'com_modules.module.16', 'Login Form', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(51, 18, 76, 77, 2, 'com_modules.module.17', 'Breadcrumbs', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(52, 18, 78, 79, 2, 'com_modules.module.79', 'Multilanguage status', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(53, 18, 80, 81, 2, 'com_modules.module.86', 'Joomla Version', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(54, 18, 82, 83, 2, 'com_modules.module.87', 'Logo', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(55, 1, 127, 128, 1, 'com_jce', 'jce', '{}'),
+(56, 61, 23, 24, 3, 'com_content.article.1', 'Perfil de Jorge Eliécer', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(57, 61, 21, 22, 3, 'com_content.article.2', 'Jorge propone para el 2014', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(58, 18, 84, 85, 2, 'com_modules.module.88', 'Banner senado', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(59, 18, 86, 87, 2, 'com_modules.module.89', 'Banner Partido de la U', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(60, 18, 88, 89, 2, 'com_modules.module.90', 'Propuestas de Campaña:', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(61, 8, 20, 25, 2, 'com_content.category.8', 'Jorge Tamayo', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(62, 8, 26, 31, 2, 'com_content.category.9', 'Noticias', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(63, 62, 27, 28, 3, 'com_content.article.3', 'Así se arman', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(64, 62, 29, 30, 3, 'com_content.article.4', 'La organización política nueva generación', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(65, 18, 90, 91, 2, 'com_modules.module.91', 'Redes Sociales', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}');
 
 -- --------------------------------------------------------
 
@@ -113,7 +112,7 @@ INSERT INTO `ziax6_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 -- Estructura de tabla para la tabla `ziax6_associations`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_associations` (
+CREATE TABLE `ziax6_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',
   `context` varchar(50) NOT NULL COMMENT 'The context of the associated item.',
   `key` char(32) NOT NULL COMMENT 'The key for the association computed from an md5 on associated ids.',
@@ -127,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_associations` (
 -- Estructura de tabla para la tabla `ziax6_banners`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_banners` (
+CREATE TABLE `ziax6_banners` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` int(11) NOT NULL DEFAULT '0',
   `type` int(11) NOT NULL DEFAULT '0',
@@ -176,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_banners` (
 -- Estructura de tabla para la tabla `ziax6_banner_clients`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_banner_clients` (
+CREATE TABLE `ziax6_banner_clients` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
   `contact` varchar(255) NOT NULL DEFAULT '',
@@ -202,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_banner_clients` (
 -- Estructura de tabla para la tabla `ziax6_banner_tracks`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_banner_tracks` (
+CREATE TABLE `ziax6_banner_tracks` (
   `track_date` datetime NOT NULL,
   `track_type` int(10) unsigned NOT NULL,
   `banner_id` int(10) unsigned NOT NULL,
@@ -219,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_banner_tracks` (
 -- Estructura de tabla para la tabla `ziax6_categories`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_categories` (
+CREATE TABLE `ziax6_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -255,20 +254,22 @@ CREATE TABLE IF NOT EXISTS `ziax6_categories` (
   KEY `idx_left_right` (`lft`,`rgt`),
   KEY `idx_alias` (`alias`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_categories`
 --
 
 INSERT INTO `ziax6_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `extension`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `modified_user_id`, `modified_time`, `hits`, `language`, `version`) VALUES
-(1, 0, 0, 0, 13, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
+(1, 0, 0, 0, 17, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 (2, 27, 1, 1, 2, 1, 'uncategorised', 'com_content', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 (3, 28, 1, 3, 4, 1, 'uncategorised', 'com_banners', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":"","foobar":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 (4, 29, 1, 5, 6, 1, 'uncategorised', 'com_contact', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 (5, 30, 1, 7, 8, 1, 'uncategorised', 'com_newsfeeds', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 (6, 31, 1, 9, 10, 1, 'uncategorised', 'com_weblinks', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
-(7, 32, 1, 11, 12, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1);
+(7, 32, 1, 11, 12, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
+(8, 61, 1, 13, 14, 1, 'jorge-tamayo', 'com_content', 'Jorge Tamayo', 'jorge-tamayo', '', 'Publicaciones relacionadas a Jorge Tamayo', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 205, '2013-12-27 16:21:24', 0, '0000-00-00 00:00:00', 0, '*', 1),
+(9, 62, 1, 15, 16, 1, 'noticias', 'com_content', 'Noticias', 'noticias', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 205, '2013-12-27 16:24:23', 0, '0000-00-00 00:00:00', 0, '*', 1);
 
 -- --------------------------------------------------------
 
@@ -276,7 +277,7 @@ INSERT INTO `ziax6_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `le
 -- Estructura de tabla para la tabla `ziax6_contact_details`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_contact_details` (
+CREATE TABLE `ziax6_contact_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -337,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_contact_details` (
 -- Estructura de tabla para la tabla `ziax6_content`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_content` (
+CREATE TABLE `ziax6_content` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
   `title` varchar(255) NOT NULL DEFAULT '',
@@ -377,15 +378,17 @@ CREATE TABLE IF NOT EXISTS `ziax6_content` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_content`
 --
 
 INSERT INTO `ziax6_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
-(1, 56, 'Perfil de Jorge Eliécer', 'perfil-de-jorge-eliecer', 'Jorge Eliécer', '', 1, 2, '2013-12-18 17:21:27', 205, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-12-18 17:21:27', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 1, '', '', 1, 19, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(2, 57, 'Jorge propone para el 2014', 'jorge-propone-para-el-2014', 'Jorge propone', '', 1, 2, '2013-12-18 17:29:39', 205, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-12-18 17:29:39', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
+(1, 56, 'Perfil de Jorge Eliécer', 'perfil-de-jorge-eliecer', 'Jorge Eliécer', '', 1, 8, '2013-12-18 17:21:27', 205, '', '2013-12-27 16:27:52', 205, 0, '0000-00-00 00:00:00', '2013-12-18 17:21:27', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 2, 1, '', '', 1, 69, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
+(2, 57, 'Jorge propone para el 2014', 'jorge-propone-para-el-2014', 'Jorge propone', '', 1, 8, '2013-12-18 17:29:39', 205, '', '2013-12-27 16:27:40', 205, 0, '0000-00-00 00:00:00', '2013-12-18 17:29:39', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 2, 0, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
+(3, 63, 'Así se arman', 'asi-se-arman', '<h1>Así se arman las listas en el Valle para las elecciones de Congreso</h1>\r\nAunque ya la mayoría de los partidos tienen definidas sus listas para el Congreso, hay otros que los cogió la campaña sin candidatos.<br /><br /><img src="images/Insumos/Noticias/noticias.png" alt="Noticias" style="float: left;" />&nbsp;El Partido de la U espera seguir siendo la colectividad mayoritaria en el departamento.<br />Las cartas con las que esperan conservar o aumentar los tres escaños que tienen en Cámara son: Juan Carlos Martínez Gutiérrez, quien estuvo en la campaña pasada con Roy Barreras; Rafael Palau, exalcalde de Tuluá; el exconcejal de Cali Jorge Eliécer Tamayo y por Palmira sería candidato Elberth Díaz.<br />Por el sector que dirige el congresista Roy Barreras, finalmente se decidió que sería él quien aspire nuevamente al Senado y no su esposa, como lo había anunciado meses atrás.<br /><br /><br /><br /><br />', '', 1, 9, '2013-12-30 14:02:42', 205, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-12-30 14:02:42', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 1, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 1, '*', ''),
+(4, 64, 'La organización política nueva generación', 'la-organizacion-politica-nueva-generacion', '<h1>LA ORGANIZACIÓN POLÍTICA NUEVA GENERACIÓN, ORIENTADA POR DILIAN FRANCISCA TORO, PRESENTÓ LA AGENDA LEGISLATIVA PARA EL PERIODO 2014-1018.</h1>\r\n<img src="images/Insumos/Noticias/noticias.png" alt="noticias" style="float: left;" />Son siete candidatos vallecaucanos, seis de ellos aspirantes a la Cámara, al lado de ROOSVELT RODRÍGUEZ al Senado, quienes trabajarán por la agenda legislativa dedicada a la paz, la justicia, el empleo, la salud, el crecimiento económico y la educación, entre otros temas que aportarán significativamente al progreso de nuestro país.<br /><br />los Candidatos a la Cámara son ELBERT DÍAZ, JORGE E. TAMAYO, ARMANDO ROA, JUAN CARLOS MARTINEZ, Parlamentario actual,RAFAEL PALAU, Y ESPERANZA DELGADO.<br />', '', 1, 9, '2013-12-30 14:10:15', 205, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-12-30 14:10:15', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"...leer m\\u00e1s","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 1, '*', '');
 
 -- --------------------------------------------------------
 
@@ -393,7 +396,7 @@ INSERT INTO `ziax6_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `f
 -- Estructura de tabla para la tabla `ziax6_contentitem_tag_map`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_contentitem_tag_map` (
+CREATE TABLE `ziax6_contentitem_tag_map` (
   `type_alias` varchar(255) NOT NULL DEFAULT '',
   `core_content_id` int(10) unsigned NOT NULL COMMENT 'PK from the core content table',
   `content_item_id` int(11) NOT NULL COMMENT 'PK from the content type table',
@@ -414,11 +417,19 @@ CREATE TABLE IF NOT EXISTS `ziax6_contentitem_tag_map` (
 -- Estructura de tabla para la tabla `ziax6_content_frontpage`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_content_frontpage` (
+CREATE TABLE `ziax6_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`content_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `ziax6_content_frontpage`
+--
+
+INSERT INTO `ziax6_content_frontpage` (`content_id`, `ordering`) VALUES
+(3, 2),
+(4, 1);
 
 -- --------------------------------------------------------
 
@@ -426,7 +437,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_content_frontpage` (
 -- Estructura de tabla para la tabla `ziax6_content_rating`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_content_rating` (
+CREATE TABLE `ziax6_content_rating` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `rating_sum` int(10) unsigned NOT NULL DEFAULT '0',
   `rating_count` int(10) unsigned NOT NULL DEFAULT '0',
@@ -440,7 +451,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_content_rating` (
 -- Estructura de tabla para la tabla `ziax6_content_types`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_content_types` (
+CREATE TABLE `ziax6_content_types` (
   `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type_title` varchar(255) NOT NULL DEFAULT '',
   `type_alias` varchar(255) NOT NULL DEFAULT '',
@@ -451,7 +462,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_content_types` (
   `content_history_options` varchar(5120) DEFAULT NULL COMMENT 'JSON string for com_contenthistory options',
   PRIMARY KEY (`type_id`),
   KEY `idx_alias` (`type_alias`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10000 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_content_types`
@@ -480,7 +491,7 @@ INSERT INTO `ziax6_content_types` (`type_id`, `type_title`, `type_alias`, `table
 -- Estructura de tabla para la tabla `ziax6_core_log_searches`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_core_log_searches` (
+CREATE TABLE `ziax6_core_log_searches` (
   `search_term` varchar(128) NOT NULL DEFAULT '',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -491,7 +502,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_core_log_searches` (
 -- Estructura de tabla para la tabla `ziax6_extensions`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_extensions` (
+CREATE TABLE `ziax6_extensions` (
   `extension_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `type` varchar(20) NOT NULL,
@@ -541,7 +552,7 @@ INSERT INTO `ziax6_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (19, 'com_search', 'component', 'com_search', '', 1, 1, 1, 0, '{"name":"com_search","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2013 Open Source Matters. All rights reserved.\\n\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_SEARCH_XML_DESCRIPTION","group":""}', '{"enabled":"0","show_date":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (20, 'com_templates', 'component', 'com_templates', '', 1, 1, 1, 1, '{"name":"com_templates","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2013 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_TEMPLATES_XML_DESCRIPTION","group":""}', '{"template_positions_display":"0","upload_limit":"2","image_formats":"gif,bmp,jpg,jpeg,png","source_formats":"txt,less,ini,xml,js,php,css","font_formats":"woff,ttf,otf","compressed_formats":"zip"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (21, 'com_weblinks', 'component', 'com_weblinks', '', 1, 1, 1, 0, '{"name":"com_weblinks","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2013 Open Source Matters. All rights reserved.\\n\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_WEBLINKS_XML_DESCRIPTION","group":""}', '{"target":"0","save_history":"1","history_limit":5,"count_clicks":"1","icons":1,"link_icons":"","float_first":"right","float_second":"right","show_tags":"1","category_layout":"_:default","show_category_title":"1","show_description":"1","show_description_image":"1","maxLevel":"-1","show_empty_categories":"0","show_subcat_desc":"1","show_cat_num_links":"1","show_cat_tags":"1","show_base_description":"1","maxLevelcat":"-1","show_empty_categories_cat":"0","show_subcat_desc_cat":"1","show_cat_num_links_cat":"1","filter_field":"1","show_pagination_limit":"1","show_headings":"0","show_link_description":"1","show_link_hits":"1","show_pagination":"2","show_pagination_results":"1","show_feed_link":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(22, 'com_content', 'component', 'com_content', '', 1, 1, 0, 1, '{"name":"com_content","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2013 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONTENT_XML_DESCRIPTION","group":""}', '{"article_layout":"_:default","show_title":"1","link_titles":"1","show_intro":"1","info_block_position":"0","show_category":"0","link_category":"0","show_parent_category":"0","link_parent_category":"0","show_author":"0","link_author":"0","show_create_date":"0","show_modify_date":"0","show_publish_date":"0","show_item_navigation":"0","show_vote":"0","show_readmore":"1","show_readmore_title":"0","readmore_limit":"100","show_tags":"1","show_icons":"1","show_print_icon":"1","show_email_icon":"1","show_hits":"0","show_noauth":"0","urls_position":"0","show_publishing_options":"1","show_article_options":"1","save_history":"1","history_limit":10,"show_urls_images_frontend":"0","show_urls_images_backend":"1","targeta":0,"targetb":0,"targetc":0,"float_intro":"left","float_fulltext":"left","category_layout":"_:blog","show_category_heading_title_text":"1","show_category_title":"0","show_description":"0","show_description_image":"0","maxLevel":"1","show_empty_categories":"0","show_no_articles":"1","show_subcat_desc":"1","show_cat_num_articles":"0","show_base_description":"1","maxLevelcat":"-1","show_empty_categories_cat":"0","show_subcat_desc_cat":"1","show_cat_num_articles_cat":"1","num_leading_articles":"1","num_intro_articles":"4","num_columns":"2","num_links":"4","multi_column_order":"0","show_subcategory_content":"0","show_pagination_limit":"1","filter_field":"hide","show_headings":"1","list_show_date":"0","date_format":"","list_show_hits":"1","list_show_author":"1","orderby_pri":"order","orderby_sec":"rdate","order_date":"published","show_pagination":"2","show_pagination_results":"1","show_feed_link":"1","feed_summary":"0","feed_show_readmore":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(22, 'com_content', 'component', 'com_content', '', 1, 1, 0, 1, '{"name":"com_content","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2013 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONTENT_XML_DESCRIPTION","group":""}', '{"article_layout":"_:default","show_title":"1","link_titles":"1","show_intro":"1","info_block_position":"0","show_category":"0","link_category":"0","show_parent_category":"0","link_parent_category":"0","show_author":"0","link_author":"0","show_create_date":"0","show_modify_date":"0","show_publish_date":"0","show_item_navigation":"0","show_vote":"0","show_readmore":"1","show_readmore_title":"0","readmore_limit":"100","show_tags":"1","show_icons":"1","show_print_icon":"1","show_email_icon":"1","show_hits":"0","show_noauth":"0","urls_position":"0","show_publishing_options":"1","show_article_options":"1","save_history":"1","history_limit":10,"show_urls_images_frontend":"0","show_urls_images_backend":"1","targeta":0,"targetb":0,"targetc":0,"float_intro":"left","float_fulltext":"left","category_layout":"_:blog","show_category_heading_title_text":"1","show_category_title":"0","show_description":"0","show_description_image":"0","maxLevel":"1","show_empty_categories":"0","show_no_articles":"1","show_subcat_desc":"1","show_cat_num_articles":"0","show_base_description":"1","maxLevelcat":"-1","show_empty_categories_cat":"0","show_subcat_desc_cat":"1","show_cat_num_articles_cat":"1","num_leading_articles":"1","num_intro_articles":"4","num_columns":"2","num_links":"4","multi_column_order":"0","show_subcategory_content":"0","show_pagination_limit":"1","filter_field":"hide","show_headings":"1","list_show_date":"0","date_format":"","list_show_hits":"1","list_show_author":"1","orderby_pri":"order","orderby_sec":"rdate","order_date":"published","show_pagination":"2","show_pagination_results":"1","show_feed_link":"1","feed_summary":"0","feed_show_readmore":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (23, 'com_config', 'component', 'com_config', '', 1, 1, 0, 1, '{"name":"com_config","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2013 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONFIG_XML_DESCRIPTION","group":""}', '{"filters":{"1":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"9":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"6":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"7":{"filter_type":"NONE","filter_tags":"","filter_attributes":""},"2":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"3":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"4":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"5":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"8":{"filter_type":"NONE","filter_tags":"","filter_attributes":""}}}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (24, 'com_redirect', 'component', 'com_redirect', '', 1, 1, 0, 1, '{"name":"com_redirect","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2013 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_REDIRECT_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (25, 'com_users', 'component', 'com_users', '', 1, 1, 0, 1, '{"name":"com_users","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2013 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_USERS_XML_DESCRIPTION","group":""}', '{"allowUserRegistration":"1","new_usertype":"2","guest_usergroup":"13","sendpassword":"1","useractivation":"1","mail_to_admin":"0","captcha":"","frontend_userparams":"1","site_language":"0","change_login_name":"0","reset_count":"10","reset_time":"1","minimum_length":"4","minimum_integers":"0","minimum_symbols":"0","minimum_uppercase":"0","save_history":"1","history_limit":5,"mailSubjectPrefix":"","mailBodySuffix":""}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -669,7 +680,7 @@ INSERT INTO `ziax6_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 -- Estructura de tabla para la tabla `ziax6_finder_filters`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_filters` (
+CREATE TABLE `ziax6_finder_filters` (
   `filter_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
@@ -693,7 +704,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_filters` (
 -- Estructura de tabla para la tabla `ziax6_finder_links`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links` (
+CREATE TABLE `ziax6_finder_links` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `url` varchar(255) NOT NULL,
   `route` varchar(255) NOT NULL,
@@ -728,7 +739,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms0`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms0` (
+CREATE TABLE `ziax6_finder_links_terms0` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -743,7 +754,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms0` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms1`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms1` (
+CREATE TABLE `ziax6_finder_links_terms1` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -758,7 +769,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms1` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms2`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms2` (
+CREATE TABLE `ziax6_finder_links_terms2` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -773,7 +784,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms2` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms3`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms3` (
+CREATE TABLE `ziax6_finder_links_terms3` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -788,7 +799,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms3` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms4`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms4` (
+CREATE TABLE `ziax6_finder_links_terms4` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -803,7 +814,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms4` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms5`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms5` (
+CREATE TABLE `ziax6_finder_links_terms5` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -818,7 +829,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms5` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms6`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms6` (
+CREATE TABLE `ziax6_finder_links_terms6` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -833,7 +844,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms6` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms7`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms7` (
+CREATE TABLE `ziax6_finder_links_terms7` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -848,7 +859,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms7` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms8`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms8` (
+CREATE TABLE `ziax6_finder_links_terms8` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -863,7 +874,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms8` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_terms9`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms9` (
+CREATE TABLE `ziax6_finder_links_terms9` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -878,7 +889,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_terms9` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_termsa`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsa` (
+CREATE TABLE `ziax6_finder_links_termsa` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -893,7 +904,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsa` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_termsb`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsb` (
+CREATE TABLE `ziax6_finder_links_termsb` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -908,7 +919,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsb` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_termsc`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsc` (
+CREATE TABLE `ziax6_finder_links_termsc` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -923,7 +934,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsc` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_termsd`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsd` (
+CREATE TABLE `ziax6_finder_links_termsd` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -938,7 +949,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsd` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_termse`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termse` (
+CREATE TABLE `ziax6_finder_links_termse` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -953,7 +964,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termse` (
 -- Estructura de tabla para la tabla `ziax6_finder_links_termsf`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsf` (
+CREATE TABLE `ziax6_finder_links_termsf` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
   `weight` float unsigned NOT NULL,
@@ -968,7 +979,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_links_termsf` (
 -- Estructura de tabla para la tabla `ziax6_finder_taxonomy`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_taxonomy` (
+CREATE TABLE `ziax6_finder_taxonomy` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
   `title` varchar(255) NOT NULL,
@@ -996,7 +1007,7 @@ INSERT INTO `ziax6_finder_taxonomy` (`id`, `parent_id`, `title`, `state`, `acces
 -- Estructura de tabla para la tabla `ziax6_finder_taxonomy_map`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_taxonomy_map` (
+CREATE TABLE `ziax6_finder_taxonomy_map` (
   `link_id` int(10) unsigned NOT NULL,
   `node_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`link_id`,`node_id`),
@@ -1010,7 +1021,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_taxonomy_map` (
 -- Estructura de tabla para la tabla `ziax6_finder_terms`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_terms` (
+CREATE TABLE `ziax6_finder_terms` (
   `term_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
@@ -1033,7 +1044,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_terms` (
 -- Estructura de tabla para la tabla `ziax6_finder_terms_common`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_terms_common` (
+CREATE TABLE `ziax6_finder_terms_common` (
   `term` varchar(75) NOT NULL,
   `language` varchar(3) NOT NULL,
   KEY `idx_word_lang` (`term`,`language`),
@@ -1167,7 +1178,7 @@ INSERT INTO `ziax6_finder_terms_common` (`term`, `language`) VALUES
 -- Estructura de tabla para la tabla `ziax6_finder_tokens`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_tokens` (
+CREATE TABLE `ziax6_finder_tokens` (
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
   `common` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -1185,7 +1196,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_tokens` (
 -- Estructura de tabla para la tabla `ziax6_finder_tokens_aggregate`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_tokens_aggregate` (
+CREATE TABLE `ziax6_finder_tokens_aggregate` (
   `term_id` int(10) unsigned NOT NULL,
   `map_suffix` char(1) NOT NULL,
   `term` varchar(75) NOT NULL,
@@ -1207,7 +1218,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_tokens_aggregate` (
 -- Estructura de tabla para la tabla `ziax6_finder_types`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_finder_types` (
+CREATE TABLE `ziax6_finder_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
   `mime` varchar(100) NOT NULL,
@@ -1221,7 +1232,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_finder_types` (
 -- Estructura de tabla para la tabla `ziax6_languages`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_languages` (
+CREATE TABLE `ziax6_languages` (
   `lang_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `lang_code` char(7) NOT NULL,
   `title` varchar(50) NOT NULL,
@@ -1256,7 +1267,7 @@ INSERT INTO `ziax6_languages` (`lang_id`, `lang_code`, `title`, `title_native`, 
 -- Estructura de tabla para la tabla `ziax6_menu`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_menu` (
+CREATE TABLE `ziax6_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `menutype` varchar(24) NOT NULL COMMENT 'The type of menu this item belongs to. FK to #__menu_types.menutype',
   `title` varchar(255) NOT NULL COMMENT 'The display title of the menu item.',
@@ -1289,14 +1300,14 @@ CREATE TABLE IF NOT EXISTS `ziax6_menu` (
   KEY `idx_alias` (`alias`),
   KEY `idx_path` (`path`(255)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=109 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=112 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_menu`
 --
 
 INSERT INTO `ziax6_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
-(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 63, 0, '*', 0),
+(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 69, 0, '*', 0),
 (2, 'menu', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 0, 1, 1, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 1, 10, 0, '*', 1),
 (3, 'menu', 'com_banners', 'Banners', '', 'Banners/Banners', 'index.php?option=com_banners', 'component', 0, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 2, 3, 0, '*', 1),
 (4, 'menu', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&extension=com_banners', 'component', 0, 2, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1),
@@ -1320,14 +1331,17 @@ INSERT INTO `ziax6_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (22, 'menu', 'com_joomlaupdate', 'Joomla! Update', '', 'Joomla! Update', 'index.php?option=com_joomlaupdate', 'component', 1, 1, 1, 32, 0, '0000-00-00 00:00:00', 0, 0, 'class:joomlaupdate', 0, '', 41, 42, 0, '*', 1),
 (23, 'main', 'com_tags', 'Tags', '', 'Tags', 'index.php?option=com_tags', 'component', 0, 1, 1, 29, 0, '0000-00-00 00:00:00', 0, 1, 'class:tags', 0, '', 43, 44, 0, '', 1),
 (24, 'main', 'com_postinstall', 'Post-installation messages', '', 'Post-installation messages', 'index.php?option=com_postinstall', 'component', 0, 1, 1, 32, 0, '0000-00-00 00:00:00', 0, 1, 'class:postinstall', 0, '', 45, 46, 0, '*', 1),
-(101, 'mainmenu', 'Noticias', 'noticias', '', 'noticias', 'index.php?option=com_content&view=featured', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"featured_categories":[""],"layout_type":"blog","num_leading_articles":"1","num_intro_articles":"3","num_columns":"3","num_links":"0","multi_column_order":"1","orderby_pri":"","orderby_sec":"front","order_date":"","show_pagination":"2","show_pagination_results":"1","show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_readmore":"","show_readmore_title":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","show_feed_link":"1","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":1,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 47, 48, 1, '*', 0),
+(101, 'mainmenu', 'Noticias', 'noticias', '', 'noticias', 'index.php?option=com_content&view=featured', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"featured_categories":["9"],"layout_type":"blog","num_leading_articles":"1","num_intro_articles":"1","num_columns":"1","num_links":"0","multi_column_order":"1","orderby_pri":"","orderby_sec":"front","order_date":"","show_pagination":"2","show_pagination_results":"1","show_title":"0","link_titles":"","show_intro":"0","info_block_position":"","show_category":"0","link_category":"0","show_parent_category":"0","link_parent_category":"0","show_author":"0","link_author":"0","show_create_date":"0","show_modify_date":"0","show_publish_date":"0","show_item_navigation":"0","show_vote":"0","show_readmore":"1","show_readmore_title":"","show_icons":"0","show_print_icon":"0","show_email_icon":"0","show_hits":"0","show_noauth":"","show_feed_link":"1","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":1,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 47, 48, 1, '*', 0),
 (102, 'main', 'JCE', 'jce', '', 'jce', 'index.php?option=com_jce', 'component', 0, 1, 1, 10007, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jce/media/img/menu/logo.png', 0, '', 49, 58, 0, '', 1),
 (103, 'main', 'WF_MENU_CPANEL', 'wf-menu-cpanel', '', 'jce/wf-menu-cpanel', 'index.php?option=com_jce', 'component', 0, 102, 2, 10007, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jce/media/img/menu/jce-cpanel.png', 0, '', 50, 51, 0, '', 1),
 (104, 'main', 'WF_MENU_CONFIG', 'wf-menu-config', '', 'jce/wf-menu-config', 'index.php?option=com_jce&view=config', 'component', 0, 102, 2, 10007, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jce/media/img/menu/jce-config.png', 0, '', 52, 53, 0, '', 1),
 (105, 'main', 'WF_MENU_PROFILES', 'wf-menu-profiles', '', 'jce/wf-menu-profiles', 'index.php?option=com_jce&view=profiles', 'component', 0, 102, 2, 10007, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jce/media/img/menu/jce-profiles.png', 0, '', 54, 55, 0, '', 1),
 (106, 'main', 'WF_MENU_INSTALL', 'wf-menu-install', '', 'jce/wf-menu-install', 'index.php?option=com_jce&view=installer', 'component', 0, 102, 2, 10007, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jce/media/img/menu/jce-install.png', 0, '', 56, 57, 0, '', 1),
-(107, 'candidato', 'Perfil de Jorge Eliécer', 'perfil-de-jorge-eliecer', '', 'perfil-de-jorge-eliecer', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_tags":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 59, 60, 0, '*', 0),
-(108, 'candidato', 'Jorge propone para el 2014', 'jorge-propone-para-el-2014', '', 'jorge-propone-para-el-2014', 'index.php?option=com_content&view=article&id=2', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_tags":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 61, 62, 0, '*', 0);
+(107, 'candidato', 'Perfil de Jorge Eliécer', 'perfil-de-jorge-eliecer', '', 'perfil-de-jorge-eliecer', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"0","info_block_position":"","show_category":"0","link_category":"0","show_parent_category":"0","link_parent_category":"0","show_author":"0","link_author":"0","show_create_date":"0","show_modify_date":"0","show_publish_date":"0","show_item_navigation":"0","show_vote":"0","show_tags":"0","show_icons":"0","show_print_icon":"0","show_email_icon":"0","show_hits":"0","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 59, 60, 0, '*', 0),
+(108, 'candidato', 'Jorge propone para el 2014', 'jorge-propone-para-el-2014', '', 'jorge-propone-para-el-2014', 'index.php?option=com_content&view=article&id=2', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_tags":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 61, 62, 0, '*', 0),
+(109, 'candidato', 'Agenda 2014', '2013-12-27-16-06-26', '', '2013-12-27-16-06-26', '#', 'url', 1, 1, 1, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1}', 63, 64, 0, '*', 0),
+(110, 'candidato', 'Noticias Recientes de Nuestra Gestión', '2013-12-27-16-06-58', '', '2013-12-27-16-06-58', '#', 'url', 1, 1, 1, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1}', 65, 66, 0, '*', 0),
+(111, 'candidato', 'Jorge Tamayo en las Redes Sociales', '2013-12-27-16-09-34', '', '2013-12-27-16-09-34', '#', 'url', 1, 1, 1, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1}', 67, 68, 0, '*', 0);
 
 -- --------------------------------------------------------
 
@@ -1335,7 +1349,7 @@ INSERT INTO `ziax6_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 -- Estructura de tabla para la tabla `ziax6_menu_types`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_menu_types` (
+CREATE TABLE `ziax6_menu_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `menutype` varchar(24) NOT NULL,
   `title` varchar(48) NOT NULL,
@@ -1358,7 +1372,7 @@ INSERT INTO `ziax6_menu_types` (`id`, `menutype`, `title`, `description`) VALUES
 -- Estructura de tabla para la tabla `ziax6_messages`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_messages` (
+CREATE TABLE `ziax6_messages` (
   `message_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id_from` int(10) unsigned NOT NULL DEFAULT '0',
   `user_id_to` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1378,7 +1392,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_messages` (
 -- Estructura de tabla para la tabla `ziax6_messages_cfg`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_messages_cfg` (
+CREATE TABLE `ziax6_messages_cfg` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
   `cfg_name` varchar(100) NOT NULL DEFAULT '',
   `cfg_value` varchar(255) NOT NULL DEFAULT '',
@@ -1391,7 +1405,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_messages_cfg` (
 -- Estructura de tabla para la tabla `ziax6_modules`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_modules` (
+CREATE TABLE `ziax6_modules` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
   `title` varchar(100) NOT NULL DEFAULT '',
@@ -1414,7 +1428,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_modules` (
   KEY `published` (`published`,`access`),
   KEY `newsfeeds` (`module`,`published`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=91 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=92 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_modules`
@@ -1436,10 +1450,11 @@ INSERT INTO `ziax6_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (17, 51, 'Breadcrumbs', '', '', 1, 'breadcrumbs', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_breadcrumbs', 1, 0, '{"showHere":"0","showHome":"0","homeText":"","showLast":"1","separator":"\\/","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (79, 68, 'Multilanguage status', '', '', 1, 'status', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_multilangstatus', 3, 1, '{"layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (86, 69, 'Joomla Version', '', '', 1, 'footer', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_version', 3, 1, '{"format":"short","product":"1","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
-(87, 54, 'Logo', '', '<div class="clear">\r\n<div class="col-md-2"><img class="img-responsive" src="images/icon.png" alt="Partido de la U" /></div>\r\n<div id="u-slogan-container" class="col-md-10"><span id="u-slogan">La <span id="u">U</span> propone: <span id="u-message">Trabajo con seriedad</span></span></div>\r\n</div>', 1, 'logo', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(87, 54, 'Logo', '', '<div class="clear">\r\n <div class="col-xs-2 col-sm-2 col-md-2"><img class="img-responsive" src="images/icon.png" alt="Partido de la U" />\r\n  </div>\r\n  <div id="u-slogan-container" class="col-xs-10 col-sm-10 col-md-10"><span id="u-slogan">La <span id="u">U</span> propone: <span id="u-message">Trabajo con seriedad</span></span>\r\n  </div>\r\n</div>', 1, 'logo', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (88, 58, 'Banner senado', '', '<img src="images/banner_senado.png" alt="banner senado" />', 1, 'footlink1', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (89, 59, 'Banner Partido de la U', '', '<img src="images/banner_partido_u.png" alt="banner partido u" />', 0, 'footlink2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
-(90, 60, 'Propuestas de Campaña:', '', '<p>Conozca mi propuesta de trabajo.</p>\r\n<a href="#"><img class="img-responsive" src="images/banner-candidato.png" alt="banner-candidato" /></a>\r\n<p class="text-center"><a href="#">Leer más...</a></p>', 1, 'right', 205, '2013-12-23 20:59:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 1, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":" contenedor","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
+(90, 60, 'Propuestas de Campaña:', '', '<p>Conozca mi propuesta de trabajo.</p>\r\n<a href="#"><img class="img-responsive" src="images/banner-candidato.png" alt="banner-candidato" /></a>\r\n<p class="text-center"><a href="#">Leer más...</a></p>', 1, 'right', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 1, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":" contenedor","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(91, 65, 'Redes Sociales', '', '<ul class="list-inline">\r\n<li><a href="#"><img src="images/Insumos/Redes/twitter.png" alt="twitter" /></a></li>\r\n<li><a href="#"><img src="images/Insumos/Redes/mail.png" alt="mail" /></a></li>\r\n<li><a href="#"><img src="images/Insumos/Redes/facebook.png" alt="facebook" /></a></li>\r\n<li><a href="#"><img src="images/Insumos/Redes/youtube.png" alt="youtube" /></a></li>\r\n<li><a href="#"><img src="images/Insumos/Redes/linkd.png" alt="linkd" /></a></li>\r\n<li><a href="#"><img src="images/Insumos/Redes/gplus.png" alt="gplus" /></a></li>\r\n</ul>', 2, 'right', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":" social-nw text-center","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
 
 -- --------------------------------------------------------
 
@@ -1447,7 +1462,7 @@ INSERT INTO `ziax6_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 -- Estructura de tabla para la tabla `ziax6_modules_menu`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_modules_menu` (
+CREATE TABLE `ziax6_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`moduleid`,`menuid`)
@@ -1478,7 +1493,8 @@ INSERT INTO `ziax6_modules_menu` (`moduleid`, `menuid`) VALUES
 (87, 0),
 (88, 0),
 (89, 0),
-(90, 0);
+(90, 0),
+(91, 0);
 
 -- --------------------------------------------------------
 
@@ -1486,7 +1502,7 @@ INSERT INTO `ziax6_modules_menu` (`moduleid`, `menuid`) VALUES
 -- Estructura de tabla para la tabla `ziax6_newsfeeds`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_newsfeeds` (
+CREATE TABLE `ziax6_newsfeeds` (
   `catid` int(11) NOT NULL DEFAULT '0',
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL DEFAULT '',
@@ -1533,7 +1549,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_newsfeeds` (
 -- Estructura de tabla para la tabla `ziax6_overrider`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_overrider` (
+CREATE TABLE `ziax6_overrider` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `constant` varchar(255) NOT NULL,
   `string` text NOT NULL,
@@ -1547,7 +1563,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_overrider` (
 -- Estructura de tabla para la tabla `ziax6_postinstall_messages`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_postinstall_messages` (
+CREATE TABLE `ziax6_postinstall_messages` (
   `postinstall_message_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `extension_id` bigint(20) NOT NULL DEFAULT '700' COMMENT 'FK to #__extensions',
   `title_key` varchar(255) NOT NULL DEFAULT '' COMMENT 'Lang key for the title',
@@ -1563,7 +1579,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_postinstall_messages` (
   `version_introduced` varchar(50) NOT NULL DEFAULT '3.2.0' COMMENT 'Version when this message was introduced',
   `enabled` tinyint(3) NOT NULL DEFAULT '1',
   PRIMARY KEY (`postinstall_message_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_postinstall_messages`
@@ -1580,7 +1596,7 @@ INSERT INTO `ziax6_postinstall_messages` (`postinstall_message_id`, `extension_i
 -- Estructura de tabla para la tabla `ziax6_redirect_links`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_redirect_links` (
+CREATE TABLE `ziax6_redirect_links` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `old_url` varchar(255) NOT NULL,
   `new_url` varchar(255) NOT NULL,
@@ -1601,7 +1617,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_redirect_links` (
 -- Estructura de tabla para la tabla `ziax6_schemas`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_schemas` (
+CREATE TABLE `ziax6_schemas` (
   `extension_id` int(11) NOT NULL,
   `version_id` varchar(20) NOT NULL,
   PRIMARY KEY (`extension_id`,`version_id`)
@@ -1620,7 +1636,7 @@ INSERT INTO `ziax6_schemas` (`extension_id`, `version_id`) VALUES
 -- Estructura de tabla para la tabla `ziax6_session`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_session` (
+CREATE TABLE `ziax6_session` (
   `session_id` varchar(200) NOT NULL DEFAULT '',
   `client_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `guest` tinyint(4) unsigned DEFAULT '1',
@@ -1638,8 +1654,8 @@ CREATE TABLE IF NOT EXISTS `ziax6_session` (
 --
 
 INSERT INTO `ziax6_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-('2ljofbu9ofpm4icprvh7206h51', 0, 1, '1387832369', '__default|a:8:{s:15:"session.counter";i:32;s:19:"session.timer.start";i:1387829053;s:18:"session.timer.last";i:1387832343;s:17:"session.timer.now";i:1387832369;s:22:"session.client.browser";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36";s:8:"registry";O:9:"JRegistry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":24:{s:9:"\\0\\0\\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:2:"13";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:10:"\\0\\0\\0_params";O:9:"JRegistry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:1:{i:0;s:1:"1";}s:14:"\\0\\0\\0_authLevels";a:2:{i:0;i:1;i:1;i:1;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:16:"com_mailto.links";a:1:{s:40:"1d508fa4c98a92a8484a6f6ee7a857ae6ff20597";O:8:"stdClass":2:{s:4:"link";s:75:"http://localhost/~pablocpantoja/politicos/index.php/perfil-de-jorge-eliecer";s:6:"expiry";i:1387831807;}}}', 0, ''),
-('4pb8afviqvicj19lm52d35n6q5', 1, 0, '1387832381', '__default|a:8:{s:15:"session.counter";i:76;s:19:"session.timer.start";i:1387829036;s:18:"session.timer.last";i:1387832376;s:17:"session.timer.now";i:1387832381;s:22:"session.client.browser";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36";s:8:"registry";O:9:"JRegistry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":5:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:0:"";}s:11:"com_plugins";O:8:"stdClass":2:{s:7:"plugins";O:8:"stdClass":4:{s:6:"filter";O:8:"stdClass":4:{s:6:"search";s:0:"";s:6:"access";i:0;s:7:"enabled";s:0:"";s:6:"folder";s:0:"";}s:8:"ordercol";s:6:"folder";s:9:"orderdirn";s:3:"asc";s:10:"limitstart";s:1:"0";}s:4:"edit";O:8:"stdClass":1:{s:6:"plugin";O:8:"stdClass":2:{s:2:"id";a:0:{}s:4:"data";N;}}}s:6:"global";O:8:"stdClass":1:{s:4:"list";O:8:"stdClass":1:{s:5:"limit";i:0;}}s:13:"com_installer";O:8:"stdClass":3:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";s:12:"redirect_url";N;}s:11:"com_modules";O:8:"stdClass":3:{s:7:"modules";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:18:"client_id_previous";i:0;}}s:4:"edit";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:2:"id";a:1:{i:0;i:90;}s:4:"data";N;}}s:3:"add";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:12:"extension_id";N;s:6:"params";N;}}}}}s:4:"user";O:5:"JUser":26:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"205";s:4:"name";s:10:"Super User";s:8:"username";s:5:"admin";s:5:"email";s:29:"pablo.pantoja@nuevosmedios.ws";s:8:"password";s:34:"$P$DLMRXPGajLMRVVI/rxtF2gcOL24JvC/";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2013-12-17 20:24:05";s:13:"lastvisitDate";s:19:"2013-12-18 16:16:14";s:10:"activation";s:1:"0";s:6:"params";s:2:"{}";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:10:"\\0\\0\\0_params";O:9:"JRegistry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"edbc28bb11b6d20c7697acdf5ef224b1";}__wf|a:1:{s:13:"session.token";s:32:"0976aba86bb93b660987f979cd1fc158";}', 205, 'admin');
+('61cca2d896a8f50be7f2d586ffb60344', 1, 0, '1388425119', '__default|a:8:{s:15:"session.counter";i:153;s:19:"session.timer.start";i:1388411571;s:18:"session.timer.last";i:1388425118;s:17:"session.timer.now";i:1388425118;s:22:"session.client.browser";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36";s:8:"registry";O:9:"JRegistry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":6:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:0:"";}s:9:"com_users";O:8:"stdClass":1:{s:4:"edit";O:8:"stdClass":1:{s:4:"user";O:8:"stdClass":1:{s:4:"data";N;}}}s:14:"com_categories";O:8:"stdClass":2:{s:10:"categories";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:9:"extension";s:11:"com_content";}}s:4:"edit";O:8:"stdClass":1:{s:8:"category";O:8:"stdClass":2:{s:2:"id";a:0:{}s:4:"data";N;}}}s:11:"com_content";O:8:"stdClass":1:{s:4:"edit";O:8:"stdClass":1:{s:7:"article";O:8:"stdClass":1:{s:4:"data";N;}}}s:9:"com_menus";O:8:"stdClass":2:{s:5:"items";O:8:"stdClass":3:{s:8:"menutype";s:8:"mainmenu";s:10:"limitstart";i:0;s:4:"list";a:4:{s:9:"direction";s:3:"asc";s:5:"limit";s:2:"20";s:8:"ordering";s:5:"a.lft";s:5:"start";d:0;}}s:4:"edit";O:8:"stdClass":1:{s:4:"item";O:8:"stdClass":4:{s:2:"id";a:0:{}s:4:"data";N;s:4:"type";N;s:4:"link";N;}}}s:11:"com_modules";O:8:"stdClass":3:{s:7:"modules";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:18:"client_id_previous";i:0;}}s:4:"edit";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:4:"data";N;s:2:"id";a:0:{}}}s:3:"add";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:12:"extension_id";N;s:6:"params";N;}}}}}s:4:"user";O:5:"JUser":26:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"205";s:4:"name";s:10:"Super User";s:8:"username";s:5:"admin";s:5:"email";s:29:"pablo.pantoja@nuevosmedios.ws";s:8:"password";s:34:"$P$DLMRXPGajLMRVVI/rxtF2gcOL24JvC/";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2013-12-17 20:24:05";s:13:"lastvisitDate";s:19:"2013-12-27 16:05:08";s:10:"activation";s:1:"0";s:6:"params";s:2:"{}";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:10:"\\0\\0\\0_params";O:9:"JRegistry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"dc73d82d6096003ee52203f071add877";}__wf|a:1:{s:13:"session.token";s:32:"5cea2578389724930e6c8dbf389c25b0";}', 205, 'admin'),
+('8ab0bab600a1097cf03591fb8764e9fc', 0, 1, '1388429370', '__default|a:8:{s:15:"session.counter";i:61;s:19:"session.timer.start";i:1388411549;s:18:"session.timer.last";i:1388427208;s:17:"session.timer.now";i:1388429370;s:22:"session.client.browser";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36";s:8:"registry";O:9:"JRegistry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":24:{s:9:"\\0\\0\\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:2:"13";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:10:"\\0\\0\\0_params";O:9:"JRegistry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:1:{i:0;s:1:"1";}s:14:"\\0\\0\\0_authLevels";a:2:{i:0;i:1;i:1;i:1;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:16:"com_mailto.links";a:1:{s:40:"c760f23fe7bf25f9bcd36917738378693fa9c100";O:8:"stdClass":2:{s:4:"link";s:67:"http://localhost:8888/politicos/index.php/9-noticias/3-asi-se-arman";s:6:"expiry";i:1388412171;}}}', 0, '');
 
 -- --------------------------------------------------------
 
@@ -1647,7 +1663,7 @@ INSERT INTO `ziax6_session` (`session_id`, `client_id`, `guest`, `time`, `data`,
 -- Estructura de tabla para la tabla `ziax6_tags`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_tags` (
+CREATE TABLE `ziax6_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
   `lft` int(11) NOT NULL DEFAULT '0',
@@ -1701,7 +1717,7 @@ INSERT INTO `ziax6_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `tit
 -- Estructura de tabla para la tabla `ziax6_template_styles`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_template_styles` (
+CREATE TABLE `ziax6_template_styles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `template` varchar(50) NOT NULL DEFAULT '',
   `client_id` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -1728,7 +1744,7 @@ INSERT INTO `ziax6_template_styles` (`id`, `template`, `client_id`, `home`, `tit
 -- Estructura de tabla para la tabla `ziax6_ucm_base`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_ucm_base` (
+CREATE TABLE `ziax6_ucm_base` (
   `ucm_id` int(10) unsigned NOT NULL,
   `ucm_item_id` int(10) NOT NULL,
   `ucm_type_id` int(11) NOT NULL,
@@ -1745,7 +1761,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_ucm_base` (
 -- Estructura de tabla para la tabla `ziax6_ucm_content`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_ucm_content` (
+CREATE TABLE `ziax6_ucm_content` (
   `core_content_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `core_type_alias` varchar(255) NOT NULL DEFAULT '' COMMENT 'FK to the content types table',
   `core_title` varchar(255) NOT NULL,
@@ -1799,7 +1815,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_ucm_content` (
 -- Estructura de tabla para la tabla `ziax6_ucm_history`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_ucm_history` (
+CREATE TABLE `ziax6_ucm_history` (
   `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ucm_item_id` int(10) unsigned NOT NULL,
   `ucm_type_id` int(10) unsigned NOT NULL,
@@ -1813,7 +1829,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_ucm_history` (
   PRIMARY KEY (`version_id`),
   KEY `idx_ucm_item_id` (`ucm_type_id`,`ucm_item_id`),
   KEY `idx_save_date` (`save_date`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_ucm_history`
@@ -1821,7 +1837,13 @@ CREATE TABLE IF NOT EXISTS `ziax6_ucm_history` (
 
 INSERT INTO `ziax6_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `version_note`, `save_date`, `editor_user_id`, `character_count`, `sha1_hash`, `version_data`, `keep_forever`) VALUES
 (1, 1, 1, '', '2013-12-18 17:21:27', 205, 1690, 'fb863a2e493129fc15e4d81020efdf4ccb339f60', '{"id":1,"asset_id":56,"title":"Perfil de Jorge Eli\\u00e9cer","alias":"perfil-de-jorge-eliecer","introtext":"Jorge Eli\\u00e9cer","fulltext":"","state":1,"catid":"2","created":"2013-12-18 17:21:27","created_by":"205","created_by_alias":"","modified":"","modified_by":null,"checked_out":null,"checked_out_time":null,"publish_up":"2013-12-18 17:21:27","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":1,"ordering":null,"metakey":"","metadesc":"","access":"1","hits":null,"metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0),
-(2, 2, 1, '', '2013-12-18 17:29:39', 205, 1686, '79b6f175e2e13f0738e6dca4fea8c7d2e4798e58', '{"id":2,"asset_id":57,"title":"Jorge propone para el 2014","alias":"jorge-propone-para-el-2014","introtext":"Jorge propone","fulltext":"","state":1,"catid":"2","created":"2013-12-18 17:29:39","created_by":"205","created_by_alias":"","modified":"","modified_by":null,"checked_out":null,"checked_out_time":null,"publish_up":"2013-12-18 17:29:39","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":1,"ordering":null,"metakey":"","metadesc":"","access":"1","hits":null,"metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0);
+(2, 2, 1, '', '2013-12-18 17:29:39', 205, 1686, '79b6f175e2e13f0738e6dca4fea8c7d2e4798e58', '{"id":2,"asset_id":57,"title":"Jorge propone para el 2014","alias":"jorge-propone-para-el-2014","introtext":"Jorge propone","fulltext":"","state":1,"catid":"2","created":"2013-12-18 17:29:39","created_by":"205","created_by_alias":"","modified":"","modified_by":null,"checked_out":null,"checked_out_time":null,"publish_up":"2013-12-18 17:29:39","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":1,"ordering":null,"metakey":"","metadesc":"","access":"1","hits":null,"metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0),
+(3, 8, 6, '', '2013-12-27 16:21:24', 205, 566, '00dfd4e32e406f832a086a4527f398b3da2e557c', '{"id":8,"asset_id":61,"parent_id":"1","lft":"13","rgt":14,"level":1,"path":null,"extension":"com_content","title":"Jorge Tamayo","alias":"jorge-tamayo","note":"","description":"Publicaciones relacionadas a Jorge Tamayo","published":"1","checked_out":null,"checked_out_time":null,"access":"1","params":"{\\"category_layout\\":\\"\\",\\"image\\":\\"\\"}","metadesc":"","metakey":"","metadata":"{\\"author\\":\\"\\",\\"robots\\":\\"\\"}","created_user_id":"205","created_time":"2013-12-27 16:21:24","modified_user_id":null,"modified_time":null,"hits":"0","language":"*","version":null}', 0),
+(4, 9, 6, '', '2013-12-27 16:24:23', 205, 517, '8717c8aad765e1ce716ebabc28351b8dfb378e29', '{"id":9,"asset_id":62,"parent_id":"1","lft":"15","rgt":16,"level":1,"path":null,"extension":"com_content","title":"Noticias","alias":"noticias","note":"","description":"","published":"1","checked_out":null,"checked_out_time":null,"access":"1","params":"{\\"category_layout\\":\\"\\",\\"image\\":\\"\\"}","metadesc":"","metakey":"","metadata":"{\\"author\\":\\"\\",\\"robots\\":\\"\\"}","created_user_id":"205","created_time":"2013-12-27 16:24:23","modified_user_id":null,"modified_time":null,"hits":"0","language":"*","version":null}', 0),
+(5, 2, 1, '', '2013-12-27 16:27:40', 205, 1724, 'f329e405775d2e6542fc4d0d8d7c9b759c8034b7', '{"id":2,"asset_id":"57","title":"Jorge propone para el 2014","alias":"jorge-propone-para-el-2014","introtext":"Jorge propone","fulltext":"","state":1,"catid":"8","created":"2013-12-18 17:29:39","created_by":"205","created_by_alias":"","modified":"2013-12-27 16:27:40","modified_by":"205","checked_out":"205","checked_out_time":"2013-12-27 16:26:37","publish_up":"2013-12-18 17:29:39","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":2,"ordering":"0","metakey":"","metadesc":"","access":"1","hits":"0","metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0),
+(6, 1, 1, '', '2013-12-27 16:27:52', 205, 1729, '197a768352d33a77147b2e0ebee3eb32cccd7aa8', '{"id":1,"asset_id":"56","title":"Perfil de Jorge Eli\\u00e9cer","alias":"perfil-de-jorge-eliecer","introtext":"Jorge Eli\\u00e9cer","fulltext":"","state":1,"catid":"8","created":"2013-12-18 17:21:27","created_by":"205","created_by_alias":"","modified":"2013-12-27 16:27:52","modified_by":"205","checked_out":"205","checked_out_time":"2013-12-27 16:27:43","publish_up":"2013-12-18 17:21:27","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":2,"ordering":"1","metakey":"","metadesc":"","access":"1","hits":"41","metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0),
+(7, 3, 1, '', '2013-12-30 14:02:42', 205, 2680, 'd0ceb202fa6810bbf523434ec8760881268c0c29', '{"id":3,"asset_id":63,"title":"As\\u00ed se arman","alias":"asi-se-arman","introtext":"<h1>As\\u00ed se arman las listas en el Valle para las elecciones de Congreso<\\/h1>\\r\\nAunque ya la mayor\\u00eda de los partidos tienen definidas sus listas para el Congreso, hay otros que los cogi\\u00f3 la campa\\u00f1a sin candidatos.<br \\/><br \\/><img src=\\"images\\/Insumos\\/Noticias\\/noticias.png\\" alt=\\"Noticias\\" style=\\"float: left;\\" \\/>&nbsp;El Partido de la U espera seguir siendo la colectividad mayoritaria en el departamento.<br \\/>Las cartas con las que esperan conservar o aumentar los tres esca\\u00f1os que tienen en C\\u00e1mara son: Juan Carlos Mart\\u00ednez Guti\\u00e9rrez, quien estuvo en la campa\\u00f1a pasada con Roy Barreras; Rafael Palau, exalcalde de Tulu\\u00e1; el exconcejal de Cali Jorge Eli\\u00e9cer Tamayo y por Palmira ser\\u00eda candidato Elberth D\\u00edaz.<br \\/>Por el sector que dirige el congresista Roy Barreras, finalmente se decidi\\u00f3 que ser\\u00eda \\u00e9l quien aspire nuevamente al Senado y no su esposa, como lo hab\\u00eda anunciado meses atr\\u00e1s.<br \\/><br \\/><br \\/><br \\/><br \\/>","fulltext":"","state":1,"catid":"9","created":"2013-12-30 14:02:42","created_by":"205","created_by_alias":"","modified":"","modified_by":null,"checked_out":null,"checked_out_time":null,"publish_up":"2013-12-30 14:02:42","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":1,"ordering":null,"metakey":"","metadesc":"","access":"1","hits":null,"metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0),
+(8, 4, 1, '', '2013-12-30 14:10:15', 205, 2552, '5c01d8a3fc6adf38796f33340be5523b61400e68', '{"id":4,"asset_id":64,"title":"La organizaci\\u00f3n pol\\u00edtica nueva generaci\\u00f3n","alias":"la-organizacion-politica-nueva-generacion","introtext":"<h1>LA ORGANIZACI\\u00d3N POL\\u00cdTICA NUEVA GENERACI\\u00d3N, ORIENTADA POR DILIAN FRANCISCA TORO, PRESENT\\u00d3 LA AGENDA LEGISLATIVA PARA EL PERIODO 2014-1018.<\\/h1>\\r\\n<img src=\\"images\\/Insumos\\/Noticias\\/noticias.png\\" alt=\\"noticias\\" style=\\"float: left;\\" \\/>Son siete candidatos vallecaucanos, seis de ellos aspirantes a la C\\u00e1mara, al lado de ROOSVELT RODR\\u00cdGUEZ al Senado, quienes trabajar\\u00e1n por la agenda legislativa dedicada a la paz, la justicia, el empleo, la salud, el crecimiento econ\\u00f3mico y la educaci\\u00f3n, entre otros temas que aportar\\u00e1n significativamente al progreso de nuestro pa\\u00eds.<br \\/><br \\/>los Candidatos a la C\\u00e1mara son ELBERT D\\u00cdAZ, JORGE E. TAMAYO, ARMANDO ROA, JUAN CARLOS MARTINEZ, Parlamentario actual,RAFAEL PALAU, Y ESPERANZA DELGADO.<br \\/>","fulltext":"","state":1,"catid":"9","created":"2013-12-30 14:10:15","created_by":"205","created_by_alias":"","modified":"","modified_by":null,"checked_out":null,"checked_out_time":null,"publish_up":"2013-12-30 14:10:15","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"...leer m\\\\u00e1s\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":1,"ordering":null,"metakey":"","metadesc":"","access":"1","hits":null,"metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0);
 
 -- --------------------------------------------------------
 
@@ -1829,7 +1851,7 @@ INSERT INTO `ziax6_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `ve
 -- Estructura de tabla para la tabla `ziax6_updates`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_updates` (
+CREATE TABLE `ziax6_updates` (
   `update_id` int(11) NOT NULL AUTO_INCREMENT,
   `update_site_id` int(11) DEFAULT '0',
   `extension_id` int(11) DEFAULT '0',
@@ -1844,61 +1866,63 @@ CREATE TABLE IF NOT EXISTS `ziax6_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=49 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=51 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_updates`
 --
 
 INSERT INTO `ziax6_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`) VALUES
-(1, 4, 10000, 'Installer - Install from Web', 'This plugin offers functionality for the ''Install from Web'' tab.', 'webinstaller', 'plugin', 'installer', 0, '1.0.5', '', 'http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 'http://docs.joomla.org/Install_from_Web'),
-(2, 3, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.1.5.4', '', 'http://update.joomla.org/language/details3/ms-MY_details.xml', ''),
-(3, 3, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/ro-RO_details.xml', ''),
-(4, 3, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/nl-BE_details.xml', ''),
-(5, 3, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/zh-TW_details.xml', ''),
-(6, 3, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/fr-FR_details.xml', ''),
-(7, 3, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/de-DE_details.xml', ''),
-(8, 3, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/el-GR_details.xml', ''),
-(9, 3, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/ja-JP_details.xml', ''),
-(10, 3, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.1', '', 'http://update.joomla.org/language/details3/he-IL_details.xml', ''),
-(11, 3, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/hu-HU_details.xml', ''),
-(12, 3, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/af-ZA_details.xml', ''),
-(13, 3, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.2.1.2', '', 'http://update.joomla.org/language/details3/ar-AA_details.xml', ''),
-(14, 3, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.0.3.1', '', 'http://update.joomla.org/language/details3/bg-BG_details.xml', ''),
-(15, 3, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/ca-ES_details.xml', ''),
-(16, 3, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/zh-CN_details.xml', ''),
-(17, 3, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.1.5.1', '', 'http://update.joomla.org/language/details3/hr-HR_details.xml', ''),
-(18, 3, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/cs-CZ_details.xml', ''),
-(19, 3, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/da-DK_details.xml', ''),
-(20, 3, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/nl-NL_details.xml', ''),
-(21, 3, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.1.0.1', '', 'http://update.joomla.org/language/details3/en-AU_details.xml', ''),
-(22, 3, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.1.0.1', '', 'http://update.joomla.org/language/details3/en-US_details.xml', ''),
-(23, 3, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/et-EE_details.xml', ''),
-(24, 3, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/it-IT_details.xml', ''),
-(25, 3, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.2.0.3', '', 'http://update.joomla.org/language/details3/ko-KR_details.xml', ''),
-(26, 3, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/lv-LV_details.xml', ''),
-(27, 3, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/mk-MK_details.xml', ''),
-(28, 3, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/nb-NO_details.xml', ''),
-(29, 3, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/fa-IR_details.xml', ''),
-(30, 3, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/pl-PL_details.xml', ''),
-(31, 3, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.1.5.1', '', 'http://update.joomla.org/language/details3/ru-RU_details.xml', ''),
-(32, 3, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sk-SK_details.xml', ''),
-(33, 3, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sv-SE_details.xml', ''),
-(34, 3, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.2.0.2', '', 'http://update.joomla.org/language/details3/sy-IQ_details.xml', ''),
-(35, 3, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/ta-IN_details.xml', ''),
-(36, 3, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/th-TH_details.xml', ''),
-(37, 3, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/tr-TR_details.xml', ''),
-(38, 3, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.2.0.6', '', 'http://update.joomla.org/language/details3/uk-UA_details.xml', ''),
-(39, 3, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/ug-CN_details.xml', ''),
-(40, 3, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.1', '', 'http://update.joomla.org/language/details3/sq-AL_details.xml', ''),
-(41, 3, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sr-YU_details.xml', ''),
-(42, 3, 10003, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/es-ES_details.xml', ''),
-(43, 3, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/bs-BA_details.xml', ''),
-(44, 3, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sr-RS_details.xml', ''),
-(45, 3, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.1.4.1', '', 'http://update.joomla.org/language/details3/id-ID_details.xml', ''),
-(46, 3, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/fi-FI_details.xml', ''),
-(47, 3, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sw-KE_details.xml', ''),
-(48, 3, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.2.0.2', '', 'http://update.joomla.org/language/details3/srp-ME_details.xml', '');
+(1, 3, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/af-ZA_details.xml', ''),
+(2, 3, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.2.1.2', '', 'http://update.joomla.org/language/details3/ar-AA_details.xml', ''),
+(3, 3, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/be-BY_details.xml', ''),
+(4, 3, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.0.3.1', '', 'http://update.joomla.org/language/details3/bg-BG_details.xml', ''),
+(5, 3, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/ca-ES_details.xml', ''),
+(6, 3, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/zh-CN_details.xml', ''),
+(7, 3, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.1.5.1', '', 'http://update.joomla.org/language/details3/hr-HR_details.xml', ''),
+(8, 3, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/cs-CZ_details.xml', ''),
+(9, 3, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/da-DK_details.xml', ''),
+(10, 3, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/nl-NL_details.xml', ''),
+(11, 3, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.1.0.1', '', 'http://update.joomla.org/language/details3/en-AU_details.xml', ''),
+(12, 3, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.1.0.1', '', 'http://update.joomla.org/language/details3/en-US_details.xml', ''),
+(13, 3, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/et-EE_details.xml', ''),
+(14, 3, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/it-IT_details.xml', ''),
+(15, 3, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.2.1.0', '', 'http://update.joomla.org/language/details3/ko-KR_details.xml', ''),
+(16, 3, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/lv-LV_details.xml', ''),
+(17, 3, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/mk-MK_details.xml', ''),
+(18, 3, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/nb-NO_details.xml', ''),
+(19, 3, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/fa-IR_details.xml', ''),
+(20, 3, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/pl-PL_details.xml', ''),
+(21, 3, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.1.5.1', '', 'http://update.joomla.org/language/details3/ru-RU_details.xml', ''),
+(22, 3, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sk-SK_details.xml', ''),
+(23, 3, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sv-SE_details.xml', ''),
+(24, 3, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.2.0.2', '', 'http://update.joomla.org/language/details3/sy-IQ_details.xml', ''),
+(25, 3, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/ta-IN_details.xml', ''),
+(26, 3, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/th-TH_details.xml', ''),
+(27, 3, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/tr-TR_details.xml', ''),
+(28, 3, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.2.0.6', '', 'http://update.joomla.org/language/details3/uk-UA_details.xml', ''),
+(29, 3, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/ug-CN_details.xml', ''),
+(30, 3, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.1', '', 'http://update.joomla.org/language/details3/sq-AL_details.xml', ''),
+(31, 3, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sr-YU_details.xml', ''),
+(32, 3, 10003, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/es-ES_details.xml', ''),
+(33, 3, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/bs-BA_details.xml', ''),
+(34, 3, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sr-RS_details.xml', ''),
+(35, 3, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/vi-VN_details.xml', ''),
+(36, 3, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.1.4.1', '', 'http://update.joomla.org/language/details3/id-ID_details.xml', ''),
+(37, 3, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/fi-FI_details.xml', ''),
+(38, 3, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/sw-KE_details.xml', ''),
+(39, 3, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/srp-ME_details.xml', ''),
+(40, 4, 10000, 'Installer - Install from Web', 'This plugin offers functionality for the ''Install from Web'' tab.', 'webinstaller', 'plugin', 'installer', 0, '1.0.5', '', 'http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 'http://docs.joomla.org/Install_from_Web'),
+(41, 3, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.1.5.4', '', 'http://update.joomla.org/language/details3/ms-MY_details.xml', ''),
+(42, 3, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/ro-RO_details.xml', ''),
+(43, 3, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/nl-BE_details.xml', ''),
+(44, 3, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/zh-TW_details.xml', ''),
+(45, 3, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/fr-FR_details.xml', ''),
+(46, 3, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/de-DE_details.xml', ''),
+(47, 3, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/el-GR_details.xml', ''),
+(48, 3, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/ja-JP_details.xml', ''),
+(49, 3, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.1', '', 'http://update.joomla.org/language/details3/he-IL_details.xml', ''),
+(50, 3, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.2.0.1', '', 'http://update.joomla.org/language/details3/hu-HU_details.xml', '');
 
 -- --------------------------------------------------------
 
@@ -1906,7 +1930,7 @@ INSERT INTO `ziax6_updates` (`update_id`, `update_site_id`, `extension_id`, `nam
 -- Estructura de tabla para la tabla `ziax6_update_sites`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_update_sites` (
+CREATE TABLE `ziax6_update_sites` (
   `update_site_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT '',
   `type` varchar(20) DEFAULT '',
@@ -1921,11 +1945,11 @@ CREATE TABLE IF NOT EXISTS `ziax6_update_sites` (
 --
 
 INSERT INTO `ziax6_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`) VALUES
-(1, 'Joomla Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1387829577),
-(2, 'Joomla Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1387829577),
-(3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1387829577),
-(4, 'WebInstaller Update Site', 'extension', 'http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 1387829577),
-(5, 'JCE Editor Updates', 'extension', 'https://www.joomlacontenteditor.net/index.php?option=com_updates&view=update&format=xml&id=1&file=extension.xml', 1, 1387829575);
+(1, 'Joomla Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1388411580),
+(2, 'Joomla Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1388411580),
+(3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1388411580),
+(4, 'WebInstaller Update Site', 'extension', 'http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 1388411580),
+(5, 'JCE Editor Updates', 'extension', 'https://www.joomlacontenteditor.net/index.php?option=com_updates&view=update&format=xml&id=1&file=extension.xml', 1, 1388411580);
 
 -- --------------------------------------------------------
 
@@ -1933,7 +1957,7 @@ INSERT INTO `ziax6_update_sites` (`update_site_id`, `name`, `type`, `location`, 
 -- Estructura de tabla para la tabla `ziax6_update_sites_extensions`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_update_sites_extensions` (
+CREATE TABLE `ziax6_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT '0',
   `extension_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`update_site_id`,`extension_id`)
@@ -1956,7 +1980,7 @@ INSERT INTO `ziax6_update_sites_extensions` (`update_site_id`, `extension_id`) V
 -- Estructura de tabla para la tabla `ziax6_usergroups`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_usergroups` (
+CREATE TABLE `ziax6_usergroups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Adjacency List Reference Id',
   `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
@@ -1990,7 +2014,7 @@ INSERT INTO `ziax6_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 -- Estructura de tabla para la tabla `ziax6_users`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_users` (
+CREATE TABLE `ziax6_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
   `username` varchar(150) NOT NULL DEFAULT '',
@@ -2011,14 +2035,15 @@ CREATE TABLE IF NOT EXISTS `ziax6_users` (
   KEY `idx_block` (`block`),
   KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=206 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=207 ;
 
 --
 -- Volcado de datos para la tabla `ziax6_users`
 --
 
 INSERT INTO `ziax6_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`) VALUES
-(205, 'Super User', 'admin', 'pablo.pantoja@nuevosmedios.ws', '$P$DLMRXPGajLMRVVI/rxtF2gcOL24JvC/', 0, 1, '2013-12-17 20:24:05', '2013-12-23 20:06:16', '0', '{}', '0000-00-00 00:00:00', 0, '', '');
+(205, 'Super User', 'admin', 'pablo.pantoja@nuevosmedios.ws', '$P$DLMRXPGajLMRVVI/rxtF2gcOL24JvC/', 0, 1, '2013-12-17 20:24:05', '2013-12-30 13:52:55', '0', '{}', '0000-00-00 00:00:00', 0, '', ''),
+(206, 'Gerson Yarce Franco', 'yeiyei', 'gerson.yarce@nuevosmedios.ws', '$P$D6LdA6u2/fGcE.lkmtfs.X4MTBK.N1.', 0, 0, '2013-12-30 13:53:46', '0000-00-00 00:00:00', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -2026,7 +2051,7 @@ INSERT INTO `ziax6_users` (`id`, `name`, `username`, `email`, `password`, `block
 -- Estructura de tabla para la tabla `ziax6_user_keys`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_user_keys` (
+CREATE TABLE `ziax6_user_keys` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
@@ -2047,7 +2072,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_user_keys` (
 -- Estructura de tabla para la tabla `ziax6_user_notes`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_user_notes` (
+CREATE TABLE `ziax6_user_notes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
   `catid` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2074,7 +2099,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_user_notes` (
 -- Estructura de tabla para la tabla `ziax6_user_profiles`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_user_profiles` (
+CREATE TABLE `ziax6_user_profiles` (
   `user_id` int(11) NOT NULL,
   `profile_key` varchar(100) NOT NULL,
   `profile_value` varchar(255) NOT NULL,
@@ -2088,7 +2113,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_user_profiles` (
 -- Estructura de tabla para la tabla `ziax6_user_usergroup_map`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_user_usergroup_map` (
+CREATE TABLE `ziax6_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__users.id',
   `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__usergroups.id',
   PRIMARY KEY (`user_id`,`group_id`)
@@ -2099,7 +2124,8 @@ CREATE TABLE IF NOT EXISTS `ziax6_user_usergroup_map` (
 --
 
 INSERT INTO `ziax6_user_usergroup_map` (`user_id`, `group_id`) VALUES
-(205, 8);
+(205, 8),
+(206, 8);
 
 -- --------------------------------------------------------
 
@@ -2107,7 +2133,7 @@ INSERT INTO `ziax6_user_usergroup_map` (`user_id`, `group_id`) VALUES
 -- Estructura de tabla para la tabla `ziax6_viewlevels`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_viewlevels` (
+CREATE TABLE `ziax6_viewlevels` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `title` varchar(100) NOT NULL DEFAULT '',
   `ordering` int(11) NOT NULL DEFAULT '0',
@@ -2133,7 +2159,7 @@ INSERT INTO `ziax6_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 -- Estructura de tabla para la tabla `ziax6_weblinks`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_weblinks` (
+CREATE TABLE `ziax6_weblinks` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `catid` int(11) NOT NULL DEFAULT '0',
   `title` varchar(250) NOT NULL DEFAULT '',
@@ -2179,7 +2205,7 @@ CREATE TABLE IF NOT EXISTS `ziax6_weblinks` (
 -- Estructura de tabla para la tabla `ziax6_wf_profiles`
 --
 
-CREATE TABLE IF NOT EXISTS `ziax6_wf_profiles` (
+CREATE TABLE `ziax6_wf_profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `description` text NOT NULL,
@@ -2207,7 +2233,3 @@ INSERT INTO `ziax6_wf_profiles` (`id`, `name`, `description`, `users`, `types`, 
 (2, 'Front End', 'Sample Front-end Profile', '', '3,4,5', '', 1, 'desktop,tablet,phone', 'help,newdocument,undo,redo,spacer,bold,italic,underline,strikethrough,justifyfull,justifycenter,justifyleft,justifyright,spacer,formatselect,styleselect;clipboard,searchreplace,indent,outdent,lists,cleanup,charmap,removeformat,hr,sub,sup,textcase,nonbreaking,visualchars,visualblocks;fullscreen,preview,print,visualaid,style,xhtmlxtras,anchor,unlink,link,imgmanager,spellchecker,article', 'charmap,contextmenu,inlinepopups,help,clipboard,searchreplace,fullscreen,preview,print,style,textcase,nonbreaking,visualchars,visualblocks,xhtmlxtras,imgmanager,anchor,link,spellchecker,article,lists', 0, 2, 0, '0000-00-00 00:00:00', ''),
 (3, 'Blogger', 'Simple Blogging Profile', '', '3,4,5,6,8,7', '', 0, 'desktop,tablet,phone', 'bold,italic,strikethrough,lists,blockquote,spacer,justifyleft,justifycenter,justifyright,spacer,link,unlink,imgmanager,article,spellchecker,fullscreen,kitchensink;formatselect,underline,justifyfull,forecolor,clipboard,removeformat,charmap,indent,outdent,undo,redo,help', 'link,imgmanager,article,spellchecker,fullscreen,kitchensink,clipboard,contextmenu,inlinepopups,lists', 0, 3, 0, '0000-00-00 00:00:00', '{"editor":{"toggle":"0"}}'),
 (4, 'Mobile', 'Sample Mobile Profile', '', '3,4,5,6,8,7', '', 0, 'tablet,phone', 'undo,redo,spacer,bold,italic,underline,formatselect,spacer,justifyleft,justifycenter,justifyfull,justifyright,spacer,fullscreen,kitchensink;styleselect,lists,spellchecker,article,link,unlink', 'fullscreen,kitchensink,spellchecker,article,link,inlinepopups,lists', 0, 4, 0, '0000-00-00 00:00:00', '{"editor":{"toolbar_theme":"mobile","resizing":"0","resize_horizontal":"0","resizing_use_cookie":"0","toggle":"0","links":{"popups":{"default":"","jcemediabox":{"enable":"0"},"window":{"enable":"0"}}}}}');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
