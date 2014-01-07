@@ -1,0 +1,19 @@
+.ui {
+	&-widget {
+		@foo = 0 4px 8px rgba(0, 0, 0, 0.35), 0 4px 1px rgba(255, 255, 255, 0.25);
+		margin-top: 2px;
+		.box-shadow(@foo);
+		& & { .box-shadow ( none ) }
+	}
+	&-datepicker {
+		margin-left: -4px;
+		td .ui-state-default { color: #555; }
+		&-title select {
+			height: 24px;
+			padding: 1px;
+		}
+		&-header span.ui-icon { margin-top: -4px !important; }
+	}
+}
+
+span.jqui-daterangepicker-text { line-height: 280%; }

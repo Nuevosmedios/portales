@@ -1,0 +1,131 @@
+body {
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	color: #272727;
+	margin: 0 padding : 0;
+}
+
+table {
+	width: 100%;
+	table-layout: fixed
+}
+
+.title {
+	color: #272727;
+	background: #eef1f6;
+	border-bottom: 1px solid #d7dadf;
+}
+
+.title tr td {
+	border-left: 1px solid #d7dadf;
+	padding-left: 10px;
+}
+
+td {
+	width: 20%;
+	word-break: break-all;
+	word-wrap: break-word;
+	border-bottom: 1px solid #edeef2;
+	padding-left: 14px;
+}
+
+.pagelist img {
+	vertical-align: middle;
+	border: medium none;
+}
+
+.pagelist {
+	position: relative;
+	padding: 8px 0;
+	height: 12px;
+	background: #f8f9fd;
+	width: 350px;
+}
+
+.pagelist a {
+	display: block;
+	background: url(page.gif) no-repeat;
+	width: 8px;
+	height: 10px;
+	float: right;
+	margin: 0 3px 0 3px;
+}
+
+.pagelist a:hover {
+	display: block;
+	background: url(page.gif) no-repeat;
+	width: 8px;
+	height: 10px;
+	float: right;
+	margin: 2px 3px 0 3px;
+}
+
+a.home {
+	background: url(home.gif) no-repeat;
+	float: right;
+	width: 18px;
+	height: 16px;
+	margin-top: -3px;
+}
+
+.pagelist a:hover.home {
+	background: url(home.gif) no-repeat;
+	float: right;
+	width: 18px;
+	height: 16px;
+	margin-top: -2px;
+}
+
+.footer {
+	width: 100%;
+	padding: 3px 0;
+	clear: both;
+	height: 12px;
+}
+
+.toptable {
+	border-top: 1px solid #d7dadf;
+	border-bottom: 1px solid #d7dadf;
+}
+
+.bottomtable {
+	border-bottom: 1px solid #d7dadf;
+	border-top: 1px solid #d7dadf;
+}
+
+.noboardertd {
+	border: none;
+}
+
+a{
+        color:#888888;
+        text-decoration:none;
+}
+
+a:hover{
+        text-decoration:underline;
+}
+
+.titlebar{
+        float:left;
+        padding:8px 0;
+        height:12px;
+        color:#666666;
+}
+
+.titlebar a{
+        text-decoration:none; 
+        color:#666666;
+        font-weight:normal;
+}       
+
+.titlebar a:hover{
+        text-decoration:underline; 
+        font-weight:normal;
+}      
+
+.datetd {border: none;width:15%;}
+.timetd {width:15%;}
+.fromtd {width:15%;}
+.totd {width:15%;}
+.messagetd {width:40%;}

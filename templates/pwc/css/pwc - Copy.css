@@ -1,0 +1,1268 @@
+/*HTML CSS*/
+html, form, fieldset 
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body 
+{
+	color: #3F3F3F;
+	font-family: Arial, Helvetica, sans-serif;
+	height:100%;
+	line-height: 150%;
+	font-size:13px;
+	margin: 0px;
+	padding: 0px;
+	background:#F2F2F2;
+}
+
+a:link
+{
+	color:#021A42;
+}
+
+a:hover 
+{
+	color:#FF8313;
+	text-decoration:underline;
+}
+
+a:visited
+{
+	color:#021A42;
+}
+
+a:active
+{
+	color:#FF8313;
+}
+
+a:link img
+{
+	border-style:none;
+}
+
+a:hover img
+{
+	border-style:none;
+}
+
+a:visited img
+{
+	border-style:none;
+}
+
+a:active img
+{
+	border-style:none;
+}
+
+fieldset
+{
+	border:none;
+	padding:20px;
+	padding-top:0px;
+}
+
+/*CUSTOM CSS*/
+.mainTable
+{
+	width:100%;
+}
+
+.mainmainDiv
+{
+	clear:both;
+	width:1000px;
+	margin:auto;
+	background:#FFF;
+}
+
+.mainDiv
+{
+	clear:both;
+	width:1000px;
+	margin:auto;
+}
+
+.headerDiv
+{
+	width:960px;
+	padding:20px;
+	padding-top:0px;
+}
+
+.headerDivLeft
+{
+	float:left;
+	width:200px;
+}
+
+.headerDivRight
+{
+	float:right;
+	width:182px;
+}
+
+.topMenuDiv
+{
+	width:187px;
+}
+
+.searchDiv
+{
+	width:187px;
+	margin-top:40px;
+	margin-right:12px;
+}
+
+div.search .inputbox
+{
+	background:url(../images/search.png) no-repeat;
+	width:187px;
+	height:25px;
+	border:none;
+	text-indent:8px;
+}
+
+.mainMenuDiv
+{
+	padding-left:10px;
+	
+}
+
+.mainContentDiv
+{
+	clear:both;
+	margin:auto;
+	padding:10px;
+}
+
+.mainContentDivLeft
+{
+	float:left;
+	width:730px;
+}
+
+.mainContentDivRight
+{
+	float:right;
+	width:200px;
+	margin-right:5px;
+}
+
+.homeLinksDiv
+{
+	clear:both;
+	width:100%;
+	margin:auto;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.homeLinksTable
+{
+	width:970px;
+	margin:auto;
+}
+
+.homeLinksTable td
+{
+	width:230px;
+	vertical-align:top;
+}
+
+div.module-novedades h3
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#EB8C00;
+	margin:0px;
+	padding:0px;
+	padding-bottom:5px;
+	margin-bottom:10px;
+	border-bottom:4px solid #EB8C00;
+}
+
+div.module-cursos h3
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#DF301E;
+	margin:0px;
+	padding:0px;
+	padding-bottom:5px;
+	margin-bottom:10px;
+	border-bottom:4px solid #DF301E;
+}
+
+div.module-foros h3
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#A31F1F;
+	margin:0px;
+	padding:0px;
+	padding-bottom:5px;
+	margin-bottom:10px;
+	border-bottom:4px solid #A31F1F;
+}
+
+div.module-multimedia h3
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#6C6E6F;
+	margin:0px;
+	padding:0px;
+	padding-bottom:5px;
+	margin-bottom:10px;
+	border-bottom:4px solid #6C6E6F;
+}
+
+.footCopy
+{
+	color:#3F3F3F;
+	font-size:11px;
+	width:965px;
+	margin:auto;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.footerDiv
+{
+	clear:both;
+	padding:20px;
+	margin-bottom:30px;
+}
+
+.footerDivLeft
+{
+	float:left;
+}
+
+.footerDivRight
+{
+	float:right;
+	width:120px;
+}
+
+.innerContentDiv
+{
+	padding:20px;
+}
+
+.innerContentDivLeft
+{
+	float:left;
+	width:190px;
+}
+
+.innerContentDivRight
+{
+	float:right;
+	width:190px;
+}
+
+.innerContentDivCenter
+{
+	margin-left:10px;
+	width:750px;
+}
+
+.innerBottomLinks
+{
+	clear:both;
+	width:950px;
+	margin:auto;
+	margin-bottom:40px;
+	margin-top:20px;
+	padding-top:10px;
+}
+
+.pathway
+{
+	text-indent:10px;
+	height:25px;
+	width:980px;
+	margin:auto;
+	line-height:25px;
+	vertical-align:middle;
+	background:#FDF5EA;
+	font-size:11px;
+}
+
+.pathway a
+{
+	font-size:11px;
+	color:#77797D;
+	text-decoration:none;
+}
+
+.pathway a:hover, .pathway a:active, .pathway a:visited
+{
+	font-weight:bold;
+}
+
+.functionalmenu
+{
+	margin:auto;
+}
+
+.functionalmenu a
+{
+	color:#575758;
+	font-size:12px;
+	text-decoration:none;
+}
+
+.functionalmenu a:hover
+{
+	color:#666;
+}
+
+div.module-loginInner
+{
+	background:#FDF5EA;
+	border-top:4px solid #F09C35;
+}
+
+div.module-loginInner .profileButton
+{
+	/*background-image:url(../images/loginbuttonback.png);
+	background-repeat:no-repeat;*/
+	width:177px;
+	height:20px;
+	line-height:20px;
+	vertical-align:middle;
+	margin-bottom:10px;
+	margin-top:5px;
+}
+
+div.module-loginInner .editProfileButton
+{
+	/*background-image:url(../images/logineditbuttonback.png);
+	background-repeat:no-repeat;*/
+	width:177px;
+	height:20px;
+	line-height:20px;
+	vertical-align:middle;
+	margin-bottom:10px;
+	margin-top:5px;
+}
+
+#mod_login_greeting-loginInner
+{
+	margin-left:20px;
+	font-weight:bold;
+	color:#575758;
+	font-size:12px;
+}
+
+#mod_login_avatar-loginInner
+{
+	padding-top:10px;
+}
+
+.button-loginInner
+{
+	background:#F09C35;
+	color:#FFF;
+	font-size:12px;
+	border:none;
+	margin-bottom:20px;
+}
+
+/*JOOMLA CSS*/
+#mod_login_greeting-login
+{
+	color:#FFF;
+	margin-left:5px;
+	font-size:12px;
+}
+
+#mod_loginform-login
+{
+	padding-left:0px;
+}
+
+div.module-login2 h3
+{
+	margin:0px;
+	padding:0px;
+	color:#FFF;
+	font-size:10px;
+	font-weight:normal;
+	text-indent:10px;
+}
+
+#mod_login_logoutform-login
+{
+	height:177px;
+}
+
+div.module-login2
+{
+	background:#A32020;
+	padding-left:0px;
+	padding-bottom:7px;
+}
+
+div.module-login
+{
+	background:#A32020;
+	padding-left:0px;
+	padding-bottom:9px;
+	min-height:170px;
+}
+
+div.module-login a
+{
+	font-size:11px;
+}
+
+div.module-login h3
+{
+	margin:0px;
+	padding:0px;
+	color:#FFF;
+	font-size:10px;
+	font-weight:normal;
+	text-indent:10px;
+}
+
+div.module-login a, div.module-login a:visited
+{
+	color:#FFF;
+}
+
+div.module-login a:hover
+{
+	color:#CCC;
+}
+
+.mod_login-login
+{
+	text-align:center;
+}
+
+.inputbox-login[type="text"], .inputbox-login[type="password"]
+{
+	border:1px solid #939598;
+	background:#FFF;
+	color:#6C6D71;
+	font-size:12px;
+	margin-bottom:10px;
+	width:180px;
+	height:27px;
+	text-indent:5px;
+}
+
+.button-login
+{
+	background:#602320;
+	border:none;
+	color:#FFF;
+	font-size:12px;
+	width:80px;
+	margin:auto;
+	margin-bottom:5px;
+}
+
+div.module
+{
+	margin-top:10px;
+}
+
+.module_menu
+{
+	margin:0px;
+	padding:0px;
+}
+
+.module_menu h3
+{
+	margin:0px;
+	padding:0px;
+	background:url(../images/titleModuleBack.png) repeat-x;
+	height:35px;
+	line-height:35px;
+	vertical-align:middle;
+	text-indent:15px;
+	color:#FFF;
+}
+
+ul.menu
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+ul.menu li
+{
+	vertical-align:middle;
+	text-indent:20px;
+	border-bottom:1px dotted #CCC;
+	cursor:pointer;
+	text-decoration:none;
+	color:#77797D;
+}
+
+ul.menu li:hover, #current
+{
+	border-bottom:1px dotted #CCC;
+	color:#006DB8;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+ul.menu li a
+{
+	text-decoration:none;
+	color:#77797D;
+}
+
+ul.menu li a:hover, #current
+{
+	color:#006DB8;
+	font-weight:bold;
+}
+
+
+
+.contentheading
+{
+	color:#968C6D;
+	font-size:20px;
+	font-weight:bold;
+	padding-bottom:20px;
+}
+
+.contentheading-boletines
+{
+	color:#E0301E;
+	font-size:20px;
+	font-weight:bold;
+	padding-bottom:20px;
+}
+
+.componentheading
+{
+	color:#E0301E;
+	font-size:20px;
+	font-weight:bold;
+	padding-bottom:20px;
+}
+
+.contentheading-novedades
+{
+	color:#E0301E;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.contentheading-enterprise, componentheading-enterprise
+{
+	color:#C8A313;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.contentheading-siesa8, componentheading-siesa8
+{
+	color:#61982C;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.contentheading-siesapymes, componentheading-siesapymes
+{
+	color:#CD2927;
+	font-size:20px;
+	font-weight:bold;
+}
+
+div.module h3
+{
+	color: #E0301E;
+	font-size:16px;
+	font-weight:bold;
+	text-indent:10px;
+	margin:0px;
+	padding:0px;
+	margin-bottom:10px;
+}
+
+div.module-soporte h3
+{
+	color:#006BB2;
+	font-size:16px;
+	font-weight:bold;
+	background:url(../images/homemoduletitlesep.png) no-repeat bottom center;
+	text-indent:10px;
+}
+
+.module-centrodeservicios
+{
+	width:200px;
+}
+
+table.centroServiciosTable
+{
+	padding:0px;
+	margin:auto;
+	margin-bottom:0px;
+	margin-top:0px;
+	width:200px;
+}
+
+table.centroServiciosTable table
+{
+	margin-left:18px;
+}
+
+table.centroServiciosTable table td
+{
+	background:none;
+	width:60px;
+}
+
+table.centroServiciosTable td
+{
+	height:60px;
+	width:200px;
+	background:url(../images/centroBackTd.png) no-repeat;
+}
+
+table.centroServiciosTable td.enlace
+{
+	background:none;
+	text-align:left;
+	width:110px;
+}
+
+table.centroServiciosTable td.enlace a
+{
+	color:#003F70;
+	font-weight:bold;
+	text-decoration:none;
+	font-size:13px;
+}
+
+table.centroServiciosTable td.enlace a:hover
+{
+	color:#0070C8;
+}
+
+.module-centrodeservicios h3
+{
+	font-size:16px;
+	color:#FFF;
+	width:200px;
+	background:url(../images/backtitlecentro.png) repeat-y;
+	height:35px;
+	line-height:35px;
+	vertical-align:middle;
+	margin:0px;
+	padding:0px;
+	text-indent:15px;
+}
+
+.module-soporte
+{
+	background:url(../images/backSoporteMod.png) no-repeat;
+	width:181px;
+	height:270px;
+}
+
+div.module-home h3
+{
+	color:#006BB2;
+	font-size:16px;
+	font-weight:bold;
+	background:url(../images/homemoduletitlesep.png) no-repeat bottom center;
+	text-indent:10px;
+}
+
+.module-home
+{
+	background:url(../images/backhomemodule.png) no-repeat;
+	width:181px;
+	height:270px;
+}
+
+div.module-solucionestic h3
+{
+	color:#006BB2;
+	font-size:16px;
+	font-weight:bold;
+	background:url(../images/homemoduletitlesep.png) no-repeat bottom center;
+	text-indent:10px;
+}
+
+.module-solucionestic
+{
+	background:url(../images/solucionesTicMod.png) no-repeat bottom center;
+	width:181px;
+	height:270px;
+}
+
+.inputbox
+{
+	border: 1px solid #ABADB3;
+	background:#FFF;
+}
+
+ul.latestnews-novedades
+{
+	margin:0px;
+	padding:0px;
+	margin-left:20px;
+	margin-right:10px;
+}
+
+ul.latestnews-multimedia
+{
+	background:#FFF;
+	margin-top:4px;
+	padding-top:10px;
+	height:170px;
+	color:#333;
+}
+
+a.latestnews-multimedia
+{
+	color:#333;
+	text-decoration:none;
+}
+
+a.latestnews-multimedia:hover
+{
+	color:#CCC;
+}
+
+#mainlevel 
+{
+	margin: 0px; 
+	padding: 0px;
+	color:#3F3F40;
+}
+
+#mainlevel li {
+	padding-left: 0px;
+	list-style:none; 
+	float: left; 
+	margin: 0px; 
+	font-size: 12px;
+	white-space: nowrap;
+	text-align:left;
+	line-height:30px;
+	padding-right:25px;
+}
+
+#mainlevel a 
+{
+	display: block; 
+	float: left; 
+	text-decoration: none;  
+	color: #3F3F40;
+}
+
+#mainlevel a 
+{
+	float: none;
+}
+
+#mainlevel a:hover 
+{
+	color:#666;
+}
+
+#mainlevel a:active
+{
+	color:#666;
+}
+
+.fpss-introtext .slidetext h1 a, .fpss-introtext .slidetext h1 a:hover
+{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.chronoform
+{
+	display:none;
+}
+
+.form_element
+{
+	font-size:12px;
+}
+
+.form_element select, .form_element input {
+	font-size:12px;
+}
+
+/*Maxi Menu CSS*/
+div#maximenuCK ul.maximenuCK {
+    height : 38px;
+    padding : 0;
+    margin : 0;
+}
+
+div#maximenuCK ul.maximenuCK li.maximenuCK {
+    background : none;
+    list-style : none;
+    border : none;
+}
+
+/* link image style */
+div#maximenuCK ul.maximenuCK li.maximenuCK>a img {
+    margin : 3px;
+    border : none;
+}
+
+/* img style without link (in separator) */
+div#maximenuCK ul.maximenuCK li.maximenuCK img {
+    border : none;
+}
+
+div#maximenuCK ul.maximenuCK li a.maximenuCK {
+    text-decoration : none;
+    text-indent : 2px;
+    height : 27px;
+    outline : none;
+    background : none;
+    border : none;
+    padding : 0;
+    cursor : pointer;
+    color :#3F3F40;
+}
+
+/* separator item */
+div#maximenuCK ul.maximenuCK li span.separator {
+
+}
+
+/**
+** active items
+**/
+
+/* current item title and description */
+div#maximenuCK ul.maximenuCK li.current>a span {
+    color : #3F3F40;
+}
+
+/* current item title when mouseover */
+div#maximenuCK ul.maximenuCK li.current>a:hover span.titreCK {
+
+}
+
+/* current item description when mouseover */
+div#maximenuCK ul.maximenuCK li.current>a:hover span.descCK {
+
+}
+
+/* active parent title */
+div#maximenuCK ul.maximenuCK li.active>a span.titreCK {
+    color : #3F3F40;
+}
+
+/* active parent description */
+div#maximenuCK ul.maximenuCK li.active>a span.descCK {
+
+}
+
+/**
+** first level items
+**/
+
+div#maximenuCK ul.maximenuCK li.level0 {
+    padding : 0 5px;
+	border-top: 4px solid #6D6E71;
+	margin-right:5px;
+	width:125px;
+    /*background : url(../images/separator.png) top right no-repeat;*/
+}
+
+div#maximenuCK ul.maximenuCK li.level0:hover
+{
+	border-top: 4px solid #EB8C00;
+}
+
+/* first level item title */
+div#maximenuCK ul.maximenuCK li.level0>a span.titreCK {
+    color : #3F3F40;
+}
+
+/* first level item description */
+div#maximenuCK ul.maximenuCK li.level0>a span.descCK {
+    color : #3F3F40;
+}
+
+/* first level item link */
+div#maximenuCK ul.maximenuCK li.parent.level0>a {
+    /*background : url(../images/maxi_arrow0.png) bottom right no-repeat;*/
+}
+
+/* parent style level 0 */
+div#maximenuCK ul.maximenuCK li.parent.level0 li.parent {
+    /*background : url(../images/maxi_arrow1.png) center right no-repeat;*/s
+}
+
+/**
+** items title and descriptions
+**/
+
+/* item title */
+div#maximenuCK span.titreCK {
+    color : #3F3F40;
+    display : block;
+    text-transform : none;
+    font-weight : normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+    font-size : 11px;
+    line-height : 18px;
+    text-decoration : none;
+    height : 17px;
+    float : none !important;
+    float : left;
+}
+
+/* item description */
+div#maximenuCK span.descCK {
+    color : #c0c0c0;
+    display : block;
+    text-transform : none;
+    font-size : 10px;
+    text-decoration : none;
+    height : 12px;
+    line-height : 12px;
+    float : none !important;
+    float : left;
+}
+
+/* item title when mouseover */
+div#maximenuCK ul.maximenuCK  a:hover span.titreCK {
+    color : #EB8C00;
+}
+
+/**
+** child items
+**/
+
+/* child item title */
+div#maximenuCK ul.maximenuCK2  a.maximenuCK {
+    width : 160px;
+}
+
+div#maximenuCK ul.maximenuCK2 li a.maximenuCK {
+    text-decoration : none;
+    border-bottom : 0px solid #505050;
+    width : 150px;
+    margin : 0 auto;
+    padding : 3px 0 3px 0;
+}
+
+/* child item block */
+div#maximenuCK ul.maximenuCK ul.maximenuCK2 {
+    background : #FFF;
+    margin : 3px 0 0 0;
+    padding : 0;
+    border : none;
+    width : 180px; /* important for Chrome and Safari compatibility */
+	border-top: 2px dotted #EB8C00;
+}
+
+div#maximenuCK ul.maximenuCK2 li.maximenuCK {
+    width : 180px;
+    padding : 2px 0 0 0;
+    border : none;
+    margin : 0;
+    background : none;
+}
+
+/* child item container  */
+div#maximenuCK ul.maximenuCK li div.floatCK {
+    background : #FFF;
+    border : 0px solid #707070;
+	margin-top:3px;
+}
+
+/**
+** module style
+**/
+
+div#maximenuCK div.maximenuCK_mod {
+    width : 170px;
+    padding : 0;
+    overflow : hidden;
+    color : #ddd;
+    white-space : normal;
+}
+
+div#maximenuCK div.maximenuCK_mod div.moduletable {
+    border : none;
+
+    background : none;
+}
+
+div#maximenuCK div.maximenuCK_mod  fieldset{
+    width : 160px;
+    padding : 0;
+    margin : 0 auto;
+    overflow : hidden;
+    background : #1a1a1a;
+    border : none;
+}
+
+div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod a {
+    border : none;
+    margin : 0;
+    padding : 0;
+    display : inline;
+    background : #1a1a1a;
+    color : #888;
+    font-weight : normal;
+}
+
+div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod a:hover {
+    color : #FFF;
+}
+
+/* module title */
+div#maximenuCK ul.maximenuCK div.maximenuCK_mod h3 {
+    font-size : 14px;
+    width : 170px;
+    color : #aaa;
+    font-size : 14px;
+    font-weight : normal;
+    background : #444;
+    margin : 5px 0 0 0;
+    padding : 3px 0 3px 0;
+}
+
+div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod ul {
+    margin : 0;
+    padding : 0;
+    width : 170px;
+    background : none;
+    border : none;
+    text-align : left;
+}
+
+div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod li {
+    margin : 0 0 0 15px;
+    padding : 0;
+    width : 155px;
+    background : none;
+    border : none;
+    text-align : left;
+    font-size : 11px;
+    float : none;
+    display : block;
+    line-height : 20px;
+    white-space : normal;
+}
+
+/* login module */
+div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod #form-login ul {
+    left : 0;
+    margin : 0;
+
+    padding : 0;
+    width : 170px;
+}
+
+div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod #form-login ul li {
+    margin : 2px 0;
+    padding : 0 5px;
+    height : 20px;
+    background : #1a1a1a;
+}
+
+
+/**
+** columns width & child position
+**/
+
+/* child blocks position (from level2 to n) */
+div#maximenuCK ul.maximenuCK li.maximenuCK div.floatCK div.floatCK {
+    margin : -30px 0 0 180px;
+}
+
+/* margin for overflown elements that rolls to the left */
+div#maximenuCK ul.maximenuCK li.maximenuCK div.floatCK div.floatCK.fixRight  {
+    margin-right : 180px;
+}
+
+/* default width */
+div#maximenuCK ul.maximenuCK li div.floatCK {
+    width : 180px;
+}
+
+/* 2 cols width */
+div#maximenuCK ul.maximenuCK li div.cols2 {
+    width : 360px;
+}
+
+div#maximenuCK ul.maximenuCK li div.cols2>div.maximenuCK2 {
+    width : 50%;
+}
+
+/* 3 cols width */
+div#maximenuCK ul.maximenuCK li div.cols3 {
+    width : 540px;
+}
+
+div#maximenuCK ul.maximenuCK li div.cols3>div.maximenuCK2 {
+    width : 33%;
+}
+
+/* 4 cols width */
+div#maximenuCK ul.maximenuCK li div.cols4 {
+    width : 720px;
+}
+
+div#maximenuCK ul.maximenuCK li div.cols4>div.maximenuCK2 {
+    width : 25%;
+}
+
+
+
+/**
+** fancy parameters
+**/
+
+div#maximenuCK .maxiFancybackground {
+    list-style : none;
+}
+
+div#maximenuCK .maxiFancybackground .maxiFancycenter {
+    background: url('../images/fancy_bg.png') repeat-x top left;
+    height : 34px;
+}
+
+div#maximenuCK .maxiFancybackground .maxiFancyleft {
+
+}
+
+div#maximenuCK .maxiFancybackground .maxiFancyright {
+
+}
+
+/**
+** rounded style
+**/
+
+/* global container */
+div#maximenuCK div.maxiRoundedleft {
+
+}
+
+div#maximenuCK div.maxiRoundedcenter {
+
+}
+
+div#maximenuCK div.maxiRoundedright {
+
+}
+
+/* child container */
+div#maximenuCK div.maxidrop-top {
+
+}
+
+div#maximenuCK div.maxidrop-main {
+
+}
+
+div#maximenuCK div.maxidrop-bottom {
+
+}
+
+/*Fin MMCSS*/
+
+.listfooter, .listheader
+{
+	display:none;
+}
+
+div#jf-jukebox div.infos
+{
+	background:none;
+}
+
+.resources
+{
+	display:none;
+}
+
+.mod_login-login .registerButton
+{
+	background:url(../images/registerButton.png) no-repeat center;
+	width:177px;
+	height:42px;
+	padding-top:4px;
+	color:#333333;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-weight:bold;
+	font-size:16px;
+}
+
+.registerButton
+{
+	background:url(../images/registerButton.png) no-repeat center;
+	width:177px;
+	height:42px;
+}
+
+.registerButton a
+{
+	color:#333333;
+	text-decoration:none;
+	font-size:12px;
+	font-weight:bold;
+	height:42px;
+	line-height:48px;
+	vertical-align:middle;
+	margin-left:0px;
+}
+
+.registerButton a:hover
+{
+	color:#666;
+}
+
+
+div.module-login .registerButton a
+{
+	color:#333333;
+	text-decoration:none;
+	font-size:12px;
+	font-weight:bold;
+}
+
+div.module-login .registerButton a:hover
+{
+	color:#666;
+}
+
+.fb_credits
+{
+	display:none;
+}
+
+#fpss-outer-container
+{
+	margin-top:0px;
+}
+
+.ul_container
+{
+	display:none;
+}
+
+.kcredits
+{
+	display:none;
+}

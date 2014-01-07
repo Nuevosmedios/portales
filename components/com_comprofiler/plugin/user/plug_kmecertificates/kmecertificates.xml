@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* Joomla Community Builder User Plugin: plug_cbhelloworld
+* @version $Id$
+* @package plug_helloworld
+* @subpackage helloworld.xml
+* @author Nant, JoomlaJoe and Beat
+* @copyright (C) Nant, JoomlaJoe and Beat, www.joomlapolis.com
+* @license Limited  http://www.gnu.org/copyleft/gpl.html GNU/GPL
+* @final 1.0
+*/
+-->
+<cbinstall version="1.0.0" type="plugin" group="user">
+	<name>KME Certificates</name>
+	<author>X-treaming</author>
+	<creationDate>2010-03-24</creationDate>
+	<copyright>(C) 2010 X-treaming</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>nant@joomlapolis.com</authorEmail>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.0</version>
+	<description>
+		This is a plugin for KME certificates management.
+	</description>
+	<files>
+		<filename plugin="kmecertificates">kmecertificates.php</filename>
+		<filename>index.html</filename>
+    <filename>proxy.php</filename>
+    <filename>kmews.php</filename>
+    <filename>terminosCondiciones.txt</filename>
+    <filename>css/preloader.gif</filename>
+    <filename>css/x.png</filename>
+    <filename>css/styles.css</filename>
+    <filename>js/jquery.simplemodal-1.3.4.min.js</filename>
+    <filename>js/jquery-1.4.2.min.js</filename>
+    <filename>js/plugin.js</filename>
+	</files>
+	<params>
+		<param	name="kmecPlugEnabled" type="radio" label="KME Certificates Plugin Enabled" default="1" description="Specify Yes to enable KME certificates.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<tabs>
+		<tab name="Mis Certificados" description="This tab is to manage your own certificates and apply to new ones" class="getkmecTab" fields="0" position="cb_tabmain" displaytype="tab">
+			<params>
+				<param name="hwTabMessage" type="text" label="CB Hello World Tab Text" default="Hello Joomlapolitans!" description="Actual hello world message to display in the tab (default: Hello Joomlapolitans!)." />
+			</params>
+			<fields>
+			</fields>
+		</tab>
+	</tabs>
+	<install>
+		<queries>
+		</queries>
+	</install>
+	<uninstall>
+	</uninstall>
+</cbinstall>

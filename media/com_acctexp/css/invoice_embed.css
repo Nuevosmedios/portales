@@ -1,0 +1,123 @@
+pre {
+font-size: 110%;
+}
+
+#invoice_wrap {
+width: 700px;
+background:#fff;
+border-color:#999999;
+border-style:solid;
+border-width:1px 1px 2px 2px;
+margin:20px auto 5px;
+overflow:hidden;
+padding:20px;
+}
+
+#before_invoice_header {
+height: 60px;
+}
+
+#invoice_paidstatus {
+width: 90%;
+border: 2px solid #000;
+background: #ddd;
+margin: 24px;
+padding: 12px;
+}
+
+#invoice_recurringstatus {
+width: 90%;
+border: 2px solid #000;
+background: #ddd;
+margin: 24px;
+padding: 12px;
+}
+
+#after_invoice_header {
+height: 12px;
+}
+
+#invoice_details {
+width: 120px;
+float: right;
+margin-right: 20px;
+}
+
+#invoice_details {
+}
+
+#text_before_content {
+width: 70%;
+}
+
+#invoice_content {
+width: 70%;
+}
+
+#invoice_content {
+margin: 40px auto;
+}
+
+#invoice_content th {
+border-bottom: 1px solid #000;
+}
+
+#invoice_content #invoice_content_total {
+border-top: 1px solid #000;
+}
+
+#invoice_details th {
+background: #555;
+color: #fff;
+text-align: center;
+font-weight: bold;
+}
+
+#invoice_details td {
+text-align: center;
+}
+
+#invoice_content_item_separator {
+margin-top: 12px;
+}
+
+#invoice_content_item_separator td {
+border-bottom: 1px solid #000;
+height: 32px;
+}
+
+#invoice_content_item_total td {
+font-weight: bold;
+}
+
+#address {
+margin: 14px;
+margin-left: 32px;
+}
+
+div#printbutton {
+padding: 20px;
+border: 1px dashed #d94;
+width: 700px;
+background:#ffb;
+margin:20px auto 5px;
+overflow:hidden;
+padding:20px;
+padding-bottom: 0;
+}
+
+#printbutton_inner {
+width: 350px;
+background:#ffb;
+margin: 0 auto;
+}
+
+dov#printbutton p {
+text-align: center;
+margin-top: 14px;
+}
+
+div#printbutton button {
+margin: 34px;
+position: absolute;
+}

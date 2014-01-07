@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Confirmation &amp; Shopping Cart Page">
+		<message>This link should not be visible to your users - it's supposed to be an internal link that helps you assign modules and other Itemid related things to your AEC pages</message>
+	</layout>
+	<state>
+		<name>Confirmation &amp; Shopping Cart Page</name>
+		<description>AEC Signup - Confirmation &amp; Shopping Cart Page</description>
+		<params>
+		</params>
+	</state>
+</metadata>

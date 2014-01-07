@@ -1,0 +1,53 @@
+.modal {
+	max-height: 1000px;
+	margin: -300px 0 0 -280px;
+	overflow: hidden;
+	width: 660px;
+	.box-shadow(0 0 70px rgba(0,0,0,0.4));
+	p {
+		margin: 0 4px 8px 10px;
+		color: #333;
+	}
+	h3 {
+		font-size: 180%;
+		font-weight: normal;
+		line-height: 100%;
+	}
+	h4 {
+		background: #c8e6f2;
+		margin: 0 0 10px -15px;
+		padding: 4px 4px 4px 18px;
+		width: 102%;
+		text-shadow: 0 1px #fff;
+		.box-shadow( 0 2px 2px #bbb );
+	}
+	&-header { padding: 11px 15px 8px; }
+	&-body {
+		overflow: hidden;
+		max-height: 1000px;
+	}
+	&.fade {
+		.transition(e('opacity .1s linear'));
+		top: 50%;
+	}
+	&-overlay {
+		.box-shadow( 0 1px 8px #777 inset );
+		margin: 12px 10px 14px -16px;
+		padding: 12px 0 4px 64px;
+		width: 100%;
+		background: url(../images/admin/gfx/cardboard_flat.png);
+		p {
+			color: #555;
+		}
+		.btn {
+			.box-shadow( 0 2px 4px #aaa );
+			font-weight: bold;
+			display: inline-block;
+			line-height: 90%;
+			margin-top: -2px;
+		}
+	}
+	&-backdrop, &-backdrop.fade.in {
+		opacity: 0.6;
+	}
+}

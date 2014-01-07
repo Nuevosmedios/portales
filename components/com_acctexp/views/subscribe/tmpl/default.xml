@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Payment Plans">
+		<message>Displays a list of payment plans</message>
+	</layout>
+	<state>
+		<name>Payment Plans</name>
+		<description>AEC Signup - First Page</description>
+		<params>
+			<param name="usage" type="text" default="" label="Plan ID" description="Enter a payment plan ID that you want to link to directly, if any."/>
+			<param name="group" type="text" default="" label="Group ID" description="Enter a payment plan group ID that you want to link to directly, if any."/>
+			<param name="processor" type="text" default="" label="Payment Processor" description="Specify a payment processor by its short handle (ie. 'paypal_subscription' for PayPal Subscription)."/>
+			<param name="intro" type="radio" default="0" label="Intro" description="If you have set an Intro Page in your AEC Settings, you can skip it with this setting. Intro Pages do not apply if you have already specified a plan or group id.">
+				<option value="0">Show Intro</option>
+				<option value="1">Skip Intro</option>
+			</param>
+		</params>
+	</state>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="usage" type="text" default="" label="Plan ID" description="Enter a payment plan ID that you want to link to directly, if any."/>
+			<field name="group" type="text" default="" label="Group ID" description="Enter a payment plan group ID that you want to link to directly, if any."/>
+			<field name="processor" type="text" default="" label="Payment Processor" description="Specify a payment processor by its short handle (ie. 'paypal_subscription' for PayPal Subscription)."/>
+			<field name="intro" type="radio" default="0" label="Intro" description="If you have set an Intro Page in your AEC Settings, you can skip it with this setting. Intro Pages do not apply if you have already specified a plan or group id.">
+				<option value="0">Show Intro</option>
+				<option value="1">Skip Intro</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

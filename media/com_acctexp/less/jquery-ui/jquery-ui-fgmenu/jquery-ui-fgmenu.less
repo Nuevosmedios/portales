@@ -1,0 +1,246 @@
+/* Styles for jQuery menu widget
+Author:	Maggie Wachs, maggie&filamentgroup.com
+Date:		September 2008
+*/
+
+.fg-menu {
+	position:relative;
+	ul {
+		position:absolute; top:0;
+		ul {
+			top:-1px;
+		}
+	}
+	&, & ul {
+		list-style-type:none;
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		clear: both;
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		li {
+			font-size: 1em;
+		}
+	}
+	a {
+		border: 1px dashed transparent;
+		span {
+			display: block;
+			cursor: pointer;
+		}
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			float:left; width:92%;
+			padding:.3em 3%;
+			text-decoration:none;
+			outline: 0 !important;
+		}
+		&.ui-state {
+			&-default,
+			&-hover,
+			&-active {
+				&:link,
+				&:visited,
+				&:hover,
+				&:active {
+					border-style: solid;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+	&&-has-icons {
+		a:link,
+		a:visited,
+		a:hover,
+		a:active { padding-left:20px; }
+	}
+	&&-scroll,
+	& ul&-scroll {
+		overflow: scroll;
+		overflow-x: hidden;
+	}
+	&-scroll {
+		overflow: scroll;
+		overflow-x: hidden;
+	}
+	&-footer {
+		margin-top: .4em;
+		padding: .4em;
+		a {
+			&:link, &:visited {
+				float:left;
+				width:100%;
+				text-decoration: none;
+			}
+			span {
+				float:left;
+				cursor: pointer;
+			}
+		}
+	}
+	&-header {
+		margin-bottom: .4em;
+		padding: .4em;
+	}
+	&-flyout & {
+		position: static;
+	}
+	
+	&-flyout{
+		ul ul { padding: .4em; }
+		li { position:relative; }
+	}
+	&-indicator span {
+		float: left;
+		.ui-icon {
+			float: right;
+		}
+	}
+	&-content.ui-widget-content, 
+	&-content ul.ui-widget-content {
+		border: 0;
+	}
+	.horizontal-divider {
+		hr, span {
+			padding: 0;
+			margin: 5px .6em;
+		}
+		hr {
+			border: 0;
+			height:1px;
+		}
+		span {
+			font-size: .9em;
+			text-transform: uppercase;
+			padding-left: .2em;
+		}
+	}
+}
+
+.fg-menu-container {
+	position: absolute;
+	top:0; left:-999px;
+	padding: .4em;
+	overflow: hidden;
+	height: 320px;
+	z-index: 100;
+	&.fg-menu-flyout {
+		overflow: visible;
+	}
+	&.fg-menu-ipod .fg-menu-content {
+		&, & ul {
+			list-style-type:none;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+.fg-menu-breadcrumb {
+	margin: 0;
+	padding: 0;
+	li {
+		float: left;
+		list-style: none;
+		margin: 0;
+		padding: 0 .2em;
+		opacity: .7;
+	}
+	a, span { float: left; }
+	li.fg-menu-prev-list,
+	li.fg-menu-current-crumb {
+		float: none;
+		opacity: 1;
+	}
+	.fg-menu-prev-list {
+		a:link,
+		a:visited,
+		a:hover,
+		a:active {
+			background-image: none;
+			text-decoration:none;
+		}
+		.fg-menu-prev-list {
+			a { float: left; padding-right: .4em; }
+			a .ui-icon { float: left; }
+		}
+	}
+	.fg-menu-current-crumb {
+		a:link,
+		a:visited,
+		a:hover,
+		a:active {
+			display:block;
+			background-image:none;
+			text-decoration:none;
+		}
+	}
+}
+
+.hidden {
+	position: absolute;
+	top: 0;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.fg-button {
+	clear: left;
+	margin: 4px 4px 40px 20px;
+	padding: .4em 1em;
+	text-decoration: none !important;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+	zoom: 1;
+	.ui-icon {
+		position: absolute;
+		top: 50%;
+		margin-top: -8px;
+		left: 50%;
+		margin-left: -8px;
+	}
+	a& {
+		top: 5px !important;
+	}
+	button& {
+		width: auto;
+		overflow: visible;
+	}
+	&-icon {
+		&-left {
+			padding-left: 2.1em;
+			.ui-icon {
+				right: auto;
+				left: .2em;
+				margin-left: 0;
+			}
+		}
+		&-right {
+			padding-right: 2.1em;
+			.ui-icon {
+				left: auto;
+				right: .2em;
+				margin-left: 0;
+			}
+		}
+		&-solo {
+			display: block;
+			width: 8px;
+			text-indent: -9999px;
+		}
+	}
+	.ui-state-loading .ui-icon {
+		background: url(spinner_bar.gif) no-repeat 0 0;
+	}
+}
