@@ -32,7 +32,7 @@
 						<div class="pull-right col-md-4">
 							<jdoc:include type="modules" name="search" style="none" />
 						</div>
-						<div class="pull-right" id="top-menu">
+						<div class="pull-right clear" id="top-menu">
 							<jdoc:include type="modules" name="topmenu" style="none" />
 						</div>
 					</div>
@@ -59,6 +59,9 @@
 					<div class="col-md-4" id="homelink1"><jdoc:include type="modules" name="homelink1" style="none" /></div>
 					<div class="col-md-4" id="homelink2"><jdoc:include type="modules" name="homelink2" style="none" /></div>
 					<div class="col-md-4" id="homelink3"><jdoc:include type="modules" name="homelink3" style="none" /></div>
+				</div>
+				<div class="clear" id="foot-menu">
+					<jdoc:include type="modules" name="footmenu" style="none" />
 				</div>
 				<div class="clear" id="footcopy">
 					<jdoc:include type="modules" name="footcopy" style="none" />

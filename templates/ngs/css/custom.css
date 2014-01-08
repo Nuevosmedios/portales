@@ -2,7 +2,8 @@ body{background: #F2F2F2; font-weight:200;line-height:120%;font-family: Georgia,
 b,strong{font-weight:400;}
 h1,h2,h3,h4,h5{font-weight:400;}
 
-a{color:#B32607;}
+a{color:#E88E00;}
+a:hover{color:#dc6600;}
 
 .clear{clear:both;}
 .auto{margin:auto;}
@@ -41,8 +42,19 @@ a{color:#B32607;}
 
 /*Custom*/
 #main{background:#FFF;}
-#header{padding-top:12px;}
+#header{}
 #header-right{padding-top:12px;}
+
+#top-menu{}
+#top-menu ul.menu{}
+#top-menu ul.menu li{}
+#top-menu ul.menu li:hover{}
+#top-menu ul.menu li a{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;padding:10px 5px;}
+#top-menu ul.menu li a:hover{background:none;}
+
+#foot-menu ul.menu li a{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;padding:10px 5px;}
+#foot-menu ul.menu li a:hover{background:none;}
+#foot-menu ul.menu li.current a{background:none;color:#dc6600;}
 
 #mainmenu ul.nav li a.orange:hover{border-top:4px solid #dc6900;color:#dc6900;}
 
