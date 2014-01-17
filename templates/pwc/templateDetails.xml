@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template">
+	<name>PWC</name>
+	<version>1.0</version>
+	<creationDate>12/09/10</creationDate>
+	<author>X-treaming Media Solutions</author>
+	<authorEmail>ppantoja@x-treaming.com</authorEmail>
+	<authorUrl>http://www.x-treaming.com</authorUrl>
+	<copyright></copyright>
+	<license>GNU/GPL version 2</license>
+	<description>PWC por X-treaming MS</description>
+<files>
+		<filename>css/index.html</filename>
+		<filename>favicon.ico</filename>
+		<filename>images/index.html</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	<images>
+		<filename>template_thumbnail.png</filename>
+	</images>
+	<css>
+		<filename>css/pwc.css</filename>
+		<filename>css/pwcieonly.css</filename>
+	</css>
+
+	<positions>
+		<position>hornav</position>
+		<position>breadcrumbs</position>
+		<position>banner</position>
+		<position>topmenu</position>
+		<position>left</position>
+		<position>right</position>
+		<position>top</position>
+		<position>login</position>
+		<position>user1</position>
+		<position>user2</position>
+		<position>user3</position>
+		<position>user4</position>
+		<position>user5</position>
+		<position>footer</position>
+		<position>syndicate</position>
+		<position>debug</position>
+		<position>logo</position>
+		<position>search</position>
+		<position>news</position>
+		<position>video</position>
+		<position>xtreaming</position>
+		<position>language</position>
+		<position>mainmenu</position>
+		<position>mainmenu2</position>
+		<position>leaderboard</position>
+		<position>communities</position>
+		<position>rss</position>
+		<position>topBanner</position>
+		<position>homeModLeft</position>
+		<position>homeModLeft1</position>
+		<position>homeModRight</position>
+		<position>homeModRight2</position>
+		<position>homeLink1</position>
+		<position>homeLink2</position>
+		<position>homeLink21</position>
+		<position>homeLink3</position>
+		<position>homeLink4</position>
+		<position>homeLink5</position>
+		<position>homeLink6</position>
+		<position>general</position>
+		<position>innerLinks</position>
+		<position>navmenu</position>
+		<position>footmenu</position>
+		<position>footcontactdata</position>
+		<position>footcopy</position>
+		<position>googleanalytics</position>
+		<position>xtreaming</position>
+		<position>messagechat</position>
+	</positions>
+
+</install>

@@ -1,0 +1,377 @@
+/* == Valanx.org AEC Membership Management - etacarinae.css == */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#aec {
+  width: 100%;
+  padding: 0 12px;
+}
+#aec > div {
+  overflow: hidden;
+  padding: 4px;
+}
+#aec form {
+  margin: 0 0;
+}
+#aec .btn {
+  padding: 4px 10px 4px;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 16px;
+}
+#aec .btn-mini {
+  padding: 2px 6px;
+}
+#aec .btn i {
+  margin-right: 6px;
+  margin-top: 2px;
+}
+#aec .btn i .narrow {
+  margin-right: 0;
+}
+#aec .componentheading {
+  margin: 12px 0 24px;
+  text-align: center;
+}
+#aec .alert {
+  padding: 8px 24px;
+  float: left;
+  width: 92%;
+}
+#aec #confirmation-tos {
+  margin: 3% 3% 1% 2%;
+  width: 90%;
+}
+#aec #confirmation-info,
+#aec #confirmation-form,
+#aec #confirmation-extra,
+#aec #confirmation-exception {
+  margin: 0 3%;
+  width: 94%;
+}
+#aec .btn-processor,
+#aec .btn-plangroup {
+  width: 120px;
+  height: 40px;
+  font-size: 120%;
+  padding: 0;
+}
+#aec .btn-processor:hover,
+#aec .btn-plangroup:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  background-position: 0 0 !important;
+}
+#aec .btn-overlay {
+  background: #555;
+  border-radius: 0 0 4px 4px;
+  color: #fff;
+  display: block;
+  position: relative;
+  font-size: 12px;
+  height: 14px;
+  line-height: 14px;
+  left: -1px;
+  bottom: -13px;
+  opacity: 0.7;
+  text-shadow: none;
+  width: 120px;
+}
+#aec .btn-tallcontent {
+  line-height: 12px;
+}
+#aec .alert {
+  overflow: hidden;
+}
+#aec .alert .btn {
+  float: right;
+  margin-right: -26px;
+  padding: 4.5px 10px 4px;
+}
+#aec #confirmation-form table {
+  width: 100%;
+}
+#aec .confirmation-info-header {
+  text-align: center;
+}
+#aec .confirmation-info-content {
+  padding: 8px;
+  color: #222;
+}
+#aec .confirmation-info-price {
+  display: block;
+  padding: 24px 0;
+}
+#aec .confirmation-info-price p {
+  font-size: 180%;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+#aec #cart-info,
+#aec .checkout-list {
+  margin: 0 5%;
+  width: 90%;
+}
+#aec .checkout-list-item-terms {
+  clear: both;
+}
+#aec table.cart-list {
+  width: 100%;
+}
+#aec table.cart-list td.center-cell {
+  text-align: center;
+}
+#aec tr.aec_formrow,
+#aec tr.aec_formrow td {
+  border: none;
+}
+#aec .well {
+  float: left;
+  width: 92%;
+  margin: 12px 1% 48px;
+}
+#aec .well p {
+  display: inline;
+  margin: 4px 0;
+  clear: both;
+}
+#aec .well p > input {
+  margin: 0 6px;
+  vertical-align: middle;
+}
+#aec .well input {
+  margin-bottom: 0;
+  vertical-align: inherit;
+}
+#aec .well button {
+  float: right;
+  margin-bottom: 0;
+  vertical-align: inherit;
+}
+#aec .well div.controls {
+  text-align: left;
+}
+#aec .well-highlight {
+  background-color: #f09696 !important;
+}
+#aec .well-highlight .label {
+  display: none !important;
+}
+#aec .form-exception-part table {
+  width: 100%;
+}
+#aec td .cleft {
+  padding: 2px;
+  margin: 0px;
+  width: 50%;
+  text-align: right !important;
+}
+#aec td .cright {
+  padding: 2px;
+  margin: 0px;
+  width: 50%;
+  text-align: left !important;
+}
+#aec td .cboth {
+  padding: 2px;
+  margin: 0px;
+  text-align: center !important;
+}
+#aec td .cboth p {
+  text-align: center !important;
+}
+#aec td .cost-cost {
+  text-align: right;
+}
+#aec .list-term-other {
+  opacity: 0.8;
+}
+#aec .processor-button,
+#aec .group-button {
+  display: inline-block;
+  float: right;
+  width: 120px;
+  height: 40px;
+  margin-left: 8px;
+}
+#aec .aec-planlist-item,
+#aec .aec-planlist-group,
+#aec .processor-list {
+  border-color: #ddd #bbb #aaa #ddd;
+  border-style: solid;
+  border-width: 1px;
+  float: left;
+  margin-bottom: 16px;
+  margin-top: 6px;
+  padding: 12px 12px 12px 24px;
+  width: 95%;
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px #ddd;
+}
+#aec .processor-details {
+  float: left;
+  width: 100%;
+}
+#aec .processor-details p {
+  padding-left: 160px;
+}
+#aec .processor-details img {
+  float: left;
+  margin: 7px;
+}
+#aec .processor-cc-icons {
+  float: right;
+}
+#aec .backtocart-button {
+  text-align: right;
+  padding: 8px 0px 8px;
+}
+#aec .nav {
+  margin-bottom: 0;
+}
+#aec .tab-pane table {
+  width: 100%;
+}
+#aec #aec-checkout-params {
+  float: left;
+}
+#aec tr,
+#aec td {
+  border: none;
+}
+#aec .aec-checkout-params {
+  float: left;
+  width: 96%;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 2px #999999;
+  margin-bottom: 24px;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: left;
+}
+#aec .aec-checkout-params table {
+  width: 100%;
+}
+#aec .aec-checkout-params form .button {
+  float: right;
+}
+#aec .tab-content {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  box-shadow: 0 2px 2px #999999;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 0 0 6px 6px;
+}
+#aec .checkout-tabs {
+  float: left;
+  width: 100%;
+}
+#aec #aec-nav-profile {
+  margin-bottom: 12px;
+}
+#aec .list-term-termlist-term-other {
+  opacity: 0.6;
+}
+#aec label.control-label {
+  display: inline-block;
+  width: 45%;
+  padding-right: 12px;
+  line-height: 16px;
+  padding-top: 8px;
+  vertical-align: top;
+  text-align: right;
+}
+#aec div.control-group .controls > * {
+  margin: 0 auto;
+  vertical-align: middle;
+}
+#aec div.control-group .controls {
+  display: inline-block;
+  width: 50%;
+}
+#aec div.control-group .controls label {
+  margin-top: 6px;
+  padding: 4px 8px;
+  display: inline-block !important;
+  width: 254px;
+  white-space: normal;
+}
+#aec div.control-group .controls p {
+  padding-top: 4px;
+}
+#aec div.control-group .controls .span6 {
+  width: 40%;
+}
+#aec form .control-group {
+  width: 100%;
+  margin-bottom: 16px;
+  clear: both;
+}
+#aec .span12 {
+  width: 940px;
+}
+#aec .span11 {
+  width: 860px;
+}
+#aec .span10 {
+  width: 780px;
+}
+#aec .span9 {
+  width: 700px;
+}
+#aec .span8 {
+  width: 620px;
+}
+#aec .span7 {
+  width: 540px;
+}
+#aec .span6 {
+  width: 460px;
+}
+#aec .span5 {
+  width: 380px;
+}
+#aec .span4 {
+  width: 300px;
+}
+#aec .span3 {
+  width: 220px;
+}
+#aec .span2 {
+  width: 140px;
+}
+#aec .span1 {
+  width: 60px;
+}

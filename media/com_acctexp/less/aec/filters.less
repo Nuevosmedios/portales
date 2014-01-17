@@ -1,0 +1,109 @@
+#status-group-select,
+#plan-filter-select,
+#group-filter-select {
+	opacity: 0;
+	height: 1px;
+}
+
+.aec-filters {
+	margin: 0 auto 24px;
+	width: 540px;
+	padding: 6px 15px;
+	background: #eee;
+	.box-shadow( 0 1px 3px rgba(1, 1, 1, 0.35) );
+	border-bottom-right-radius( 10px );
+	border-bottom-left-radius( 10px );
+	ul { list-style: none; }
+	label {
+		text-align: left;
+		width: inherit;
+		margin-left: 10px;
+	}
+	input.search {
+		width: 80%;
+	}
+	.controls-list { padding-left: 4px; }
+	.btn-primary { margin: 4px 48%; }
+	.filter-sub .btn-primary { margin: 18px 30%; }
+	p .btn {
+		margin: 0px 90%;
+	}
+	input,
+	textarea,
+	select,
+	.uneditable-input { margin-bottom: 0; }
+	&-wide {
+		width: 580px;
+		height: 140px;
+		label { width: 100%; }
+	}
+}
+
+a#filter-button {
+	display: block;
+	clear: both;
+}
+
+.filter-sub {
+	float: left;
+	.control { margin-bottom: 12px; }
+}
+
+.setting-filter {
+	&-mute {
+		opacity: 0.4;
+		.transition( all 1s linear );
+	}
+	&-hide {
+		height: 0;
+		overflow: hidden;
+		.transition( all 0.1s linear );
+		&-override {
+			height: inherit;
+			.transition( all 0.1s linear );
+		}
+	}
+	&-header {
+		display: none;
+	}
+}
+
+section.setting-filter-hide {
+	height: 0px;
+	margin: 0px;
+	padding: 0px !important;
+	&-override {
+		height: auto;
+		margin: 30px 0 0;
+		padding: 12px 12px 12px 36px;
+	}
+}
+
+h2.setting-filter-hide {
+	display: none;
+	&-override {
+		display: block;
+	}
+}
+
+.control-group.setting-filter-hide {
+	margin-bottom: 0px;
+	&-override {
+		margin-bottom: 20px;
+	}
+}
+
+.page-header.setting-filter-hide {
+	display: none;
+	&-override {
+		display: block;
+	}
+}
+
+#settings-filter {
+	border: none;
+	margin: 1px;
+	padding: 5px;
+	margin-top: 0;
+	margin-left: 0px;
+}

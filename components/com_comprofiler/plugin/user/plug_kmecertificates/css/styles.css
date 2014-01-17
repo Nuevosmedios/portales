@@ -1,0 +1,57 @@
+.simplemodal-overlay{background: #333333; opacity: .80; filter: alpha(opacity=80);}
+.simplemodal-container a.modalCloseImg {
+	background:url(x.png) no-repeat; /* adjust url as required */
+	width:25px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	cursor:pointer;
+}
+
+.simplemodal-container  {
+background-color:#333333;
+border:4px solid #444444;
+color:#BBBBBB;
+padding:12px;
+}
+
+.simplemodal-container a{
+	color:#FFFFFF;
+}
+
+.simplemodal-container a:hover{
+	color:#000000;
+}
+
+.preloader{width:100%;height:32px;background:url(preloader.gif) center center no-repeat;}
+.contentkme{border:1px #cccccc solid;padding:10px;position:relative;clear:both;}
+
+.tos-content{width:600px;height:400px;position:relative;clear:both;background:#FFFFFF;}
+.resources{width:400px;}
+.resources .title{text-weight:bolder;font-size:14px;text-decoration:underline;}
+.resources ul{padding:0;}
+.resources ul li{list-style:none;}
+.resources ul li img{margin-left:10px;position:relative;top:3px;}
+.resources ul .webcast{text-transform:uppercase;font-size:12px;text-weight:bolder;margin-top:10px;margin-bottom:10px;}
+.resources ul .podcast{text-transform:uppercase;font-size:12px;text-weight:bolder;margin-top:10px;margin-bottom:10px;}
+.resources ul .forums{text-transform:uppercase;font-size:12px;text-weight:bolder;margin-top:10px;margin-bottom:10px;}
+.resources ul .blogs{text-transform:uppercase;font-size:12px;text-weight:bolder;margin-top:10px;margin-bottom:10px;}
+.resources ul .wiki{text-transform:uppercase;font-size:12px;text-weight:bolder;margin-top:10px;margin-bottom:10px;}
+.resources ul .resource{background:#FFFFFF;color:#000000; font-size:12px;text-weight:normal;}
+.course-extra-panel{height:80px;}
+.extra-panel{position:relative;float:right;}
+.extra-panel td{text-align:center;}
+.rate-bar{width:100px;border:1px solid #333333;height:10px;float:left;}
+.rate-bar-progress{background:url(barbg.png);height:10px;text-align:right;font-size:9px;font-weight:bolder;line-height:10px;}
+.rate-bar-numbers{margin-left:2px;height:10px;text-align:right;font-size:9px;font-weight:bolder;line-height:10px;float:right;}
+.course-list{width:400px;}
+.course-page-content table{width:100%;}
+.course-page-content table td{vertical-align:top;}
+.course-page-content table .extra-td{width:140px;}
+.course-list h1{font-size:14px;}
+.course-list ul,.course-list h1{margin-bottom:1px; margin-top:1px;}
+.course-list .course-list-item .course{margin-right:10px;}
+.button{height:20px;}

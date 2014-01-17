@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" method="upgrade">
+	<name>AEC Module</name>
+	<creationDate>24.02.2008</creationDate>
+	<author>David Deutsch</author>
+	<copyright>Copyright (C) 2004-2012 David Deutsch</copyright>
+	<license>GNU/GPL 3.0</license>
+	<authorEmail>skore@valanx.org</authorEmail>
+	<authorUrl>www.valanx.org</authorUrl>
+	<version>1.2</version>
+	<description>Module for use with Account Expiration Control Component.</description>
+	<files folder="modules/mod_acctexp">
+		<filename module="mod_acctexp">mod_acctexp.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		<language tag="de-DE">de-DE/de-DE.mod_acctexp.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_acctexp.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_acctexp.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_acctexp.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_acctexp.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_acctexp.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_acctexp.ini</language>
+		<language tag="zh-CN">zh-CN/zh-CN.mod_acctexp.ini</language>
+	</languages>
+	<params>
+		<param name="pretext" type="text" default="" label="Pre Text" description="Text that you want to display before the automatically generated text." />
+		<param name="posttext" type="text" default="" label="Post Text" description="Text that you want to display after the automatically generated text." />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="show_expiration" type="list" default="1" label="Subscription Expiration Date" description="Choose if you want to display the end date of subscription." >
+			<option value="0">Do not show</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="extended" type="list" default="0" label="Extended" description="The AEC Module normally only shows the primary membership and its expiration. Switching to extended Mode (activating this setting here) will display every membership that the user currently holds." >
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="displaypipeline" type="list" default="1" label="DisplayPipeline" description="If you have MicroIntegrations that write to the DisplayPipeline, enable this feature to actually display things." >
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="pretext" type="text" default="" label="Pre Text" description="Text that you want to display before the automatically generated text." />
+				<field name="posttext" type="text" default="" label="Post Text" description="Text that you want to display after the automatically generated text." />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+				<field name="show_expiration" type="list" default="1" label="Subscription Expiration Date" description="Choose if you want to display the expiration date of the subscription." >
+					<option value="0">Do not show</option>
+					<option value="1">Show</option>
+				</field>
+				<field name="displaypipeline" type="list" default="1" label="DisplayPipeline" description="If you have MicroIntegrations that write to the DisplayPipeline, enable this feature to actually display things." >
+					<option value="0">Disable</option>
+					<option value="1">Enable</option>
+				</field>
+				<field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

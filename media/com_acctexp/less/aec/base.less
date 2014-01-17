@@ -1,0 +1,91 @@
+#aec-wrap {
+	overflow: hidden;
+	color: @grayDark;
+	p {
+		font-size: @baseFontSize;
+		line-height: @baseLineHeight;
+	}
+}
+
+#aec-wrap-settings {
+	background: url(../images/admin/gfx/grey.png);
+	overflow: hidden;
+	color: @grayDark;
+	p {
+		font-size: @baseFontSize;
+		line-height: @baseLineHeight;
+	}
+}
+
+.icon-32-extensions {
+	background-image:url(../images/admin/icons/aec_central_icon.png);
+}
+
+.element p {
+	margin: 0;
+	padding: 4px;
+}
+
+.float-right {
+	padding: 10px 20px;
+	float: right;
+}
+
+blockquote {
+	text-style: italic;
+	padding: 5px 0 5px 30px;
+}
+
+pre { text-align: left; }
+
+h5 {
+	line-height: 14px;
+	margin: 12px 2px 2px;
+}
+
+.prettyprint {
+	background-color: #fefbf3;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	.box-shadow( 0 1px 2px rgba(0, 0, 0, 0.1) );
+	padding: 9px;
+	line-height: 120%;
+	font-size: 100%;
+}
+
+fieldset { clear: both; }
+
+div.liner {
+	border-bottom: 1px dashed #999999;
+	height: 16px;
+	margin: 0 33%;
+	position: absolute;
+	width: 22%;
+}
+
+.plogo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+div.ranges { border: none !important; }
+
+div.container section {
+	@foo = inset -2px -2px 30px rgba(0,0,0,.02), inset -1px 0 1px rgba(0,0,0,.1),0 2px 3px rgba(0,0,0,.1), 0 7px 14px rgba(127,127,127,.08);
+	margin: 30px 0 0;
+	padding: 12px 12px 12px 36px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-bottom-color: #bbb;
+	border-right-color: #bbb;
+	.border-radius(2px);
+	.box-shadow(@foo);
+	h2 {
+		border-bottom: 1px dotted #ddd;
+		width: 95%;
+	}
+}
+
+.row .span9 {
+	margin-top: 12px;
+}

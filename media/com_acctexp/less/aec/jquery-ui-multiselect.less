@@ -1,0 +1,40 @@
+.ui {
+	&-multiselect {
+		margin: 1px 0;
+		max-width: 95%;
+		&-header {
+			background: #aaa;
+			border: none !important;
+			border-bottom-right-radius( 0 ) !important;
+			border-bottom-left-radius( 0 ) !important;
+			margin: -4px -4px 0 !important;
+			padding: 5px !important;
+		}
+		&-checkboxes {
+			overflow-y: auto !important;
+			height: auto !important;
+			max-height: 215px;
+			label {
+				width: 99%;
+				padding: 2px 1px !important;
+				margin-bottom: 0px;
+				.border-radius( 2px );
+				background: #fff;
+				.transition( background 0.5s ease-out );
+			}
+		}
+		&-menu {
+			label {
+				span {
+					display: inline-block;
+					margin-left: 6px;
+					margin-top: 3px;
+					width: 80%;
+					vertical-align: top;
+				}
+				&:hover { background: #eee; }
+			}
+			input { display: inline-block; }
+		}
+	}
+}

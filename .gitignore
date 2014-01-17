@@ -5,3 +5,4 @@ tmp
 administrator/cache
 cache
 .project
+.DS_Store

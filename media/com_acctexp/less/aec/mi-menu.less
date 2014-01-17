@@ -1,0 +1,14 @@
+.mi-menu-mi {
+	display: block;
+	.transition( background linear 0.1s, box-shadow linear 0.1s );
+	span { color: #bd362f; }
+	&:hover {
+		background: #f9f9f9;
+		.box-shadow( 0 1px 1px #d9d9d9 );
+	}
+	&:hover span {
+		color: #555;
+	}
+	&-name { font-weight: bold; }
+	&-desc { font-size: 80%; }
+}

@@ -1,0 +1,289 @@
+#stats {
+	width: 1164px;
+	margin: 24px auto;
+}
+
+#statnav {
+	float: left;
+	width: 240px;
+	background: #ccc;
+	padding: 18px 0 24px 18px;
+	.border-radius( 10px );
+	margin: 24px 0;
+	ul {
+		float: right;
+		width: 96%;
+		list-style-type: none;
+		li {
+			text-align: center;
+			font-size: 150%;
+			padding: 10px 4px;
+			background: #ccc;
+			margin-bottom: 2px;
+			margin-right: 12px;
+			&:hover {
+				background: #efefef;
+			}
+			.current {
+				background: #eee;
+				font-weight: bold;
+				margin-right: 0px;
+				&:hover {
+					background: #ccc;
+				}
+			}
+		}
+	}
+}
+
+.aec_backend_page_heading {
+	margin-left: -2px;
+	h1 {
+		font-size: 120%;
+		padding-top: 16px;
+		padding-left: 16px;
+	}
+} 
+
+#chart {
+	padding: 18px 0 24px 18px;
+	font: 10px sans-serif;
+	margin: 24px auto;
+	width: 980px;
+	.border-radius( 10px );
+	overflow: hidden;
+	h3 {
+		text-align: center;
+		background: #ccc;
+		.border-radius( 8px );
+		margin: 16px 0;
+		padding: 6px 0;
+		text-align: center;
+		width: 97%;
+	}
+	.svg-crisp {
+		shape-rendering: crispedges;
+	}
+}
+
+#overview-day-hourly {
+	margin-top: 24px;
+}
+
+.chart-rickshaw-huge {
+	height: 400px;
+	width: 96%;
+}
+
+.chart-rickshaw {
+	float: left;
+	width: 700px;
+	height: 200px;
+	margin-left: 25px;
+	margin-bottom: 24px;
+	.xtick-shifted-hour {
+		margin-left: -56px;
+	}
+}
+
+.chart-rickshaw-bump {
+	float: left;
+	width: 180px;
+	height: 160px;
+	margin-top: 12px;
+	.y_ticks text {
+		text-anchor: middle;
+	}
+}
+
+.chart-rickshaw-wide-slim {
+	.xtick-shifted-hour {
+		margin-left: -72px;
+	}
+	.xtick-shifted-day {
+		margin-left: -6px;
+	}
+}
+
+.xtick-shifted-week {
+	margin-left: -10px;
+}
+
+.chart-rickshaw-slim {
+	float: left;
+	width: 740px;
+	height: 150px;
+	margin-left: 12px;
+	margin-bottom: 24px;
+}
+
+.chart-rickshaw-wide {
+	float: left;
+	width: 910px;
+	height: 200px;
+	margin-left: 25px;
+	margin-bottom: 24px;
+}
+
+.chart-rickshaw-wide-slim {
+	float: left;
+	width: 910px;
+	height: 80px;
+	margin-left: 25px;
+	margin-bottom: 24px;
+}
+
+.rickshaw_graph {
+	.x_tick {
+		bottom: -12px;
+		.title {
+			bottom: -6px;
+		}
+	}
+	.detail .x_label {
+		opacity: 0.9;
+	}
+	.y_ticks {
+		path {
+			stroke: none;
+		}
+		.tick {
+			stroke: none;
+		}
+	}
+	.y_grid .tick {
+		shape-rendering: crispedges;
+	}
+}
+
+.chart-sunburst {
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+
+.chart-sunburstxl {
+	width: 500px;
+	height: 500px;
+	float: left;
+	margin: 0 240px;
+}
+
+.chart-cellular {
+	width: 760px;
+	height: 160px;
+	float: left;
+	margin: 36px 0 0;
+}
+
+.overview-container-full,
+.compare-container-full
+.all-time-container-full {
+	float: left;
+	clear: both;
+}
+
+.overview-container,
+.compare-container,
+.all-time-container {
+	float: left;
+	clear: both;
+	width: 98%;
+}
+
+#compare-day-last,
+#compare-week-last,
+#compare-month-last,
+#compare-year-last {
+	margin-left: 168px;
+}
+
+#sales-graph {
+	margin: 0 3%;
+}
+
+rect.panel {
+	fill: none;
+}
+
+.day {
+	fill: #fff;
+}
+
+rect.month {
+	fill: #fff;
+}
+
+path.month {
+	fill: none;
+	stroke: #555;
+	stroke-width: 2px;
+}
+
+.console-amt {
+	font-size: 110%;
+}
+
+.console-val {
+	font-size: 150%;
+	font-weight: bold;
+}
+
+.chart-controls-box {
+	margin: 0 auto;
+	width: 860px;
+	padding: 12px 0;
+	.rickshaw_legend {
+		width: 180px;
+		height: auto !important;
+		.label {
+			vertical-align: text-bottom;
+			line-height: 191%;
+		}
+	}
+	#legend p {
+		color: #999;
+		margin-left: 16px;
+		margin-top: 4px;
+	}
+}
+
+.chart-controls {
+	float: left;
+	padding: 24px 10px;
+	input {
+		float: left;
+		margin-right: 8px;
+	}
+	label {
+		width: 100px;
+		.disabled {
+			opacity: 0.4;
+		}
+	}
+}
+
+[class^="graph-control-"] {
+	display: inline-block;
+	width: 28px;
+	height: 14px;
+	vertical-align: text-top;
+	background-image: url(../images/admin/icons/graph-controls-sprites.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin-right: 8px;
+}
+
+.graph-control {
+	&-area { background-position: 0 0; }
+	&-bar { background-position: 0 -14px; }
+	&-line { background-position: 0 -28px; }
+	&-scatter { background-position: 0 -42px; }
+	&-stack { background-position: 0 -56px; }
+	&-stream { background-position: 0 -70px; }
+	&-pct { background-position: 0 -84px; }
+	&-value { background-position: 0 -98px; }
+	&-day { background-position: 0 -112px; }
+	&-week { background-position: 0 -126px; }
+	&-year { background-position: 0 -140px; }
+}

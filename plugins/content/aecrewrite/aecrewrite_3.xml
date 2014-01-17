@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="plugin" group="content" method="upgrade">
+	<name>Content - AEC Rewrite</name>
+	<author>David Deutsch</author>
+	<creationDate>02.01.2012</creationDate>
+	<copyright>Copyright (C) 2012 David Deutsch</copyright>
+	<license>GNU/GPL Version 3.0 or later - http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>skore@valanx.org</authorEmail>
+	<authorUrl>https://valanx.org</authorUrl>
+	<version>1.1</version>
+	<description>The AEC Rewrite Plugin gives you the power of the AEC ReWrite Engine right in your content.</description>
+	<files>
+		<filename plugin="aecrewrite">aecrewrite.php</filename>
+	</files>
+	<params/>
+</extension>

@@ -1,0 +1,80 @@
+/* https://github.com/entropillc/css3-toggleswitch modified */
+
+div.toggleswitch {
+	margin-top: 3px !important;
+}
+
+.toggleswitch {
+	display: inline-block;
+	width: 78px;
+	height: 20px;
+	padding: 0;
+	overflow: hidden;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	text-align: left;
+	cursor: pointer;
+	.border-radius( 6px );
+	.user-select( none );
+	.box-shadow( 0 0 3px rgba(0, 0, 0, 0.2) );
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	> input {
+		display: none !important;
+		~ .toggleswitch-inner {
+			margin-left: -52px;
+			.transition( margin-left 0.2s ease );
+		}
+		&:checked ~ .toggleswitch-inner {
+			margin-left: 0;
+		}
+		&:disabled ~ .toggleswitch-inner {
+			> .toggleswitch-on,
+			> .toggleswitch-off {
+				background: #999 !important;
+				cursor: not-allowed;
+			}
+			> .toggleswitch-handle {
+				cursor: not-allowed;
+			}
+		}
+	}
+	> .toggleswitch-inner {
+		display: block;
+		width: 170px;
+		height: 24px;
+		color: #fff;
+		overflow: hidden;
+		text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.toggleswitch-inner {
+	> * {
+		display: block;
+		float: left;
+		height: 20px;
+		line-height: 21px;
+		.box-shadow( inset 0 0.1em 6px rgba(0, 0, 0, 0.75) );
+	}
+	> .toggleswitch-handle {
+		width: 26px;
+		margin-left: -93px;
+		border: 1px solid #999;
+		#gradient > .vertical( #eee, #aaa );
+		.box-shadow( 0 2px 6px #000 );
+		.border-radius( 6px );
+		.box-sizing( border-box );
+	}
+	> .toggleswitch-on {
+		background: #7ebb00;
+		width: 40px;
+		padding-left: 18px;
+	}
+	> .toggleswitch-off {
+		background: #c43c35;
+		width: 48px;
+		padding-right: 35px;
+		text-align: right;
+		margin-left: 4px;
+	}
+}
