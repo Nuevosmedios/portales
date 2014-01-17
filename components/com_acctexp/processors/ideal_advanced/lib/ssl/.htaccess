@@ -1,4 +1,0 @@
-
-# Start rewrite engine
-RewriteEngine On
-RewriteRule ^(.*)$ index.html
